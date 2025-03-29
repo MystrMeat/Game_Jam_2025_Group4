@@ -4,6 +4,7 @@
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_1ehe0"]
 [ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="2_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="3_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://c72v86gqm7ndy" path="res://Assets/title_screen/TITLE.png" id="5_m3bi6"]
 [ext_resource type="Texture2D" uid="uid://cuahr2ccc5ulh" path="res://Assets/UI/title/button_play_normal.png" id="5_opfnp"]
 [ext_resource type="Texture2D" uid="uid://bofw31n8x1hlp" path="res://Assets/UI/title/button_play_pressed.png" id="6_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://brgxb45po5knn" path="res://Assets/UI/main_menu/button_shop_normal.png" id="7_16hvj"]
@@ -15,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://be3ulhqsgxojw" path="res://Assets/UI/main_menu/button_exit_normal.png" id="13_m3bi6"]
 [ext_resource type="Texture2D" uid="uid://dj6te2b0ixvxy" path="res://Assets/UI/main_menu/button_exit_pressed.png" id="14_wyh8j"]
 [ext_resource type="Shader" uid="uid://dv82snil5dlry" path="res://Shaders/hard_light.gdshader" id="15_m3bi6"]
-[ext_resource type="Texture2D" uid="uid://dimxbhhtr7fjq" path="res://Assets/title_screen/title_screen_balck_hole.png" id="16_wyh8j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
 shader = ExtResource("2_1ehe0")
@@ -42,6 +42,12 @@ material = SubResource("ShaderMaterial_n45e2")
 position = Vector2(1, 1)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_ce3w2")
+
+[node name="TitleScreenBalckHole" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ujyyl")
+position = Vector2(-135, -67)
+scale = Vector2(0.0703506, 0.0703506)
+texture = ExtResource("5_m3bi6")
 
 [node name="Button Timer" type="Timer" parent="."]
 wait_time = 0.255
@@ -94,13 +100,6 @@ layout_mode = 2
 texture_normal = ExtResource("13_m3bi6")
 texture_pressed = ExtResource("14_wyh8j")
 stretch_mode = 3
-
-[node name="TitleScreenBalckHole" type="Sprite2D" parent="."]
-visible = false
-material = SubResource("ShaderMaterial_ujyyl")
-position = Vector2(-141, -124)
-scale = Vector2(0.222837, 0.222837)
-texture = ExtResource("16_wyh8j")
 
 [connection signal="timeout" from="Button Timer" to="." method="_on_button_timer_timeout"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
