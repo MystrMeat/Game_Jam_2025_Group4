@@ -1,9 +1,15 @@
 extends Control
 
+@onready var player_mass_text: Label = $"Player Mass"
+@onready var player_money_text: Label = $"Player Money"
+
+static var player_mass = 0
+static var player_money = 10000
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	player_mass_text.text = str(player_mass)
+	player_money_text.text = "$ " + str(player_money)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
