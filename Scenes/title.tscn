@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dosfe35u1iwqc" path="res://Assets/UI/title/button_credits_presed.png" id="7_th2ad"]
 [ext_resource type="Texture2D" uid="uid://yfk3ne47koyi" path="res://Assets/UI/title/button_back_normal.png" id="8_qh4d7"]
 [ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="9_lv7gn"]
-[ext_resource type="AudioStream" uid="uid://bshn6sryxvnkq" path="res://Audio/opening screen.wav" id="10_kyk5u"]
+[ext_resource type="PackedScene" uid="uid://bdmd6ufh82ckc" path="res://Scenes/transition.tscn" id="12_th2ad"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q2qps"]
 shader = ExtResource("2_fp2oq")
@@ -30,7 +30,7 @@ shader_parameter/additional_scroll_speed = 0.07
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qh4d7"]
 shader = ExtResource("4_th2ad")
 
-[node name="Title" type="Node2D" node_paths=PackedStringArray("cloud_back", "cloud_front", "play_button", "credits_button", "close_credits", "credits_menu", "audio")]
+[node name="Title" type="Node2D" node_paths=PackedStringArray("cloud_back", "cloud_front", "play_button", "credits_button", "close_credits", "credits_menu", "transition")]
 script = ExtResource("1_w31pl")
 cloud_back = NodePath("cloud_back")
 cloud_front = NodePath("cloud_front")
@@ -38,7 +38,7 @@ play_button = NodePath("play_button")
 credits_button = NodePath("credits_button")
 close_credits = NodePath("credits_menu/ColorRect/back")
 credits_menu = NodePath("credits_menu")
-audio = NodePath("AudioStreamPlayer")
+transition = NodePath("Transition")
 
 [node name="BackgroundNoStars" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_q2qps")
@@ -74,7 +74,6 @@ texture_normal = ExtResource("6_cwqts")
 texture_pressed = ExtResource("7_th2ad")
 
 [node name="credits_menu" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
@@ -130,11 +129,9 @@ grow_vertical = 0
 texture_normal = ExtResource("8_qh4d7")
 texture_pressed = ExtResource("9_lv7gn")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_kyk5u")
-autoplay = true
+[node name="Transition" parent="." instance=ExtResource("12_th2ad")]
+visible = false
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="credits_button" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="credits_menu/ColorRect/back" to="." method="_on_back_pressed"]
-[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
