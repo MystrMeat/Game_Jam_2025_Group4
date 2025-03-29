@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb1bp6vb5lnwp"]
+
+[ext_resource type="Script" uid="uid://010ublnp8sde" path="res://Scenes/title.gd" id="1_w31pl"]
+
+[node name="Title" type="Node2D"]
+script = ExtResource("1_w31pl")
+
+[node name="cloud_back" type="Node2D" parent="."]
