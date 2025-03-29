@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cb1bp6vb5lnwp"]
+[gd_scene load_steps=12 format=3 uid="uid://cb1bp6vb5lnwp"]
 
 [ext_resource type="Script" uid="uid://010ublnp8sde" path="res://Scripts/title.gd" id="1_w31pl"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_ekrfg"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dosfe35u1iwqc" path="res://Assets/UI/title/button_credits_presed.png" id="7_th2ad"]
 [ext_resource type="Texture2D" uid="uid://yfk3ne47koyi" path="res://Assets/UI/title/button_back_normal.png" id="8_qh4d7"]
 [ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="9_lv7gn"]
+[ext_resource type="AudioStream" uid="uid://bshn6sryxvnkq" path="res://Audio/opening screen.wav" id="10_kyk5u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q2qps"]
 shader = ExtResource("2_fp2oq")
@@ -115,6 +116,10 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("8_qh4d7")
 texture_pressed = ExtResource("9_lv7gn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_kyk5u")
+autoplay = true
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="credits_button" to="." method="_on_credits_pressed"]
