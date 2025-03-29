@@ -25,7 +25,7 @@ shader_parameter/near_stars_color = Color(1, 1, 1, 1)
 shader_parameter/base_scroll_speed = 0.02
 shader_parameter/additional_scroll_speed = 0.07
 
-[node name="Title" type="Node2D" node_paths=PackedStringArray("cloud_back", "cloud_front", "play_button", "credits_button", "close_credits", "credits_menu")]
+[node name="Title" type="Node2D" node_paths=PackedStringArray("cloud_back", "cloud_front", "play_button", "credits_button", "close_credits", "credits_menu", "audio")]
 script = ExtResource("1_w31pl")
 cloud_back = NodePath("cloud_back")
 cloud_front = NodePath("cloud_front")
@@ -33,6 +33,7 @@ play_button = NodePath("play_button")
 credits_button = NodePath("credits_button")
 close_credits = NodePath("credits_menu/ColorRect/back")
 credits_menu = NodePath("credits_menu")
+audio = NodePath("AudioStreamPlayer")
 
 [node name="BackgroundNoStars" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_q2qps")
@@ -124,3 +125,4 @@ autoplay = true
 [connection signal="pressed" from="play_button" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="credits_button" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="credits_menu/ColorRect/back" to="." method="_on_back_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
