@@ -10,3 +10,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_koean")
+
+[node name="Player Mass" type="Label" parent="."]
+layout_mode = 0
+offset_left = -372.0
+offset_top = -254.0
+offset_right = -332.0
+offset_bottom = -231.0
+theme_override_colors/font_color = Color(0.911738, 0.280682, 0, 1)
+text = "0"
+
+[node name="Player Money" type="Label" parent="."]
+layout_mode = 0
+offset_left = -324.0
+offset_top = -254.0
+offset_right = -284.0
+offset_bottom = -231.0
+theme_override_colors/font_color = Color(0, 0.749434, 1.92523e-06, 1)
+text = "0"
