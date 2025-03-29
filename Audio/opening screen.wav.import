@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bshn6sryxvnkq"
+path="res://.godot/imported/opening screen.wav-57f66b7de64c8571719f17a303953181.sample"
+
+[deps]
+
+source_file="res://Audio/opening screen.wav"
+dest_files=["res://.godot/imported/opening screen.wav-57f66b7de64c8571719f17a303953181.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
