@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cauce3wkgdp8y"]
+
+[node name="Black Hole" type="Node2D"]
+
+[node name="BlackHoleBack" type="Sprite2D" parent="."]
+
+[node name="BlackHoleMid" type="Sprite2D" parent="."]
+
+[node name="BlackHoleFront" type="Sprite2D" parent="."]
