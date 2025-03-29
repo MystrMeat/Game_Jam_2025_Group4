@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlymn3psdev4o"
-path="res://.godot/imported/wheel.png-5e9c155066dc83fa826210d8447c2551.ctex"
+uid="uid://dosfe35u1iwqc"
+path="res://.godot/imported/button_credits_presed.png-ed6a0655284b30e5cf5e45b467ea6cb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/game/wheel.png"
-dest_files=["res://.godot/imported/wheel.png-5e9c155066dc83fa826210d8447c2551.ctex"]
+source_file="res://Assets/UI/title/button_credits_presed.png"
+dest_files=["res://.godot/imported/button_credits_presed.png-ed6a0655284b30e5cf5e45b467ea6cb2.ctex"]
 
 [params]
 

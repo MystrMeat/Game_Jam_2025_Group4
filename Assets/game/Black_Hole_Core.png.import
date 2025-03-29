@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyh4rng82tbln"
-path="res://.godot/imported/Roulette Template.png-c1d88cdcf3fecdf229b84d26733dfd9f.ctex"
+uid="uid://cxfcjie0nkavc"
+path="res://.godot/imported/Black_Hole_Core.png-4f74d8a9a89e318f22db8bc1a9c3ecf9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/game/Roulette Template.png"
-dest_files=["res://.godot/imported/Roulette Template.png-c1d88cdcf3fecdf229b84d26733dfd9f.ctex"]
+source_file="res://Assets/game/Black_Hole_Core.png"
+dest_files=["res://.godot/imported/Black_Hole_Core.png-4f74d8a9a89e318f22db8bc1a9c3ecf9.ctex"]
 
 [params]
 
