@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3njkcwdvyclr"]
+[gd_scene load_steps=5 format=3 uid="uid://d3njkcwdvyclr"]
 
 [ext_resource type="PackedScene" uid="uid://ejjh63y8scsy" path="res://Scenes/ball.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bsreyydqg7aet" path="res://Scripts/game.gd" id="1_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="2_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://cauce3wkgdp8y" path="res://Scenes/black_hole.tscn" id="4_3dryh"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_qxrlw")
@@ -10,5 +11,8 @@ script = ExtResource("1_qxrlw")
 [node name="Global" parent="." instance=ExtResource("2_wrm1d")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Black Hole" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(5, -7)
 
 [node name="Ball" parent="." instance=ExtResource("1_ebmjs")]

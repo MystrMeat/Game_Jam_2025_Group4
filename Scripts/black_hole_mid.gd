@@ -1,9 +1,7 @@
-extends Node2D
+extends Sprite2D
 
 var d := 0.0
-var radius := 265
-var speed := 2
-
+var speed := 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,7 +13,6 @@ func _process(delta: float) -> void:
 	d += delta
 	
 	position = Vector2(
-		sin(d * speed) * radius,
-		cos(d * speed) * radius
+		sin(d * speed),
+		cos(d * speed)
 	)
-	
