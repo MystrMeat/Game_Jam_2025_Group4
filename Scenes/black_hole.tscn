@@ -1,9 +1,16 @@
-[gd_scene format=3 uid="uid://cauce3wkgdp8y"]
+[gd_scene load_steps=4 format=3 uid="uid://cauce3wkgdp8y"]
+
+[ext_resource type="Texture2D" uid="uid://bgcw4dluyiju8" path="res://Assets/game/Black_Hole_Background.png" id="1_hjqa0"]
+[ext_resource type="Texture2D" uid="uid://cxfcjie0nkavc" path="res://Assets/game/Black_Hole_Core.png" id="2_cv587"]
+[ext_resource type="Texture2D" uid="uid://b37ncaes01210" path="res://Assets/game/Black_Hole_Foreground.png" id="3_wn18u"]
 
 [node name="Black Hole" type="Node2D"]
 
 [node name="BlackHoleBack" type="Sprite2D" parent="."]
+texture = ExtResource("1_hjqa0")
 
 [node name="BlackHoleMid" type="Sprite2D" parent="."]
+texture = ExtResource("2_cv587")
 
 [node name="BlackHoleFront" type="Sprite2D" parent="."]
+texture = ExtResource("3_wn18u")
