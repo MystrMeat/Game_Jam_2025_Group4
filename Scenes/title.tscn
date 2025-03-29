@@ -1,0 +1,111 @@
+[gd_scene load_steps=6 format=3 uid="uid://cb1bp6vb5lnwp"]
+
+[ext_resource type="Script" uid="uid://010ublnp8sde" path="res://Scenes/title.gd" id="1_w31pl"]
+[ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_ekrfg"]
+[ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_fp2oq"]
+[ext_resource type="Texture2D" uid="uid://cp0dxx5pww388" path="res://icon.svg" id="4_q2qps"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q2qps"]
+shader = ExtResource("2_fp2oq")
+shader_parameter/dimensions = Vector2(1024, 600)
+shader_parameter/small_stars = 50.0
+shader_parameter/small_stars_far_size = 0.3
+shader_parameter/small_stars_near_size = 0.4
+shader_parameter/large_stars = 8.0
+shader_parameter/large_stars_far_size = 0.1
+shader_parameter/large_stars_near_size = 0.2
+shader_parameter/far_stars_color = Color(0.5, 0, 1, 1)
+shader_parameter/near_stars_color = Color(1, 1, 1, 1)
+shader_parameter/base_scroll_speed = 0.02
+shader_parameter/additional_scroll_speed = 0.07
+
+[node name="Title" type="Node2D" node_paths=PackedStringArray("cloud_back", "cloud_front", "play_button", "credits_button", "close_credits", "credits_menu")]
+script = ExtResource("1_w31pl")
+cloud_back = NodePath("cloud_back")
+cloud_front = NodePath("cloud_front")
+play_button = NodePath("play_button")
+credits_button = NodePath("credits_button")
+close_credits = NodePath("credits_menu/ColorRect/back")
+credits_menu = NodePath("credits_menu")
+
+[node name="BackgroundNoStars" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_q2qps")
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ekrfg")
+
+[node name="cloud_back" type="Node2D" parent="."]
+
+[node name="cloud_front" type="Node2D" parent="."]
+
+[node name="play_button" type="TextureButton" parent="."]
+offset_left = 882.0
+offset_top = 297.0
+offset_right = 1010.0
+offset_bottom = 425.0
+texture_normal = ExtResource("4_q2qps")
+
+[node name="credits_button" type="TextureButton" parent="."]
+offset_left = 881.0
+offset_top = 459.0
+offset_right = 1009.0
+offset_bottom = 587.0
+texture_normal = ExtResource("4_q2qps")
+
+[node name="credits_menu" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="credits_menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.103
+anchor_top = 0.113
+anchor_right = 0.874
+anchor_bottom = 0.898
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0196078, 0.0352941, 0.117647, 0.741176)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credits_menu/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.068
+anchor_right = 0.955
+anchor_bottom = 0.92
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Credits
+
+Programming
+MysterMeat, StR-Lite
+
+Design
+Crowbird, StR-Lite
+
+Audio
+Crowbird
+
+Illustration
+Griffingalactic[/center]"
+
+[node name="back" type="TextureButton" parent="credits_menu/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.341
+anchor_top = 0.966
+anchor_right = 0.637
+anchor_bottom = 0.966
+offset_top = -128.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("4_q2qps")
+
+[connection signal="pressed" from="play_button" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="credits_button" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="credits_menu/ColorRect/back" to="." method="_on_back_pressed"]
