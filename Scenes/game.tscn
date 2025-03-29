@@ -1,18 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3njkcwdvyclr"]
+[gd_scene load_steps=8 format=3 uid="uid://d3njkcwdvyclr"]
 
 [ext_resource type="PackedScene" uid="uid://ejjh63y8scsy" path="res://Scenes/ball.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bsreyydqg7aet" path="res://Scripts/game.gd" id="1_qxrlw"]
+[ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_i6g32"]
 [ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="2_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="3_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://cauce3wkgdp8y" path="res://Scenes/black_hole.tscn" id="4_3dryh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v158k"]
+shader = ExtResource("2_i6g32")
+shader_parameter/dimensions = Vector2(1024, 600)
+shader_parameter/small_stars = 50.0
+shader_parameter/small_stars_far_size = 0.3
+shader_parameter/small_stars_near_size = 0.4
+shader_parameter/large_stars = 8.0
+shader_parameter/large_stars_far_size = 0.1
+shader_parameter/large_stars_near_size = 0.2
+shader_parameter/far_stars_color = Color(0.5, 0, 1, 1)
+shader_parameter/near_stars_color = Color(1, 1, 1, 1)
+shader_parameter/base_scroll_speed = 0.02
+shader_parameter/additional_scroll_speed = 0.07
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_qxrlw")
+
+[node name="BackgroundNoStars" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_v158k")
+position = Vector2(1, 1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_1l0tm")
 
 [node name="Global" parent="." instance=ExtResource("2_wrm1d")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Black Hole" parent="." instance=ExtResource("4_3dryh")]
-position = Vector2(5, -7)
+position = Vector2(-192, 0)
 
 [node name="Ball" parent="." instance=ExtResource("1_ebmjs")]

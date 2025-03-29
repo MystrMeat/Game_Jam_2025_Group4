@@ -33,7 +33,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_ce3w2")
 
 [node name="Button Timer" type="Timer" parent="."]
-wait_time = 0.04
+wait_time = 0.255
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
@@ -74,10 +74,6 @@ texture_normal = ExtResource("7_yhxw7")
 texture_pressed = ExtResource("8_trj04")
 stretch_mode = 3
 
-[node name="Credits" type="Button" parent="Main Menu Options/VBoxContainer"]
-layout_mode = 2
-text = "Credits"
-
 [node name="Exit" type="Button" parent="Main Menu Options/VBoxContainer"]
 layout_mode = 2
 text = "Exit"
@@ -87,5 +83,4 @@ text = "Exit"
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="Main Menu Options/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

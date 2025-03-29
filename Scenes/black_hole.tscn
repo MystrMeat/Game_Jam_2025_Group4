@@ -8,14 +8,14 @@
 [node name="Black Hole" type="Node2D"]
 
 [node name="BlackHoleBack" type="Sprite2D" parent="."]
-scale = Vector2(0.199999, 0.197012)
+scale = Vector2(0.0407862, 0.0399974)
 texture = ExtResource("1_hjqa0")
 
 [node name="BlackHoleMid" type="Sprite2D" parent="."]
-scale = Vector2(0.199999, 0.197012)
+scale = Vector2(0.0407862, 0.0399974)
 texture = ExtResource("2_cv587")
 script = ExtResource("3_cv587")
 
 [node name="BlackHoleFront" type="Sprite2D" parent="."]
-scale = Vector2(0.199999, 0.197012)
+scale = Vector2(0.0407862, 0.0399974)
 texture = ExtResource("3_wn18u")
