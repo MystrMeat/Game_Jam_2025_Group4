@@ -13,20 +13,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_shop_pressed() -> void: # shop menu pressed on main menu
-	button_timer.start()
-	n = 3
-
-
-func _on_options_pressed() -> void: # options menu pressed on main menu
-	pass
-
-
-func _on_exit_pressed() -> void: # exit pressed on main menu
-	button_timer.start()
-	n = 1
-
-
 func _on_button_timer_timeout() -> void:
 	if n == 1: # exit game
 		get_tree().quit()
@@ -44,3 +30,14 @@ func _on_play_button_pressed() -> void: # play pressed on main menu
 func _on_credits_button_pressed() -> void: # credit screen pressed
 	button_timer.start()
 	n = 4
+
+func _on_shop_button_pressed() -> void: # shop menu pressed on main menu
+	button_timer.start()
+	n = 3
+	
+func _on_options_button_pressed() -> void: # options on main menu
+	pass # Replace with function body.
+
+func _on_exit_button_pressed() -> void: # exit pressed on main menu
+	button_timer.start()
+	n = 1

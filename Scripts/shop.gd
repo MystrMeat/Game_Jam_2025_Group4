@@ -11,10 +11,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_back_pressed() -> void: # back pressed on shop screen
-	timer.start()
-
 func _on_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 
@@ -42,3 +38,6 @@ func _on_purchase_1000_pressed() -> void:
 
 func _on_purchase_2000_pressed() -> void:
 	global.purchase2000()
+
+func _on_back_button_pressed() -> void: # back pressed on shop screen
+	timer.start()

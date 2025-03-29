@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0pbhgx1cs4wi"]
+[gd_scene load_steps=10 format=3 uid="uid://b0pbhgx1cs4wi"]
 
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="1_2shtd"]
 [ext_resource type="Script" uid="uid://m8oqp3hg1n1w" path="res://Scripts/shop.gd" id="1_fdj0q"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_io27d"]
 [ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="3_io27d"]
+[ext_resource type="Texture2D" uid="uid://yfk3ne47koyi" path="res://Assets/UI/title/button_back_normal.png" id="4_3ps1r"]
+[ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="5_ymrm4"]
+[ext_resource type="Theme" uid="uid://byr2us48h4awc" path="res://Shaders/button_theme.tres" id="7_ymrm4"]
+[ext_resource type="FontFile" uid="uid://c235vknrpwev6" path="res://Assets/castiron-condensed.otf" id="8_s8dlv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fdj0q"]
 shader = ExtResource("1_2shtd")
@@ -41,20 +45,22 @@ texture = ExtResource("2_io27d")
 position = Vector2(1, 0)
 zoom = Vector2(1.5, 1.5)
 
-[node name="Back" type="Button" parent="."]
-layout_mode = 0
-offset_left = -22.0
-offset_top = 134.0
-offset_right = 23.0
-offset_bottom = 165.0
-text = "Back"
-
 [node name="Global" parent="." instance=ExtResource("3_io27d")]
 layout_mode = 1
-offset_left = 19.0
-offset_top = 45.0
-offset_right = 19.0
-offset_bottom = 45.0
+offset_left = 20.0
+offset_top = 87.0
+offset_right = 20.0
+offset_bottom = 87.0
+
+[node name="back_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -346.0
+offset_top = 119.0
+offset_right = -190.0
+offset_bottom = 188.0
+texture_normal = ExtResource("4_3ps1r")
+texture_pressed = ExtResource("5_ymrm4")
+stretch_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -63,12 +69,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -935.0
-offset_top = -541.0
-offset_right = -217.0
-offset_bottom = -205.0
+offset_left = -890.0
+offset_top = -493.0
+offset_right = -172.0
+offset_bottom = -289.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.315, 1.315)
 
 [node name="Buying Options" type="GridContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -80,46 +87,59 @@ columns = 4
 
 [node name="Purchase 10" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+theme = ExtResource("7_ymrm4")
 text = "10 Kg"
+icon_alignment = 1
 
 [node name="Purchase 20" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+theme = ExtResource("7_ymrm4")
 text = "20 Kg"
+icon_alignment = 1
 
 [node name="Purchase 50" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+theme = ExtResource("7_ymrm4")
 text = "50 Kg"
 
 [node name="Purchase 100" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+theme = ExtResource("7_ymrm4")
 text = "100 Kg"
 
 [node name="Purchase 200" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+theme = ExtResource("7_ymrm4")
 text = "200 Kg"
 
 [node name="Purchase 500" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+theme = ExtResource("7_ymrm4")
 text = "500 Kg"
 
 [node name="Purchase 1000" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+theme = ExtResource("7_ymrm4")
 text = "1000 Kg"
 
 [node name="Purchase 2000" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+theme = ExtResource("7_ymrm4")
 text = "2000 Kg"
 
 [node name="Currency conversion" type="Label" parent="."]
 layout_mode = 0
-offset_left = -359.0
-offset_top = -160.0
-offset_right = -264.0
-offset_bottom = -137.0
+offset_left = 94.0
+offset_top = -201.0
+offset_right = 199.0
+offset_bottom = -159.0
+theme_override_fonts/font = ExtResource("8_s8dlv")
+theme_override_font_sizes/font_size = 35
 text = "$0.25 per Kg"
+horizontal_alignment = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="MarginContainer/Buying Options/Purchase 10" to="." method="_on_purchase_10_pressed"]
 [connection signal="pressed" from="MarginContainer/Buying Options/Purchase 20" to="." method="_on_purchase_20_pressed"]
 [connection signal="pressed" from="MarginContainer/Buying Options/Purchase 50" to="." method="_on_purchase_50_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c34qdg3a6yjc3"]
+[gd_scene load_steps=16 format=3 uid="uid://c34qdg3a6yjc3"]
 
 [ext_resource type="Script" uid="uid://bb8onw2y5qw06" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_1ehe0"]
@@ -6,8 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="3_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://cuahr2ccc5ulh" path="res://Assets/UI/title/button_play_normal.png" id="5_opfnp"]
 [ext_resource type="Texture2D" uid="uid://bofw31n8x1hlp" path="res://Assets/UI/title/button_play_pressed.png" id="6_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://brgxb45po5knn" path="res://Assets/UI/main_menu/button_shop_normal.png" id="7_16hvj"]
 [ext_resource type="Texture2D" uid="uid://buocmlt2h13jj" path="res://Assets/UI/title/button_credits_normal.png" id="7_yhxw7"]
 [ext_resource type="Texture2D" uid="uid://dosfe35u1iwqc" path="res://Assets/UI/title/button_credits_presed.png" id="8_trj04"]
+[ext_resource type="Texture2D" uid="uid://75a2pox475ji" path="res://Assets/UI/main_menu/button_shop_pressed.png" id="8_vr1f0"]
+[ext_resource type="Texture2D" uid="uid://45rgh4mkcbow" path="res://Assets/UI/main_menu/button_options_normal.png" id="9_vtepg"]
+[ext_resource type="Texture2D" uid="uid://be0i28vy3nco2" path="res://Assets/UI/main_menu/button_options_pressed.png" id="10_8dnnj"]
+[ext_resource type="Texture2D" uid="uid://be3ulhqsgxojw" path="res://Assets/UI/main_menu/button_exit_normal.png" id="13_m3bi6"]
+[ext_resource type="Texture2D" uid="uid://dj6te2b0ixvxy" path="res://Assets/UI/main_menu/button_exit_pressed.png" id="14_wyh8j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
 shader = ExtResource("2_1ehe0")
@@ -39,16 +45,16 @@ wait_time = 0.255
 zoom = Vector2(1.5, 1.5)
 
 [node name="Global" parent="." instance=ExtResource("2_ce3w2")]
-offset_left = 0.0
-offset_top = 49.0
-offset_right = 0.0
-offset_bottom = 49.0
+offset_left = 5.0
+offset_top = 84.0
+offset_right = 5.0
+offset_bottom = 84.0
 
 [node name="Main Menu Options" type="MarginContainer" parent="."]
-offset_left = -134.0
-offset_top = -88.0
-offset_right = 136.0
-offset_bottom = 83.0
+offset_left = 139.0
+offset_top = -180.0
+offset_right = 409.0
+offset_bottom = 181.0
 size_flags_horizontal = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Main Menu Options"]
@@ -60,13 +66,17 @@ texture_normal = ExtResource("5_opfnp")
 texture_pressed = ExtResource("6_cp0ys")
 stretch_mode = 3
 
-[node name="Shop" type="Button" parent="Main Menu Options/VBoxContainer"]
+[node name="shop_button" type="TextureButton" parent="Main Menu Options/VBoxContainer"]
 layout_mode = 2
-text = "Shop"
+texture_normal = ExtResource("7_16hvj")
+texture_pressed = ExtResource("8_vr1f0")
+stretch_mode = 3
 
-[node name="Options" type="Button" parent="Main Menu Options/VBoxContainer"]
+[node name="options_button" type="TextureButton" parent="Main Menu Options/VBoxContainer"]
 layout_mode = 2
-text = "Options"
+texture_normal = ExtResource("9_vtepg")
+texture_pressed = ExtResource("10_8dnnj")
+stretch_mode = 3
 
 [node name="credits_button" type="TextureButton" parent="Main Menu Options/VBoxContainer"]
 layout_mode = 2
@@ -74,13 +84,15 @@ texture_normal = ExtResource("7_yhxw7")
 texture_pressed = ExtResource("8_trj04")
 stretch_mode = 3
 
-[node name="Exit" type="Button" parent="Main Menu Options/VBoxContainer"]
+[node name="exit_button" type="TextureButton" parent="Main Menu Options/VBoxContainer"]
 layout_mode = 2
-text = "Exit"
+texture_normal = ExtResource("13_m3bi6")
+texture_pressed = ExtResource("14_wyh8j")
+stretch_mode = 3
 
 [connection signal="timeout" from="Button Timer" to="." method="_on_button_timer_timeout"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Main Menu Options/VBoxContainer/Shop" to="." method="_on_shop_pressed"]
-[connection signal="pressed" from="Main Menu Options/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Main Menu Options/VBoxContainer/shop_button" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="Main Menu Options/VBoxContainer/options_button" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="Main Menu Options/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Main Menu Options/VBoxContainer/exit_button" to="." method="_on_exit_button_pressed"]

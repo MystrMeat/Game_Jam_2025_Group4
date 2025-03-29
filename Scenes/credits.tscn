@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjrlj4jopg1qs"]
+[gd_scene load_steps=7 format=3 uid="uid://bjrlj4jopg1qs"]
 
 [ext_resource type="Script" uid="uid://d1h2c5roguy2f" path="res://Scripts/credits.gd" id="1_ccovl"]
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="1_gryuy"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_ccovl"]
+[ext_resource type="Texture2D" uid="uid://yfk3ne47koyi" path="res://Assets/UI/title/button_back_normal.png" id="4_xelri"]
+[ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="5_uah1q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bamb"]
 shader = ExtResource("1_gryuy")
@@ -71,13 +73,14 @@ Crowbird
 Illustration
 Griffingalactic[/center]"
 
-[node name="Back" type="Button" parent="credits_menu/ColorRect"]
-layout_mode = 0
-offset_left = 400.0
-offset_top = 404.0
-offset_right = 481.0
-offset_bottom = 442.0
-text = "Back"
+[node name="back_button" type="TextureButton" parent="credits_menu/ColorRect"]
+offset_left = 367.344
+offset_top = 390.776
+offset_right = 523.344
+offset_bottom = 459.776
+texture_normal = ExtResource("4_xelri")
+texture_pressed = ExtResource("5_uah1q")
+stretch_mode = 3
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="credits_menu/ColorRect/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="credits_menu/ColorRect/back_button" to="." method="_on_back_button_pressed"]
