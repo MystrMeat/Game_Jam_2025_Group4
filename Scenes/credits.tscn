@@ -74,6 +74,7 @@ Illustration
 Griffingalactic[/center]"
 
 [node name="back_button" type="TextureButton" parent="credits_menu/ColorRect"]
+layout_mode = 0
 offset_left = 367.344
 offset_top = 390.776
 offset_right = 523.344

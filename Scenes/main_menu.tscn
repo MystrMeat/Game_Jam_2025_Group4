@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c34qdg3a6yjc3"]
+[gd_scene load_steps=19 format=3 uid="uid://c34qdg3a6yjc3"]
 
 [ext_resource type="Script" uid="uid://bb8onw2y5qw06" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_1ehe0"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://be0i28vy3nco2" path="res://Assets/UI/main_menu/button_options_pressed.png" id="10_8dnnj"]
 [ext_resource type="Texture2D" uid="uid://be3ulhqsgxojw" path="res://Assets/UI/main_menu/button_exit_normal.png" id="13_m3bi6"]
 [ext_resource type="Texture2D" uid="uid://dj6te2b0ixvxy" path="res://Assets/UI/main_menu/button_exit_pressed.png" id="14_wyh8j"]
+[ext_resource type="Shader" uid="uid://dv82snil5dlry" path="res://Shaders/hard_light.gdshader" id="15_m3bi6"]
+[ext_resource type="Texture2D" uid="uid://dimxbhhtr7fjq" path="res://Assets/title_screen/title_screen_balck_hole.png" id="16_wyh8j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
 shader = ExtResource("2_1ehe0")
@@ -28,6 +30,9 @@ shader_parameter/far_stars_color = Color(0.5, 0, 1, 1)
 shader_parameter/near_stars_color = Color(1, 1, 1, 1)
 shader_parameter/base_scroll_speed = 0.02
 shader_parameter/additional_scroll_speed = 0.07
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ujyyl"]
+shader = ExtResource("15_m3bi6")
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_28flt")
@@ -45,10 +50,10 @@ wait_time = 0.255
 zoom = Vector2(1.5, 1.5)
 
 [node name="Global" parent="." instance=ExtResource("2_ce3w2")]
-offset_left = 5.0
-offset_top = 84.0
-offset_right = 5.0
-offset_bottom = 84.0
+offset_left = 15.0
+offset_top = 353.0
+offset_right = 15.0
+offset_bottom = 353.0
 
 [node name="Main Menu Options" type="MarginContainer" parent="."]
 offset_left = 139.0
@@ -89,6 +94,13 @@ layout_mode = 2
 texture_normal = ExtResource("13_m3bi6")
 texture_pressed = ExtResource("14_wyh8j")
 stretch_mode = 3
+
+[node name="TitleScreenBalckHole" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_ujyyl")
+position = Vector2(-141, -124)
+scale = Vector2(0.222837, 0.222837)
+texture = ExtResource("16_wyh8j")
 
 [connection signal="timeout" from="Button Timer" to="." method="_on_button_timer_timeout"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]

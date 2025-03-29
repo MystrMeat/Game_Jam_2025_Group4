@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3njkcwdvyclr"]
+[gd_scene load_steps=9 format=3 uid="uid://d3njkcwdvyclr"]
 
 [ext_resource type="PackedScene" uid="uid://ejjh63y8scsy" path="res://Scenes/ball.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bsreyydqg7aet" path="res://Scripts/game.gd" id="1_qxrlw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="2_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="3_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://cauce3wkgdp8y" path="res://Scenes/black_hole.tscn" id="4_3dryh"]
+[ext_resource type="Theme" uid="uid://byr2us48h4awc" path="res://Shaders/button_theme.tres" id="7_1l0tm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v158k"]
 shader = ExtResource("2_i6g32")
@@ -31,14 +32,148 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_1l0tm")
 
 [node name="Global" parent="." instance=ExtResource("2_wrm1d")]
-offset_left = -173.0
-offset_top = -14.0
-offset_right = -173.0
-offset_bottom = -14.0
+offset_left = -169.0
+offset_top = 451.0
+offset_right = -169.0
+offset_bottom = 451.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Black Hole" parent="." instance=ExtResource("4_3dryh")]
-position = Vector2(-192, 0)
+position = Vector2(-297, -90)
 
 [node name="Ball" parent="." instance=ExtResource("1_ebmjs")]
+
+[node name="InOutBet" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 109.0
+offset_top = 30.0
+offset_right = 310.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.76, 1.76)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InOutBet"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Bet Inside" type="Button" parent="InOutBet/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Inside"
+
+[node name="Bet Outside" type="Button" parent="InOutBet/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Outside"
+
+[node name="InBet" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = 121.0
+offset_right = 345.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.64772, 1.64772)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GridContainer" type="GridContainer" parent="InBet"]
+layout_mode = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 3
+
+[node name="Line" type="Button" parent="InBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Line"
+
+[node name="Bet Corner" type="Button" parent="InBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Corner"
+
+[node name="Bet Street" type="Button" parent="InBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Street"
+
+[node name="Bet Split" type="Button" parent="InBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Split"
+
+[node name="Bet Zero" type="Button" parent="InBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Zero"
+
+[node name="Bet Number" type="Button" parent="InBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Number"
+
+[node name="OutBet" type="MarginContainer" parent="."]
+visible = false
+offset_left = 73.0
+offset_top = 104.0
+offset_right = 352.0
+offset_bottom = 235.0
+scale = Vector2(1.60475, 1.49752)
+
+[node name="GridContainer" type="GridContainer" parent="OutBet"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 3
+
+[node name="Bet Red" type="Button" parent="OutBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Red"
+
+[node name="Bet Black" type="Button" parent="OutBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Black"
+
+[node name="Bet Odd" type="Button" parent="OutBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Odd"
+
+[node name="Bet Even" type="Button" parent="OutBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Even"
+
+[node name="Bet Low" type="Button" parent="OutBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Low"
+
+[node name="Bet High" type="Button" parent="OutBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet High"
+
+[node name="Bet Dozen" type="Button" parent="OutBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+text = "Bet Dozen"

@@ -50,7 +50,7 @@ texture = ExtResource("2_ekrfg")
 
 [node name="TitleScreenBalckHole" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_qh4d7")
-position = Vector2(428, 278)
+position = Vector2(445, 222)
 scale = Vector2(0.269896, 0.269896)
 texture = ExtResource("4_cwqts")
 
