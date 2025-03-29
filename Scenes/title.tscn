@@ -1,11 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://cb1bp6vb5lnwp"]
+[gd_scene load_steps=13 format=3 uid="uid://cb1bp6vb5lnwp"]
 
 [ext_resource type="Script" uid="uid://010ublnp8sde" path="res://Scripts/title.gd" id="1_w31pl"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_ekrfg"]
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_fp2oq"]
 [ext_resource type="Texture2D" uid="uid://cuahr2ccc5ulh" path="res://Assets/UI/title/button_play_normal.png" id="4_6aagf"]
-[ext_resource type="Texture2D" uid="uid://dimxbhhtr7fjq" path="res://Assets/title_screen/title_screen_balck_hole.png" id="4_cwqts"]
-[ext_resource type="Shader" uid="uid://dv82snil5dlry" path="res://Shaders/hard_light.gdshader" id="4_th2ad"]
+[ext_resource type="Texture2D" uid="uid://c72v86gqm7ndy" path="res://Assets/title_screen/TITLE.png" id="4_cwqts"]
 [ext_resource type="Texture2D" uid="uid://bofw31n8x1hlp" path="res://Assets/UI/title/button_play_pressed.png" id="5_kyk5u"]
 [ext_resource type="Texture2D" uid="uid://buocmlt2h13jj" path="res://Assets/UI/title/button_credits_normal.png" id="6_cwqts"]
 [ext_resource type="Texture2D" uid="uid://dosfe35u1iwqc" path="res://Assets/UI/title/button_credits_presed.png" id="7_th2ad"]
@@ -27,9 +26,6 @@ shader_parameter/near_stars_color = Color(1, 1, 1, 1)
 shader_parameter/base_scroll_speed = 0.02
 shader_parameter/additional_scroll_speed = 0.07
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_qh4d7"]
-shader = ExtResource("4_th2ad")
-
 [node name="Title" type="Node2D" node_paths=PackedStringArray("cloud_back", "cloud_front", "play_button", "credits_button", "close_credits", "credits_menu", "audio")]
 script = ExtResource("1_w31pl")
 cloud_back = NodePath("cloud_back")
@@ -48,10 +44,9 @@ texture = ExtResource("2_ekrfg")
 
 [node name="cloud_back" type="Node2D" parent="."]
 
-[node name="TitleScreenBalckHole" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_qh4d7")
-position = Vector2(445, 222)
-scale = Vector2(0.269896, 0.269896)
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(415, 280)
+scale = Vector2(0.14163, 0.14163)
 texture = ExtResource("4_cwqts")
 
 [node name="cloud_front" type="Node2D" parent="."]
