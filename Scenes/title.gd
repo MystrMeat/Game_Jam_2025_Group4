@@ -4,6 +4,10 @@ extends Node2D
 @onready var fg_cloud = preload("res://Assets/title_screen/Scrolling_Clouds_Foreground.png")
 @export var cloud_back: Node2D
 @export var cloud_front: Node2D
+@export var play_button: TextureButton
+@export var credits_button: TextureButton
+@export var close_credits: TextureButton
+@export var credits_menu: Control
 var bg_cloud_spd = 2
 var fg_cloud_spd = 4
 
@@ -17,7 +21,6 @@ func _ready():
 func _physics_process(_delta):
 	move_cloud_parallax(cloud_back,bg_cloud_spd)
 	move_cloud_parallax(cloud_front,fg_cloud_spd)
-	pass
 
 func spawn_cloud_inst(cloud, x,y, node):
 	var sprite = Sprite2D.new()
@@ -36,3 +39,16 @@ func move_cloud_parallax(node, speed):
 			if node.name == "cloud_front":
 				spawn_cloud_inst(fg_cloud, 3840, 108,cloud_front)
 			cloud.queue_free()
+
+func _on_play_pressed():
+	print("play")
+	pass # Replace with function body.
+
+func _on_credits_pressed():
+	print("credits")
+	credits_menu.show()
+	pass # Replace with function body.
+
+func _on_back_pressed():
+	credits_menu.hide()
+	pass # Replace with function body.
