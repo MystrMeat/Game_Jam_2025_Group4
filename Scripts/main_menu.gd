@@ -13,11 +13,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_play_pressed() -> void: # play pressed on main menu
-	button_timer.start()
-	n = 2
-
-
 func _on_shop_pressed() -> void: # shop menu pressed on main menu
 	button_timer.start()
 	n = 3
@@ -42,8 +37,10 @@ func _on_button_timer_timeout() -> void:
 	elif n == 4: # credits
 		get_tree().change_scene_to_file("res://Scenes/credits.tscn")
 
- 
-func _on_credits_pressed() -> void: # credit screen pressed
+func _on_play_button_pressed() -> void: # play pressed on main menu
+	button_timer.start()
+	n = 2
+
+func _on_credits_button_pressed() -> void: # credit screen pressed
 	button_timer.start()
 	n = 4
-	

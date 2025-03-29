@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://c34qdg3a6yjc3"]
+[gd_scene load_steps=10 format=3 uid="uid://c34qdg3a6yjc3"]
 
 [ext_resource type="Script" uid="uid://bb8onw2y5qw06" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_1ehe0"]
 [ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="2_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="3_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://cuahr2ccc5ulh" path="res://Assets/UI/title/button_play_normal.png" id="5_opfnp"]
+[ext_resource type="Texture2D" uid="uid://bofw31n8x1hlp" path="res://Assets/UI/title/button_play_pressed.png" id="6_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://buocmlt2h13jj" path="res://Assets/UI/title/button_credits_normal.png" id="7_yhxw7"]
+[ext_resource type="Texture2D" uid="uid://dosfe35u1iwqc" path="res://Assets/UI/title/button_credits_presed.png" id="8_trj04"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
 shader = ExtResource("2_1ehe0")
@@ -50,9 +54,11 @@ size_flags_horizontal = 4
 [node name="VBoxContainer" type="VBoxContainer" parent="Main Menu Options"]
 layout_mode = 2
 
-[node name="Play" type="Button" parent="Main Menu Options/VBoxContainer"]
+[node name="play_button" type="TextureButton" parent="Main Menu Options/VBoxContainer"]
 layout_mode = 2
-text = "Play"
+texture_normal = ExtResource("5_opfnp")
+texture_pressed = ExtResource("6_cp0ys")
+stretch_mode = 3
 
 [node name="Shop" type="Button" parent="Main Menu Options/VBoxContainer"]
 layout_mode = 2
@@ -61,6 +67,12 @@ text = "Shop"
 [node name="Options" type="Button" parent="Main Menu Options/VBoxContainer"]
 layout_mode = 2
 text = "Options"
+
+[node name="credits_button" type="TextureButton" parent="Main Menu Options/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("7_yhxw7")
+texture_pressed = ExtResource("8_trj04")
+stretch_mode = 3
 
 [node name="Credits" type="Button" parent="Main Menu Options/VBoxContainer"]
 layout_mode = 2
@@ -71,8 +83,9 @@ layout_mode = 2
 text = "Exit"
 
 [connection signal="timeout" from="Button Timer" to="." method="_on_button_timer_timeout"]
-[connection signal="pressed" from="Main Menu Options/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Main Menu Options/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Main Menu Options/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
