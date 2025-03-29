@@ -1,8 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://cb1bp6vb5lnwp"]
+[gd_scene load_steps=5 format=3 uid="uid://cb1bp6vb5lnwp"]
 
 [ext_resource type="Script" uid="uid://010ublnp8sde" path="res://Scenes/title.gd" id="1_w31pl"]
+[ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_ekrfg"]
+[ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_fp2oq"]
 
-[node name="Title" type="Node2D"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q2qps"]
+shader = ExtResource("2_fp2oq")
+shader_parameter/dimensions = Vector2(1024, 600)
+shader_parameter/small_stars = 50.0
+shader_parameter/small_stars_far_size = 0.3
+shader_parameter/small_stars_near_size = 0.4
+shader_parameter/large_stars = 8.0
+shader_parameter/large_stars_far_size = 0.1
+shader_parameter/large_stars_near_size = 0.2
+shader_parameter/far_stars_color = Color(0.5, 0, 1, 1)
+shader_parameter/near_stars_color = Color(1, 1, 1, 1)
+shader_parameter/base_scroll_speed = 0.02
+shader_parameter/additional_scroll_speed = 0.07
+
+[node name="Title" type="Node2D" node_paths=PackedStringArray("cloud_back", "cloud_front")]
 script = ExtResource("1_w31pl")
+cloud_back = NodePath("cloud_back")
+cloud_front = NodePath("cloud_front")
+
+[node name="BackgroundNoStars" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_q2qps")
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ekrfg")
 
 [node name="cloud_back" type="Node2D" parent="."]
+
+[node name="cloud_front" type="Node2D" parent="."]
