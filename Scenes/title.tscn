@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cb1bp6vb5lnwp"]
 
-[ext_resource type="Script" uid="uid://010ublnp8sde" path="res://Scenes/title.gd" id="1_w31pl"]
+[ext_resource type="Script" uid="uid://010ublnp8sde" path="res://Scripts/title.gd" id="1_w31pl"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_ekrfg"]
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_fp2oq"]
 [ext_resource type="Texture2D" uid="uid://cp0dxx5pww388" path="res://icon.svg" id="4_q2qps"]

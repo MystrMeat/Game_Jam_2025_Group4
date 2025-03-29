@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjrlj4jopg1qs"]
+
+[ext_resource type="Script" uid="uid://d1h2c5roguy2f" path="res://Scripts/credits.gd" id="1_ccovl"]
+[ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="1_gryuy"]
+[ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_ccovl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bamb"]
+shader = ExtResource("1_gryuy")
+shader_parameter/dimensions = Vector2(1024, 600)
+shader_parameter/small_stars = 50.0
+shader_parameter/small_stars_far_size = 0.3
+shader_parameter/small_stars_near_size = 0.4
+shader_parameter/large_stars = 8.0
+shader_parameter/large_stars_far_size = 0.1
+shader_parameter/large_stars_near_size = 0.2
+shader_parameter/far_stars_color = Color(0.5, 0, 1, 1)
+shader_parameter/near_stars_color = Color(1, 1, 1, 1)
+shader_parameter/base_scroll_speed = 0.02
+shader_parameter/additional_scroll_speed = 0.07
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_ccovl")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="BackgroundNoStars" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_1bamb")
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ccovl")
+
+[node name="credits_menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="credits_menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.103
+anchor_top = 0.113
+anchor_right = 0.874
+anchor_bottom = 0.898
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0196078, 0.0352941, 0.117647, 0.741176)
+
+[node name="CreditsTxt" type="RichTextLabel" parent="credits_menu/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03
+anchor_top = 0.068
+anchor_right = 0.955
+anchor_bottom = 0.92
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Credits
+
+Programming
+MysterMeat, StR-Lite
+
+Design
+Crowbird, StR-Lite
+
+Audio
+Crowbird
+
+Illustration
+Griffingalactic[/center]"
+
+[node name="Back" type="Button" parent="credits_menu/ColorRect"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 404.0
+offset_right = 481.0
+offset_bottom = 442.0
+text = "Back"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="credits_menu/ColorRect/Back" to="." method="_on_back_pressed"]

@@ -19,12 +19,12 @@ func _on_play_pressed() -> void: # play pressed on main menu
 
 
 func _on_shop_pressed() -> void: # shop menu pressed on main menu
-	get_tree().change_scene_to_file("res://Scenes/shop.tscn")
+	button_timer.start()
+	n = 3
 
 
 func _on_options_pressed() -> void: # options menu pressed on main menu
-	button_timer.start()
-	n = 3
+	pass
 
 
 func _on_exit_pressed() -> void: # exit pressed on main menu
@@ -33,9 +33,17 @@ func _on_exit_pressed() -> void: # exit pressed on main menu
 
 
 func _on_button_timer_timeout() -> void:
-	if n == 1:
+	if n == 1: # exit game
 		get_tree().quit()
-	elif n == 2:
+	elif n == 2: # play game
 		get_tree().change_scene_to_file("res://Scenes/game.tscn")
-	elif n == 3:
+	elif n == 3: # enter shop
 		get_tree().change_scene_to_file("res://Scenes/shop.tscn")
+	elif n == 4: # credits
+		get_tree().change_scene_to_file("res://Scenes/credits.tscn")
+
+ 
+func _on_credits_pressed() -> void: # credit screen pressed
+	button_timer.start()
+	n = 4
+	

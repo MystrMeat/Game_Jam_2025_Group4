@@ -1,20 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://c34qdg3a6yjc3"]
+[gd_scene load_steps=6 format=3 uid="uid://c34qdg3a6yjc3"]
 
 [ext_resource type="Script" uid="uid://bb8onw2y5qw06" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_1ehe0"]
+[ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="2_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="3_ce3w2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
+shader = ExtResource("2_1ehe0")
+shader_parameter/dimensions = Vector2(1024, 600)
+shader_parameter/small_stars = 50.0
+shader_parameter/small_stars_far_size = 0.3
+shader_parameter/small_stars_near_size = 0.4
+shader_parameter/large_stars = 8.0
+shader_parameter/large_stars_far_size = 0.1
+shader_parameter/large_stars_near_size = 0.2
+shader_parameter/far_stars_color = Color(0.5, 0, 1, 1)
+shader_parameter/near_stars_color = Color(1, 1, 1, 1)
+shader_parameter/base_scroll_speed = 0.02
+shader_parameter/additional_scroll_speed = 0.07
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_28flt")
+
+[node name="BackgroundNoStars" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_n45e2")
+position = Vector2(1, 1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_ce3w2")
 
 [node name="Button Timer" type="Timer" parent="."]
 wait_time = 0.04
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+
+[node name="Global" parent="." instance=ExtResource("2_ce3w2")]
+offset_left = 0.0
+offset_top = 49.0
+offset_right = 0.0
+offset_bottom = 49.0
 
 [node name="Main Menu Options" type="MarginContainer" parent="."]
 offset_left = -134.0
-offset_top = -19.0
+offset_top = -88.0
 offset_right = 136.0
-offset_bottom = 136.0
+offset_bottom = 83.0
 size_flags_horizontal = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Main Menu Options"]
@@ -32,6 +62,10 @@ text = "Shop"
 layout_mode = 2
 text = "Options"
 
+[node name="Credits" type="Button" parent="Main Menu Options/VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
 [node name="Exit" type="Button" parent="Main Menu Options/VBoxContainer"]
 layout_mode = 2
 text = "Exit"
@@ -40,4 +74,5 @@ text = "Exit"
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Main Menu Options/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
