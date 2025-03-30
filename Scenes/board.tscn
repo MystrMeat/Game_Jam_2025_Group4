@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://qrffl8vmj2ys"]
 
 [ext_resource type="Script" uid="uid://rdpgmp7kakk4" path="res://Scripts/board.gd" id="1_2wvcj"]
-[ext_resource type="Texture2D" uid="uid://b1sywgsblc2mi" path="res://Assets/game/Board NewPalette.png" id="2_uh3b8"]
+[ext_resource type="Texture2D" uid="uid://o6r8hr15lrtb" path="res://Assets/game/Board NewPalette FIXED.png" id="2_uh3b8"]
 [ext_resource type="Texture2D" uid="uid://c1lluj5b14hes" path="res://Assets/game/CursorTop.png" id="3_shhme"]
 
 [node name="Board" type="Node2D"]
@@ -11,118 +11,6 @@ script = ExtResource("1_2wvcj")
 position = Vector2(0, -31)
 scale = Vector2(0.839998, 0.839998)
 texture = ExtResource("2_uh3b8")
-
-[node name="Black" type="ColorRect" parent="."]
-offset_left = -49.0
-offset_top = -34.0
-offset_right = -14.0
-offset_bottom = 31.0
-color = Color(0.137255, 0.121569, 0.12549, 1)
-
-[node name="Black2" type="ColorRect" parent="."]
-offset_left = -86.0
-offset_top = -101.0
-offset_right = -51.0
-offset_bottom = -36.0
-color = Color(0.137255, 0.121569, 0.12549, 1)
-
-[node name="Black3" type="ColorRect" parent="."]
-offset_left = -49.0
-offset_top = -167.0
-offset_right = -14.0
-offset_bottom = -102.0
-color = Color(0.137255, 0.121569, 0.12549, 1)
-
-[node name="Black4" type="ColorRect" parent="."]
-offset_left = -11.0
-offset_top = -101.0
-offset_right = 24.0
-offset_bottom = -36.0
-color = Color(0.137255, 0.121569, 0.12549, 1)
-
-[node name="Black5" type="ColorRect" parent="."]
-offset_left = 140.0
-offset_top = -101.0
-offset_right = 175.0
-offset_bottom = -36.0
-color = Color(0.137255, 0.121569, 0.12549, 1)
-
-[node name="Black6" type="ColorRect" parent="."]
-offset_left = 178.0
-offset_top = -34.0
-offset_right = 213.0
-offset_bottom = 31.0
-color = Color(0.137255, 0.121569, 0.12549, 1)
-
-[node name="Black7" type="ColorRect" parent="."]
-offset_left = 178.0
-offset_top = -167.0
-offset_right = 213.0
-offset_bottom = -102.0
-color = Color(0.137255, 0.121569, 0.12549, 1)
-
-[node name="Black8" type="ColorRect" parent="."]
-offset_left = 216.0
-offset_top = -101.0
-offset_right = 251.0
-offset_bottom = -36.0
-color = Color(0.137255, 0.121569, 0.12549, 1)
-
-[node name="Red" type="ColorRect" parent="."]
-offset_left = 216.0
-offset_top = -168.0
-offset_right = 251.0
-offset_bottom = -103.0
-color = Color(0.529412, 0.219608, 0.368627, 1)
-
-[node name="Red2" type="ColorRect" parent="."]
-offset_left = 216.0
-offset_top = -34.0
-offset_right = 251.0
-offset_bottom = 31.0
-color = Color(0.529412, 0.219608, 0.368627, 1)
-
-[node name="Red3" type="ColorRect" parent="."]
-offset_left = 178.0
-offset_top = -101.0
-offset_right = 213.0
-offset_bottom = -36.0
-color = Color(0.529412, 0.219608, 0.368627, 1)
-
-[node name="Red4" type="ColorRect" parent="."]
-offset_left = 140.0
-offset_top = -168.0
-offset_right = 175.0
-offset_bottom = -103.0
-color = Color(0.529412, 0.219608, 0.368627, 1)
-
-[node name="Red5" type="ColorRect" parent="."]
-offset_left = -11.0
-offset_top = -168.0
-offset_right = 24.0
-offset_bottom = -103.0
-color = Color(0.529412, 0.219608, 0.368627, 1)
-
-[node name="Red6" type="ColorRect" parent="."]
-offset_left = -11.0
-offset_top = -34.0
-offset_right = 24.0
-offset_bottom = 31.0
-color = Color(0.529412, 0.219608, 0.368627, 1)
-
-[node name="Red7" type="ColorRect" parent="."]
-offset_left = -49.0
-offset_top = -100.0
-offset_right = -14.0
-offset_bottom = -35.0
-color = Color(0.529412, 0.219608, 0.368627, 1)
-
-[node name="Red8" type="ColorRect" parent="."]
-offset_left = -87.0
-offset_top = -168.0
-offset_right = -52.0
-offset_bottom = -103.0
-color = Color(0.529412, 0.219608, 0.368627, 1)
 
 [node name="1st12" type="Label" parent="."]
 offset_left = -158.0
@@ -229,9 +117,9 @@ text = "2 to 1"
 
 [node name="0" type="Label" parent="."]
 offset_left = -286.0
-offset_top = -50.0
+offset_top = -52.0
 offset_right = -246.0
-offset_bottom = -22.0
+offset_bottom = -24.0
 rotation = -1.5708
 scale = Vector2(2.77941, 2.77941)
 theme_override_font_sizes/font_size = 20
@@ -692,9 +580,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 168.0
-offset_top = 20.6912
+offset_top = 18.6912
 offset_right = 183.0
-offset_bottom = 38.6912
+offset_bottom = 36.6912
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -1.5708
@@ -778,72 +666,91 @@ theme_override_font_sizes/font_size = 13
 text = "36"
 
 [node name="LineOption1" type="Line2D" parent="."]
+visible = false
 position = Vector2(-52.0405, 95.3779)
 scale = Vector2(0.371875, 1.15546)
 points = PackedVector2Array(-301, -226, -301, -56)
 width = 8.0
 
 [node name="LineOption2" type="Line2D" parent="."]
+visible = false
 position = Vector2(-14.0405, 95.3779)
 scale = Vector2(0.371875, 1.15546)
 points = PackedVector2Array(-301, -226, -301, -56)
 width = 8.0
 
 [node name="LineOption3" type="Line2D" parent="."]
+visible = false
 position = Vector2(22.9595, 95.3779)
 scale = Vector2(0.371875, 1.15546)
 points = PackedVector2Array(-301, -226, -301, -56)
 width = 8.0
 
 [node name="LineOption4" type="Line2D" parent="."]
+visible = false
 position = Vector2(60.9595, 95.3779)
 scale = Vector2(0.371875, 1.15546)
 points = PackedVector2Array(-301, -226, -301, -56)
 width = 8.0
 
 [node name="LineOption5" type="Line2D" parent="."]
+visible = false
 position = Vector2(98.9595, 95.3779)
 scale = Vector2(0.371875, 1.15546)
 points = PackedVector2Array(-301, -226, -301, -56)
 width = 8.0
 
 [node name="LineOption6" type="Line2D" parent="."]
+visible = false
 position = Vector2(136.959, 95.3779)
 scale = Vector2(0.371875, 1.15546)
 points = PackedVector2Array(-301, -226, -301, -56)
 width = 8.0
 
 [node name="LineOption7" type="Line2D" parent="."]
+visible = false
 position = Vector2(175, 96)
 scale = Vector2(0.371875, 1.15546)
 points = PackedVector2Array(-301, -226, -301, -56)
 width = 8.0
 
 [node name="LineOption8" type="Line2D" parent="."]
+visible = false
 position = Vector2(212, 96)
 scale = Vector2(0.371875, 1.15546)
 points = PackedVector2Array(-301, -226, -301, -56)
 width = 8.0
 
 [node name="LineOption9" type="Line2D" parent="."]
+visible = false
 position = Vector2(250, 96)
 scale = Vector2(0.371875, 1.15546)
 points = PackedVector2Array(-301, -226, -301, -56)
 width = 8.0
 
 [node name="LineOption10" type="Line2D" parent="."]
+visible = false
 position = Vector2(288, 96)
 scale = Vector2(0.371875, 1.15546)
 points = PackedVector2Array(-301, -226, -301, -56)
 width = 8.0
 
 [node name="LineOption11" type="Line2D" parent="."]
+visible = false
 position = Vector2(326, 96)
 scale = Vector2(0.371875, 1.15546)
 points = PackedVector2Array(-301, -226, -301, -56)
 width = 8.0
 
+[node name="ZeroLineOption" type="Line2D" parent="."]
+visible = false
+position = Vector2(2.40343, 91)
+scale = Vector2(0.67748, 1.15546)
+points = PackedVector2Array(-301.092, -212.902, -300.188, -53.6583)
+width = 8.0
+
 [node name="SplitOption1" type="TextureButton" parent="."]
+visible = false
 offset_left = -192.0
 offset_top = -12.0
 offset_right = 8.00002
@@ -854,6 +761,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption2" type="TextureButton" parent="."]
+visible = false
 offset_left = -192.0
 offset_top = -79.0
 offset_right = 8.00002
@@ -864,6 +772,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption3" type="TextureButton" parent="."]
+visible = false
 offset_left = -192.0
 offset_top = -145.0
 offset_right = 8.00002
@@ -874,6 +783,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption4" type="TextureButton" parent="."]
+visible = false
 offset_left = -154.0
 offset_top = -12.0
 offset_right = 46.0
@@ -884,6 +794,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption5" type="TextureButton" parent="."]
+visible = false
 offset_left = -154.0
 offset_top = -79.0
 offset_right = 46.0
@@ -894,6 +805,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption6" type="TextureButton" parent="."]
+visible = false
 offset_left = -154.0
 offset_top = -145.0
 offset_right = 46.0
@@ -904,6 +816,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption7" type="TextureButton" parent="."]
+visible = false
 offset_left = -116.0
 offset_top = -12.0
 offset_right = 84.0
@@ -914,6 +827,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption8" type="TextureButton" parent="."]
+visible = false
 offset_left = -116.0
 offset_top = -79.0
 offset_right = 84.0
@@ -924,6 +838,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption9" type="TextureButton" parent="."]
+visible = false
 offset_left = -116.0
 offset_top = -145.0
 offset_right = 84.0
@@ -934,6 +849,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption10" type="TextureButton" parent="."]
+visible = false
 offset_left = -79.0
 offset_top = -12.0
 offset_right = 121.0
@@ -944,6 +860,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption11" type="TextureButton" parent="."]
+visible = false
 offset_left = -79.0
 offset_top = -79.0
 offset_right = 121.0
@@ -954,6 +871,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption12" type="TextureButton" parent="."]
+visible = false
 offset_left = -79.0
 offset_top = -145.0
 offset_right = 121.0
@@ -964,6 +882,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption13" type="TextureButton" parent="."]
+visible = false
 offset_left = -41.0
 offset_top = -12.0
 offset_right = 159.0
@@ -974,6 +893,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption14" type="TextureButton" parent="."]
+visible = false
 offset_left = -41.0
 offset_top = -79.0
 offset_right = 159.0
@@ -984,6 +904,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption15" type="TextureButton" parent="."]
+visible = false
 offset_left = -41.0
 offset_top = -145.0
 offset_right = 159.0
@@ -994,6 +915,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption16" type="TextureButton" parent="."]
+visible = false
 offset_left = -3.00002
 offset_top = -12.0
 offset_right = 197.0
@@ -1004,6 +926,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption17" type="TextureButton" parent="."]
+visible = false
 offset_left = -3.00002
 offset_top = -79.0
 offset_right = 197.0
@@ -1014,6 +937,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption18" type="TextureButton" parent="."]
+visible = false
 offset_left = -3.00002
 offset_top = -145.0
 offset_right = 197.0
@@ -1024,6 +948,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption19" type="TextureButton" parent="."]
+visible = false
 offset_left = 35.0
 offset_top = -12.0
 offset_right = 235.0
@@ -1034,6 +959,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption20" type="TextureButton" parent="."]
+visible = false
 offset_left = 35.0
 offset_top = -79.0
 offset_right = 235.0
@@ -1044,6 +970,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption21" type="TextureButton" parent="."]
+visible = false
 offset_left = 35.0
 offset_top = -145.0
 offset_right = 235.0
@@ -1054,6 +981,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption22" type="TextureButton" parent="."]
+visible = false
 offset_left = 72.0
 offset_top = -12.0
 offset_right = 272.0
@@ -1064,6 +992,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption23" type="TextureButton" parent="."]
+visible = false
 offset_left = 72.0
 offset_top = -79.0
 offset_right = 272.0
@@ -1074,6 +1003,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption24" type="TextureButton" parent="."]
+visible = false
 offset_left = 72.0
 offset_top = -145.0
 offset_right = 272.0
@@ -1084,6 +1014,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption25" type="TextureButton" parent="."]
+visible = false
 offset_left = 110.0
 offset_top = -12.0
 offset_right = 310.0
@@ -1094,6 +1025,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption26" type="TextureButton" parent="."]
+visible = false
 offset_left = 110.0
 offset_top = -79.0
 offset_right = 310.0
@@ -1104,6 +1036,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption27" type="TextureButton" parent="."]
+visible = false
 offset_left = 110.0
 offset_top = -145.0
 offset_right = 310.0
@@ -1114,6 +1047,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption28" type="TextureButton" parent="."]
+visible = false
 offset_left = 148.0
 offset_top = -12.0
 offset_right = 348.0
@@ -1124,6 +1058,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption29" type="TextureButton" parent="."]
+visible = false
 offset_left = 148.0
 offset_top = -79.0
 offset_right = 348.0
@@ -1134,6 +1069,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption30" type="TextureButton" parent="."]
+visible = false
 offset_left = 148.0
 offset_top = -145.0
 offset_right = 348.0
@@ -1144,6 +1080,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption31" type="TextureButton" parent="."]
+visible = false
 offset_left = 186.0
 offset_top = -12.0
 offset_right = 386.0
@@ -1154,6 +1091,7 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption32" type="TextureButton" parent="."]
+visible = false
 offset_left = 186.0
 offset_top = -79.0
 offset_right = 386.0
@@ -1164,10 +1102,979 @@ texture_pressed = ExtResource("3_shhme")
 texture_hover = ExtResource("3_shhme")
 
 [node name="SplitOption33" type="TextureButton" parent="."]
+visible = false
 offset_left = 186.0
 offset_top = -145.0
 offset_right = 386.0
 offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="ZeroSplitOption1" type="TextureButton" parent="."]
+visible = false
+offset_left = -230.0
+offset_top = -12.0
+offset_right = -30.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="ZeroSplitOption2" type="TextureButton" parent="."]
+visible = false
+offset_left = -230.0
+offset_top = -79.0
+offset_right = -30.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="ZeroSplitOption3" type="TextureButton" parent="."]
+visible = false
+offset_left = -230.0
+offset_top = -145.0
+offset_right = -30.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption1" type="TextureButton" parent="."]
+visible = false
+offset_left = -192.0
+offset_top = -45.0
+offset_right = 8.00003
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption2" type="TextureButton" parent="."]
+visible = false
+offset_left = -192.0
+offset_top = -112.0
+offset_right = 8.00003
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption3" type="TextureButton" parent="."]
+visible = false
+offset_left = -154.0
+offset_top = -45.0
+offset_right = 46.0
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption4" type="TextureButton" parent="."]
+visible = false
+offset_left = -154.0
+offset_top = -112.0
+offset_right = 46.0
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption5" type="TextureButton" parent="."]
+visible = false
+offset_left = -116.0
+offset_top = -45.0
+offset_right = 84.0
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption6" type="TextureButton" parent="."]
+visible = false
+offset_left = -116.0
+offset_top = -112.0
+offset_right = 84.0
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption7" type="TextureButton" parent="."]
+visible = false
+offset_left = -79.0
+offset_top = -45.0
+offset_right = 121.0
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption8" type="TextureButton" parent="."]
+visible = false
+offset_left = -79.0
+offset_top = -112.0
+offset_right = 121.0
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption9" type="TextureButton" parent="."]
+visible = false
+offset_left = -41.0
+offset_top = -45.0
+offset_right = 159.0
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption10" type="TextureButton" parent="."]
+visible = false
+offset_left = -41.0
+offset_top = -112.0
+offset_right = 159.0
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption11" type="TextureButton" parent="."]
+visible = false
+offset_left = -2.99998
+offset_top = -45.0
+offset_right = 197.0
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption12" type="TextureButton" parent="."]
+visible = false
+offset_left = -2.99998
+offset_top = -112.0
+offset_right = 197.0
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption13" type="TextureButton" parent="."]
+visible = false
+offset_left = 35.0
+offset_top = -45.0
+offset_right = 235.0
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption14" type="TextureButton" parent="."]
+visible = false
+offset_left = 35.0
+offset_top = -112.0
+offset_right = 235.0
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption15" type="TextureButton" parent="."]
+visible = false
+offset_left = 72.0
+offset_top = -45.0
+offset_right = 272.0
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption16" type="TextureButton" parent="."]
+visible = false
+offset_left = 72.0
+offset_top = -112.0
+offset_right = 272.0
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption17" type="TextureButton" parent="."]
+visible = false
+offset_left = 110.0
+offset_top = -45.0
+offset_right = 310.0
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption18" type="TextureButton" parent="."]
+visible = false
+offset_left = 110.0
+offset_top = -112.0
+offset_right = 310.0
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption19" type="TextureButton" parent="."]
+visible = false
+offset_left = 148.0
+offset_top = -45.0
+offset_right = 348.0
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption20" type="TextureButton" parent="."]
+visible = false
+offset_left = 148.0
+offset_top = -112.0
+offset_right = 348.0
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption21" type="TextureButton" parent="."]
+visible = false
+offset_left = 186.0
+offset_top = -45.0
+offset_right = 386.0
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="CornerOption22" type="TextureButton" parent="."]
+visible = false
+offset_left = 186.0
+offset_top = -112.0
+offset_right = 386.0
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="ZeroCornerOption1" type="TextureButton" parent="."]
+visible = false
+offset_left = -230.0
+offset_top = -45.0
+offset_right = -30.0
+offset_bottom = 155.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="ZeroCornerOption2" type="TextureButton" parent="."]
+visible = false
+offset_left = -230.0
+offset_top = -112.0
+offset_right = -30.0
+offset_bottom = 88.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="1st12Option" type="TextureButton" parent="."]
+visible = false
+offset_left = -154.0
+offset_top = 41.0
+offset_right = 46.0
+offset_bottom = 241.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="2nd12Option" type="TextureButton" parent="."]
+visible = false
+offset_left = -2.99998
+offset_top = 41.0
+offset_right = 197.0
+offset_bottom = 241.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="3rd12Option" type="TextureButton" parent="."]
+visible = false
+offset_left = 148.0
+offset_top = 41.0
+offset_right = 348.0
+offset_bottom = 241.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="2to1Option1" type="TextureButton" parent="."]
+visible = false
+offset_left = 244.0
+offset_top = -12.0
+offset_right = 444.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="2to1Option2" type="TextureButton" parent="."]
+visible = false
+offset_left = 244.0
+offset_top = -78.0
+offset_right = 444.0
+offset_bottom = 122.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="2to1Option3" type="TextureButton" parent="."]
+visible = false
+offset_left = 244.0
+offset_top = -146.0
+offset_right = 444.0
+offset_bottom = 54.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="LowOption" type="TextureButton" parent="."]
+visible = false
+offset_left = -191.0
+offset_top = 78.0
+offset_right = 9.00003
+offset_bottom = 278.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="HighOption" type="TextureButton" parent="."]
+visible = false
+offset_left = 186.0
+offset_top = 78.0
+offset_right = 386.0
+offset_bottom = 278.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="EvenOption" type="TextureButton" parent="."]
+visible = false
+offset_left = -118.0
+offset_top = 78.0
+offset_right = 82.0
+offset_bottom = 278.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="OddOption" type="TextureButton" parent="."]
+visible = false
+offset_left = 111.0
+offset_top = 78.0
+offset_right = 311.0
+offset_bottom = 278.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="RedOption" type="TextureButton" parent="."]
+visible = false
+offset_left = -41.0
+offset_top = 78.0
+offset_right = 159.0
+offset_bottom = 278.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="BlackOption" type="TextureButton" parent="."]
+visible = false
+offset_left = 35.0
+offset_top = 78.0
+offset_right = 235.0
+offset_bottom = 278.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="ZeroOption" type="TextureButton" parent="."]
+visible = false
+offset_left = -273.0
+offset_top = -79.0
+offset_right = -73.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option1" type="TextureButton" parent="."]
+visible = false
+offset_left = -211.0
+offset_top = -12.0
+offset_right = -11.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option2" type="TextureButton" parent="."]
+visible = false
+offset_left = -211.0
+offset_top = -79.0
+offset_right = -11.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option3" type="TextureButton" parent="."]
+visible = false
+offset_left = -211.0
+offset_top = -145.0
+offset_right = -11.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option4" type="TextureButton" parent="."]
+visible = false
+offset_left = -173.0
+offset_top = -12.0
+offset_right = 27.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option5" type="TextureButton" parent="."]
+visible = false
+offset_left = -173.0
+offset_top = -79.0
+offset_right = 27.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option6" type="TextureButton" parent="."]
+visible = false
+offset_left = -173.0
+offset_top = -145.0
+offset_right = 27.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option7" type="TextureButton" parent="."]
+visible = false
+offset_left = -134.0
+offset_top = -12.0
+offset_right = 66.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option8" type="TextureButton" parent="."]
+visible = false
+offset_left = -134.0
+offset_top = -79.0
+offset_right = 66.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option9" type="TextureButton" parent="."]
+visible = false
+offset_left = -134.0
+offset_top = -145.0
+offset_right = 66.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option10" type="TextureButton" parent="."]
+visible = false
+offset_left = -97.0
+offset_top = -12.0
+offset_right = 103.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option11" type="TextureButton" parent="."]
+visible = false
+offset_left = -97.0
+offset_top = -79.0
+offset_right = 103.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option12" type="TextureButton" parent="."]
+visible = false
+offset_left = -97.0
+offset_top = -145.0
+offset_right = 103.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option13" type="TextureButton" parent="."]
+visible = false
+offset_left = -59.0
+offset_top = -12.0
+offset_right = 141.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option14" type="TextureButton" parent="."]
+visible = false
+offset_left = -59.0
+offset_top = -79.0
+offset_right = 141.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option15" type="TextureButton" parent="."]
+visible = false
+offset_left = -59.0
+offset_top = -145.0
+offset_right = 141.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option16" type="TextureButton" parent="."]
+visible = false
+offset_left = -21.0
+offset_top = -12.0
+offset_right = 179.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option17" type="TextureButton" parent="."]
+visible = false
+offset_left = -21.0
+offset_top = -79.0
+offset_right = 179.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option18" type="TextureButton" parent="."]
+visible = false
+offset_left = -21.0
+offset_top = -145.0
+offset_right = 179.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option19" type="TextureButton" parent="."]
+visible = false
+offset_left = 17.0
+offset_top = -12.0
+offset_right = 217.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option20" type="TextureButton" parent="."]
+visible = false
+offset_left = 17.0
+offset_top = -79.0
+offset_right = 217.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option21" type="TextureButton" parent="."]
+visible = false
+offset_left = 17.0
+offset_top = -145.0
+offset_right = 217.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option22" type="TextureButton" parent="."]
+visible = false
+offset_left = 55.0
+offset_top = -12.0
+offset_right = 255.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option23" type="TextureButton" parent="."]
+visible = false
+offset_left = 55.0
+offset_top = -79.0
+offset_right = 255.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option24" type="TextureButton" parent="."]
+visible = false
+offset_left = 55.0
+offset_top = -145.0
+offset_right = 255.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option25" type="TextureButton" parent="."]
+visible = false
+offset_left = 92.0
+offset_top = -12.0
+offset_right = 292.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option26" type="TextureButton" parent="."]
+visible = false
+offset_left = 92.0
+offset_top = -79.0
+offset_right = 292.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option27" type="TextureButton" parent="."]
+visible = false
+offset_left = 92.0
+offset_top = -145.0
+offset_right = 292.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option28" type="TextureButton" parent="."]
+visible = false
+offset_left = 130.0
+offset_top = -12.0
+offset_right = 330.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option29" type="TextureButton" parent="."]
+visible = false
+offset_left = 130.0
+offset_top = -79.0
+offset_right = 330.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option30" type="TextureButton" parent="."]
+visible = false
+offset_left = 130.0
+offset_top = -145.0
+offset_right = 330.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option31" type="TextureButton" parent="."]
+visible = false
+offset_left = 168.0
+offset_top = -12.0
+offset_right = 368.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option32" type="TextureButton" parent="."]
+visible = false
+offset_left = 168.0
+offset_top = -79.0
+offset_right = 368.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option33" type="TextureButton" parent="."]
+visible = false
+offset_left = 168.0
+offset_top = -145.0
+offset_right = 368.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option34" type="TextureButton" parent="."]
+visible = false
+offset_left = 205.0
+offset_top = -12.0
+offset_right = 405.0
+offset_bottom = 188.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option35" type="TextureButton" parent="."]
+visible = false
+offset_left = 205.0
+offset_top = -79.0
+offset_right = 405.0
+offset_bottom = 121.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="Option36" type="TextureButton" parent="."]
+visible = false
+offset_left = 205.0
+offset_top = -145.0
+offset_right = 405.0
+offset_bottom = 55.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption1" type="TextureButton" parent="."]
+visible = false
+offset_left = -209.0
+offset_top = 21.0
+offset_right = -9.00003
+offset_bottom = 221.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption2" type="TextureButton" parent="."]
+visible = false
+offset_left = -173.0
+offset_top = 21.0
+offset_right = 27.0
+offset_bottom = 221.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption3" type="TextureButton" parent="."]
+visible = false
+offset_left = -135.0
+offset_top = 21.0
+offset_right = 65.0
+offset_bottom = 221.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption4" type="TextureButton" parent="."]
+visible = false
+offset_left = -97.0
+offset_top = 21.0
+offset_right = 103.0
+offset_bottom = 221.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption5" type="TextureButton" parent="."]
+visible = false
+offset_left = -58.0
+offset_top = 21.0
+offset_right = 142.0
+offset_bottom = 221.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption6" type="TextureButton" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = 21.0
+offset_right = 180.0
+offset_bottom = 221.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption7" type="TextureButton" parent="."]
+visible = false
+offset_left = 17.0
+offset_top = 21.0
+offset_right = 217.0
+offset_bottom = 221.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption8" type="TextureButton" parent="."]
+visible = false
+offset_left = 55.0
+offset_top = 21.0
+offset_right = 255.0
+offset_bottom = 221.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption9" type="TextureButton" parent="."]
+visible = false
+offset_left = 91.0
+offset_top = 21.0
+offset_right = 291.0
+offset_bottom = 221.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption10" type="TextureButton" parent="."]
+visible = false
+offset_left = 131.0
+offset_top = 21.0
+offset_right = 331.0
+offset_bottom = 221.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption11" type="TextureButton" parent="."]
+visible = false
+offset_left = 168.0
+offset_top = 21.0
+offset_right = 368.0
+offset_bottom = 221.0
+scale = Vector2(0.28, 0.28)
+texture_normal = ExtResource("3_shhme")
+texture_pressed = ExtResource("3_shhme")
+texture_hover = ExtResource("3_shhme")
+
+[node name="StreetOption12" type="TextureButton" parent="."]
+visible = false
+offset_left = 168.0
+offset_top = 21.0
+offset_right = 368.0
+offset_bottom = 221.0
 scale = Vector2(0.28, 0.28)
 texture_normal = ExtResource("3_shhme")
 texture_pressed = ExtResource("3_shhme")
