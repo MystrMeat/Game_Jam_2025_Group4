@@ -28,9 +28,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	move_cloud_parallax(cloud_back,bg_cloud_spd)
 	move_cloud_parallax(cloud_front,fg_cloud_spd)
-	
-	
-
 
 func _on_button_timer_timeout() -> void:
 	if n == 1: # to home
@@ -41,20 +38,25 @@ func _on_button_timer_timeout() -> void:
 		get_tree().change_scene_to_file("res://Scenes/shop.tscn")
 
 func _on_play_button_pressed() -> void: # play pressed on main menu
+	$button_sfx.play()
 	button_timer.start()
 	n = 2
 
 func _on_tutorial_button_pressed() -> void: # credit screen pressed
+	$button_sfx.play()
 	$Tutorial.show()
 	
 func _on_shop_button_pressed() -> void: # shop menu pressed on main menu
+	$button_sfx.play()
 	button_timer.start()
 	n = 3
 	
 func _on_options_button_pressed() -> void: # options on main menu
+	$button_sfx.play()
 	pass # Replace with function body.
 
 func _on_exit_button_pressed() -> void: # exit pressed on main menu
+	$button_sfx.play()
 	button_timer.start()
 	n = 1
 

@@ -6,7 +6,7 @@ var button_toggled = false
 
 func change_sprite(image):
 	var texture = image
-	button.normal_texture = texture
+	button.texture_normal.set_texture(image)
 
 func _on_texture_button_pressed():
 	if !button_toggled:

@@ -47,7 +47,7 @@ func move_cloud_parallax(node, speed):
 			cloud.queue_free()
 
 func _on_play_pressed():
-	print("play")
+	play_button_sfx()
 	if Global.tutorial_complete:
 		transition.file_name = "res://Scenes/game.tscn"
 		transition.play("fade_out")
@@ -56,10 +56,14 @@ func _on_play_pressed():
 	 # Replace with function body.
 
 func _on_credits_pressed():
-	print("credits")
+	play_button_sfx()
 	credits_menu.show()
 	pass # Replace with function body.
 
 func _on_back_pressed():
+	play_button_sfx()
 	credits_menu.hide()
 	pass # Replace with function body.
+
+func play_button_sfx():
+	$button_sfx.play()

@@ -12,6 +12,7 @@ func _physics_process(delta):
 	pass
 
 func _on_arrow_left_pressed():
+	$button_sfx.play()
 	if step_count == 1:
 		hide()
 		pass
@@ -46,6 +47,7 @@ func _on_arrow_left_pressed():
 
 
 func _on_arrow_right_pressed():
+	$button_sfx.play()
 	if step_count == 1:
 		print(step_count)
 		$step1.hide()

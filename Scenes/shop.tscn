@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b0pbhgx1cs4wi"]
+[gd_scene load_steps=17 format=3 uid="uid://b0pbhgx1cs4wi"]
 
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="1_2shtd"]
 [ext_resource type="Script" uid="uid://m8oqp3hg1n1w" path="res://Scripts/shop.gd" id="1_fdj0q"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://wno1o0hu07l5" path="res://Assets/game/token_star.png" id="11_1cyt5"]
 [ext_resource type="Texture2D" uid="uid://cwobaavjllq23" path="res://Assets/game/token_planet.png" id="12_0vsm1"]
 [ext_resource type="PackedScene" uid="uid://bdmd6ufh82ckc" path="res://Scenes/transition.tscn" id="13_1sjcd"]
+[ext_resource type="AudioStream" uid="uid://bk7le2ybxdp1b" path="res://Audio/Videogame Menu Select.wav" id="14_1cyt5"]
+[ext_resource type="AudioStream" uid="uid://bve8dw5o2l7ds" path="res://Audio/Inventory select.wav" id="15_0vsm1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fdj0q"]
 shader = ExtResource("1_2shtd")
@@ -334,6 +336,14 @@ offset_left = -526.0
 offset_top = -295.0
 offset_right = 626.0
 offset_bottom = 353.0
+
+[node name="button_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_1cyt5")
+bus = &"sfx"
+
+[node name="buy_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_0vsm1")
+bus = &"sfx"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
