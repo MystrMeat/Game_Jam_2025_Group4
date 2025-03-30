@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d3njkcwdvyclr"]
+[gd_scene load_steps=17 format=3 uid="uid://d3njkcwdvyclr"]
 
 [ext_resource type="PackedScene" uid="uid://ejjh63y8scsy" path="res://Scenes/ball.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bsreyydqg7aet" path="res://Scripts/game.gd" id="1_qxrlw"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cuso4elagclcu" path="res://Assets/game/ButtonDepressed.png" id="12_nb51f"]
 [ext_resource type="Theme" uid="uid://c4jhfnt41gh80" path="res://Shaders/BetEnterTheme.tres" id="13_1phco"]
 [ext_resource type="FontFile" uid="uid://c235vknrpwev6" path="res://Assets/castiron-condensed.otf" id="14_nb51f"]
+[ext_resource type="AudioStream" uid="uid://bk7le2ybxdp1b" path="res://Audio/Videogame Menu Select.wav" id="15_nb51f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v158k"]
 shader = ExtResource("2_i6g32")
@@ -33,6 +34,7 @@ shader_parameter/additional_scroll_speed = 0.07
 script = ExtResource("1_qxrlw")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.046
 
 [node name="validTimer" type="Timer" parent="."]
 wait_time = 4.263
@@ -69,7 +71,6 @@ offset_right = -169.0
 offset_bottom = 451.0
 
 [node name="Current_number" parent="Global" index="2"]
-visible = true
 offset_left = -188.0
 offset_top = -634.0
 offset_right = -136.0
@@ -96,6 +97,17 @@ theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 theme_override_font_sizes/font_size = 30
 text = "Clear"
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 457.0
+offset_top = 268.0
+offset_right = 551.0
+offset_bottom = 308.0
+scale = Vector2(1.09983, 1.12184)
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+theme_override_font_sizes/font_size = 30
+text = "Menu"
 
 [node name="InOutBet" type="MarginContainer" parent="."]
 anchors_preset = 8
@@ -498,8 +510,8 @@ text = "Back"
 [node name="BigButtons" type="MarginContainer" parent="."]
 offset_left = 125.0
 offset_top = 156.0
-offset_right = 729.0
-offset_bottom = 356.0
+offset_right = 425.0
+offset_bottom = 256.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="BigButtons"]
 layout_mode = 2
@@ -576,10 +588,14 @@ text = "0"
 expand_to_text_length = true
 caret_blink = true
 
+[node name="ButtonSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_nb51f")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="validTimer" to="." method="_on_valid_timer_timeout"]
 [connection signal="pressed" from="Spin" to="." method="_on_spin_pressed"]
 [connection signal="pressed" from="Clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="InOutBet/HBoxContainer/Bet Inside" to="." method="_on_bet_inside_pressed"]
 [connection signal="pressed" from="InOutBet/HBoxContainer/Bet Outside" to="." method="_on_bet_outside_pressed"]
 [connection signal="pressed" from="InBet/GridContainer/Bet Line" to="." method="_on_bet_line_pressed"]

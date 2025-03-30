@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 
 func _on_button_timer_timeout() -> void:
 	if n == 1: # to home
-		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+		get_tree().quit()
 	elif n == 2: # play game
 		get_tree().change_scene_to_file("res://Scenes/game.tscn")
 	elif n == 3: # enter shop
