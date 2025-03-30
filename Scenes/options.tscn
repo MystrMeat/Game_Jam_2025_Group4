@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo3rjedvkgml1"]
+
+[ext_resource type="Texture2D" uid="uid://2qdn0b6udrh8" path="res://Assets/UI/title/WindowCredits FIXED.png" id="1_qyyw6"]
+[ext_resource type="Texture2D" uid="uid://yfk3ne47koyi" path="res://Assets/UI/title/button_back_normal.png" id="2_ww8vx"]
+[ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="3_kftxf"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0196078, 0.0352941, 0.117647, 0.741176)
+
+[node name="WindowCreditsFixed" type="Sprite2D" parent="ColorRect"]
+position = Vector2(573, 323)
+scale = Vector2(0.598148, 0.598148)
+texture = ExtResource("1_qyyw6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.205
+anchor_right = 0.955
+anchor_bottom = 0.92
+offset_left = 311.768
+offset_top = 44.16
+offset_right = -310.16
+offset_bottom = -142.16
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[color=E19898]Music volume
+
+Sound SFX volume"
+
+[node name="back" type="TextureButton" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.83
+anchor_right = 0.5
+anchor_bottom = 0.83
+offset_left = -78.0
+offset_top = -69.0
+offset_right = 78.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("2_ww8vx")
+texture_pressed = ExtResource("3_kftxf")

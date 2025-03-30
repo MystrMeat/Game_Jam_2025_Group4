@@ -328,6 +328,7 @@ offset_right = 58.0
 offset_bottom = 165.0
 
 [node name="Transition" parent="." instance=ExtResource("13_1sjcd")]
+visible = false
 z_index = 5
 offset_left = -526.0
 offset_top = -295.0

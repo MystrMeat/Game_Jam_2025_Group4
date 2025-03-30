@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dudqe8aaop582"
+path="res://.godot/imported/Roulette Wheel Spin Loop 1 1.wav-4681119f919516ca1fcceb42d0285e39.sample"
+
+[deps]
+
+source_file="res://Audio/Roulette Wheel Spin Loop 1 1.wav"
+dest_files=["res://.godot/imported/Roulette Wheel Spin Loop 1 1.wav-4681119f919516ca1fcceb42d0285e39.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

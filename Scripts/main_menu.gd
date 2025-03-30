@@ -31,23 +31,20 @@ func _process(delta: float) -> void:
 
 
 func _on_button_timer_timeout() -> void:
-	if n == 1: # exit game
-		get_tree().quit()
+	if n == 1: # to home
+		get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 	elif n == 2: # play game
 		get_tree().change_scene_to_file("res://Scenes/game.tscn")
 	elif n == 3: # enter shop
 		get_tree().change_scene_to_file("res://Scenes/shop.tscn")
-	elif n == 4: # credits
-		get_tree().change_scene_to_file("res://Scenes/credits.tscn")
 
 func _on_play_button_pressed() -> void: # play pressed on main menu
 	button_timer.start()
 	n = 2
 
-func _on_credits_button_pressed() -> void: # credit screen pressed
-	button_timer.start()
-	n = 4
-
+func _on_tutorial_button_pressed() -> void: # credit screen pressed
+	$Tutorial.show()
+	
 func _on_shop_button_pressed() -> void: # shop menu pressed on main menu
 	button_timer.start()
 	n = 3
