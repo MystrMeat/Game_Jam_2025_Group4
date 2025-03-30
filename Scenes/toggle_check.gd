@@ -5,8 +5,9 @@ extends Control
 var button_toggled = false
 
 func change_sprite(image):
-	var texture = image
-	button.texture_normal.set_texture(image)
+	var button_texture = Texture2D.new()
+	button_texture.texture = image
+	button.texture_normal = button_texture
 
 func _on_texture_button_pressed():
 	if !button_toggled:
