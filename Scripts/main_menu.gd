@@ -10,8 +10,12 @@ var fg_cloud_spd = 4
 @onready var button_timer: Timer = $"Button Timer"
 var n
 
+func _init():
+	GlobalAudio.current_scene = "game"
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GlobalAudio.play_music_level()
 	spawn_cloud_inst(bg_cloud,0, 108,cloud_back)
 	spawn_cloud_inst(fg_cloud,0, 108,cloud_front)
 	

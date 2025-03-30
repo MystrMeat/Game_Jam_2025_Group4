@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var timer: Timer = $Timer
+@export var transition: Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,10 +9,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
 
-func _on_timer_timeout() -> void:
-	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
-
-
-func _on_back_button_pressed() -> void:
-	timer.start()
+func _on_back_pressed():
+	transition.file_name = "res://Scenes/main_menu.tscn"
+	transition.play("fade_out")
+	pass # Replace with function body.
