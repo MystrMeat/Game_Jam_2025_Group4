@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3njkcwdvyclr"]
+[gd_scene load_steps=14 format=3 uid="uid://d3njkcwdvyclr"]
 
 [ext_resource type="PackedScene" uid="uid://ejjh63y8scsy" path="res://Scenes/ball.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bsreyydqg7aet" path="res://Scripts/game.gd" id="1_qxrlw"]
@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cauce3wkgdp8y" path="res://Scenes/black_hole.tscn" id="4_3dryh"]
 [ext_resource type="PackedScene" uid="uid://dvohnaalxgygx" path="res://Scenes/roulette_wheel.tscn" id="6_h4fw4"]
 [ext_resource type="Theme" uid="uid://byr2us48h4awc" path="res://Shaders/button_theme.tres" id="7_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://qrffl8vmj2ys" path="res://Scenes/board.tscn" id="8_rku1e"]
+[ext_resource type="FontFile" uid="uid://bv8dft2gtqmku" path="res://Assets/UI/title/AeromoveDemoRegular.ttf" id="9_rku1e"]
+[ext_resource type="Texture2D" uid="uid://drxv7c4tof4wp" path="res://Assets/game/ButtonRaised.png" id="11_1phco"]
+[ext_resource type="Texture2D" uid="uid://cuso4elagclcu" path="res://Assets/game/ButtonDepressed.png" id="12_nb51f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v158k"]
 shader = ExtResource("2_i6g32")
@@ -25,6 +29,8 @@ shader_parameter/additional_scroll_speed = 0.07
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_qxrlw")
+
+[node name="Timer" type="Timer" parent="."]
 
 [node name="BackgroundNoStars" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_v158k")
@@ -51,7 +57,21 @@ scale = Vector2(0.599995, 0.599995)
 
 [node name="Ball" parent="." instance=ExtResource("1_ebmjs")]
 unique_name_in_owner = true
-position = Vector2(-337, -88)
+visible = false
+
+[node name="Board" parent="." instance=ExtResource("8_rku1e")]
+position = Vector2(268, -135)
+
+[node name="Spin" type="Button" parent="."]
+offset_left = -123.0
+offset_top = -296.0
+offset_right = -43.0
+offset_bottom = -256.0
+scale = Vector2(1.09983, 1.12184)
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+theme_override_font_sizes/font_size = 30
+text = "Spin"
 
 [node name="InOutBet" type="MarginContainer" parent="."]
 anchors_preset = 8
@@ -59,13 +79,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 109.0
-offset_top = 30.0
-offset_right = 310.0
-offset_bottom = 57.0
+offset_left = 24.0
+offset_top = 10.0
+offset_right = 385.0
+offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.76, 1.76)
+scale = Vector2(1.48, 1.76)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
@@ -76,11 +96,15 @@ theme_override_constants/separation = 25
 [node name="Bet Inside" type="Button" parent="InOutBet/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+theme_override_font_sizes/font_size = 30
 text = "Bet Inside"
 
 [node name="Bet Outside" type="Button" parent="InOutBet/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+theme_override_font_sizes/font_size = 30
 text = "Bet Outside"
 
 [node name="InBet" type="MarginContainer" parent="."]
@@ -90,10 +114,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 39.0
-offset_top = 121.0
-offset_right = 345.0
-offset_bottom = 200.0
+offset_left = 106.0
+offset_top = 143.0
+offset_right = 333.0
+offset_bottom = 222.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.64772, 1.64772)
@@ -109,39 +133,45 @@ columns = 3
 [node name="Line" type="Button" parent="InBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Line"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line"
 
 [node name="Bet Corner" type="Button" parent="InBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Corner"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Corner"
 
 [node name="Bet Street" type="Button" parent="InBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Street"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Street"
 
 [node name="Bet Split" type="Button" parent="InBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Split"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Split"
 
 [node name="Bet Zero" type="Button" parent="InBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Zero"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Zero"
 
 [node name="Bet Number" type="Button" parent="InBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Number"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Number"
 
 [node name="OutBet" type="MarginContainer" parent="."]
 visible = false
-offset_left = 73.0
-offset_top = 104.0
-offset_right = 352.0
-offset_bottom = 235.0
+offset_left = 50.0
+offset_top = 107.0
+offset_right = 329.0
+offset_bottom = 238.0
 scale = Vector2(1.60475, 1.49752)
 
 [node name="GridContainer" type="GridContainer" parent="OutBet"]
@@ -155,45 +185,72 @@ columns = 3
 [node name="Bet Black" type="Button" parent="OutBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Red"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Red"
 
 [node name="Bet Purple" type="Button" parent="OutBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Black"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Black"
 
 [node name="Bet Odd" type="Button" parent="OutBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Odd"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Odd"
 
 [node name="Bet Even" type="Button" parent="OutBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Even"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Even"
 
 [node name="Bet Low" type="Button" parent="OutBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Low"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Low"
 
 [node name="Bet High" type="Button" parent="OutBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet High"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "High"
 
 [node name="Bet Dozen" type="Button" parent="OutBet/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
-text = "Bet Dozen"
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Dozen"
 
-[node name="Spin" type="Button" parent="."]
-offset_left = -123.0
-offset_top = -295.0
-offset_right = -43.0
-offset_bottom = -255.0
-scale = Vector2(1.09983, 1.12184)
-theme = ExtResource("7_1l0tm")
-text = "Spin"
+[node name="BigButtons" type="MarginContainer" parent="."]
+offset_left = 125.0
+offset_top = 156.0
+offset_right = 729.0
+offset_bottom = 356.0
 
+[node name="HBoxContainer" type="HBoxContainer" parent="BigButtons"]
+layout_mode = 2
+
+[node name="Shop" type="TextureButton" parent="BigButtons/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("11_1phco")
+texture_pressed = ExtResource("12_nb51f")
+
+[node name="Label" type="Label" parent="BigButtons/HBoxContainer/Shop"]
+layout_mode = 2
+offset_left = 56.0
+offset_top = 12.0
+offset_right = 294.0
+offset_bottom = 132.0
+scale = Vector2(0.818811, 0.818811)
+theme_override_fonts/font = ExtResource("9_rku1e")
+theme_override_font_sizes/font_size = 100
+text = "Shop"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Spin" to="." method="_on_spin_pressed"]
+[connection signal="pressed" from="InOutBet/HBoxContainer/Bet Inside" to="." method="_on_bet_inside_pressed"]
+[connection signal="pressed" from="InOutBet/HBoxContainer/Bet Outside" to="." method="_on_bet_outside_pressed"]
+[connection signal="pressed" from="BigButtons/HBoxContainer/Shop" to="." method="_on_shop_pressed"]

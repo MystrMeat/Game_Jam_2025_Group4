@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://b0pbhgx1cs4wi"]
+[gd_scene load_steps=15 format=3 uid="uid://b0pbhgx1cs4wi"]
 
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="1_2shtd"]
 [ext_resource type="Script" uid="uid://m8oqp3hg1n1w" path="res://Scripts/shop.gd" id="1_fdj0q"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_io27d"]
 [ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="3_io27d"]
 [ext_resource type="Texture2D" uid="uid://yfk3ne47koyi" path="res://Assets/UI/title/button_back_normal.png" id="4_3ps1r"]
+[ext_resource type="Texture2D" uid="uid://boroqx2ylboa4" path="res://Assets/UI/shop/WindowShop FIXED.png" id="5_1sjcd"]
 [ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="5_ymrm4"]
 [ext_resource type="Theme" uid="uid://byr2us48h4awc" path="res://Shaders/button_theme.tres" id="7_ymrm4"]
 [ext_resource type="FontFile" uid="uid://c235vknrpwev6" path="res://Assets/castiron-condensed.otf" id="8_s8dlv"]
@@ -37,31 +38,30 @@ grow_vertical = 2
 script = ExtResource("1_fdj0q")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.197
+wait_time = 0.028
 
 [node name="BackgroundNoStars" type="Sprite2D" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_fdj0q")
 position = Vector2(3, -2)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_io27d")
 
+[node name="Button Container" type="Sprite2D" parent="."]
+position = Vector2(1, -6)
+scale = Vector2(0.414615, 0.416301)
+texture = ExtResource("5_1sjcd")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 0)
 zoom = Vector2(1.5, 1.5)
 
-[node name="Global" parent="." instance=ExtResource("3_io27d")]
-layout_mode = 1
-offset_left = 20.0
-offset_top = 87.0
-offset_right = 20.0
-offset_bottom = 87.0
-
 [node name="back_button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = -346.0
-offset_top = 119.0
-offset_right = -190.0
-offset_bottom = 188.0
+offset_left = -348.0
+offset_top = 104.0
+offset_right = -192.0
+offset_bottom = 173.0
 texture_normal = ExtResource("4_3ps1r")
 texture_pressed = ExtResource("5_ymrm4")
 stretch_mode = 3
@@ -73,13 +73,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -642.0
-offset_top = -391.0
-offset_right = -303.0
-offset_bottom = -187.0
+offset_left = -667.0
+offset_top = -436.0
+offset_right = -328.0
+offset_bottom = -232.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.315, 1.315)
+scale = Vector2(1.315, 1.115)
 
 [node name="Buying Options" type="GridContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -92,51 +92,67 @@ columns = 4
 [node name="Purchase 10" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
 theme = ExtResource("7_ymrm4")
+theme_override_fonts/font = ExtResource("8_s8dlv")
+theme_override_font_sizes/font_size = 30
 text = "10 Kg"
 icon_alignment = 1
 
 [node name="Purchase 20" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
 theme = ExtResource("7_ymrm4")
+theme_override_fonts/font = ExtResource("8_s8dlv")
+theme_override_font_sizes/font_size = 30
 text = "20 Kg"
 icon_alignment = 1
 
 [node name="Purchase 50" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
 theme = ExtResource("7_ymrm4")
+theme_override_fonts/font = ExtResource("8_s8dlv")
+theme_override_font_sizes/font_size = 30
 text = "50 Kg"
 
 [node name="Purchase 100" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
 theme = ExtResource("7_ymrm4")
+theme_override_fonts/font = ExtResource("8_s8dlv")
+theme_override_font_sizes/font_size = 30
 text = "100 Kg"
 
 [node name="Purchase 200" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
 theme = ExtResource("7_ymrm4")
+theme_override_fonts/font = ExtResource("8_s8dlv")
+theme_override_font_sizes/font_size = 30
 text = "200 Kg"
 
 [node name="Purchase 500" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
 theme = ExtResource("7_ymrm4")
+theme_override_fonts/font = ExtResource("8_s8dlv")
+theme_override_font_sizes/font_size = 30
 text = "500 Kg"
 
 [node name="Purchase 1000" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
 theme = ExtResource("7_ymrm4")
+theme_override_fonts/font = ExtResource("8_s8dlv")
+theme_override_font_sizes/font_size = 30
 text = "1000 Kg"
 
 [node name="Purchase 2000" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
 theme = ExtResource("7_ymrm4")
+theme_override_fonts/font = ExtResource("8_s8dlv")
+theme_override_font_sizes/font_size = 30
 text = "2000 Kg"
 
 [node name="Currency conversion" type="Label" parent="."]
 layout_mode = 0
-offset_left = 94.0
-offset_top = -201.0
-offset_right = 199.0
-offset_bottom = -159.0
+offset_left = -324.0
+offset_top = 53.0
+offset_right = -219.0
+offset_bottom = 95.0
 theme_override_fonts/font = ExtResource("8_s8dlv")
 theme_override_font_sizes/font_size = 35
 text = "$0.25 per Kg"
@@ -145,79 +161,86 @@ horizontal_alignment = 1
 [node name="Token Icons" type="Node" parent="."]
 
 [node name="Comet" type="Sprite2D" parent="Token Icons"]
-position = Vector2(-14, -76)
+position = Vector2(-30, -142)
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("9_k6pkm")
 
 [node name="Comet2" type="Sprite2D" parent="Token Icons"]
-position = Vector2(80, -85)
+position = Vector2(57, -155)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("9_k6pkm")
 
 [node name="Comet3" type="Sprite2D" parent="Token Icons"]
-position = Vector2(110, -64)
+position = Vector2(86, -134)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("9_k6pkm")
 
 [node name="Moon" type="Sprite2D" parent="Token Icons"]
-position = Vector2(203, -76)
+position = Vector2(174, -141)
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("10_1sjcd")
 
 [node name="Star" type="Sprite2D" parent="Token Icons"]
-position = Vector2(203, 96)
+position = Vector2(174, 20)
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("11_1cyt5")
 
 [node name="Planet" type="Sprite2D" parent="Token Icons"]
-position = Vector2(322, -76)
+position = Vector2(285, -141)
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet2" type="Sprite2D" parent="Token Icons"]
-position = Vector2(-28, 84)
+position = Vector2(-44, 7.00001)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet3" type="Sprite2D" parent="Token Icons"]
-position = Vector2(2.00001, 105)
+position = Vector2(-15, 28)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet4" type="Sprite2D" parent="Token Icons"]
-position = Vector2(108, 110)
+position = Vector2(86, 31)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet5" type="Sprite2D" parent="Token Icons"]
-position = Vector2(81, 105)
+position = Vector2(59, 26)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet6" type="Sprite2D" parent="Token Icons"]
-position = Vector2(108, 87)
+position = Vector2(86, 8)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet7" type="Sprite2D" parent="Token Icons"]
-position = Vector2(81, 82)
+position = Vector2(59, 3)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet8" type="Sprite2D" parent="Token Icons"]
-position = Vector2(95, 96)
+position = Vector2(73, 17)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("12_0vsm1")
 
 [node name="Star2" type="Sprite2D" parent="Token Icons"]
-position = Vector2(308, 85)
+position = Vector2(272, 8)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("11_1cyt5")
 
 [node name="Star3" type="Sprite2D" parent="Token Icons"]
-position = Vector2(337, 106)
+position = Vector2(301, 29)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("11_1cyt5")
+
+[node name="Global" parent="." instance=ExtResource("3_io27d")]
+layout_mode = 1
+offset_left = 42.0
+offset_top = 165.0
+offset_right = 42.0
+offset_bottom = 165.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
