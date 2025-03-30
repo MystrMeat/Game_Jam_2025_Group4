@@ -9,11 +9,12 @@ extends Node2D
 @export var close_credits: TextureButton
 @export var credits_menu: Control
 @export var transition: Control
+@export var audio_manager: Node
 var bg_cloud_spd = 2
 var fg_cloud_spd = 4
 
 func _ready():
-	GlobalAudioStream.current_scene = "title"
+	$audio_manager.current_scene = "title"
 	spawn_cloud_inst(bg_cloud,0, 108,cloud_back)
 	spawn_cloud_inst(fg_cloud,0, 108,cloud_front)
 	
@@ -44,6 +45,7 @@ func move_cloud_parallax(node, speed):
 
 func _on_play_pressed():
 	print("play")
+	transition.file_name = "res://Scenes/main_menu.tscn"
 	transition.play("fade_out")
 	pass # Replace with function body.
 

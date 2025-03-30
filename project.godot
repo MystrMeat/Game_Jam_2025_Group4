@@ -18,4 +18,3 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Scenes/global.tscn"
-GlobalAudioStream="*res://Scripts/audio_stream.gd"
