@@ -13,8 +13,10 @@ extends Node2D
 var bg_cloud_spd = 2
 var fg_cloud_spd = 4
 
+func _init(): #parent called before children
+	GlobalAudio.current_scene = "title"
+
 func _ready():
-	$audio_manager.current_scene = "title"
 	spawn_cloud_inst(bg_cloud,0, 108,cloud_back)
 	spawn_cloud_inst(fg_cloud,0, 108,cloud_front)
 	
