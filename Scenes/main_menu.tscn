@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c34qdg3a6yjc3"]
+[gd_scene load_steps=24 format=3 uid="uid://c34qdg3a6yjc3"]
 
 [ext_resource type="Script" uid="uid://bb8onw2y5qw06" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_1ehe0"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dm2q8hn84e8qn" path="res://Assets/UI/main_menu/buttons_tutorial_pressed.png" id="15_mkpwh"]
 [ext_resource type="PackedScene" uid="uid://bdmd6ufh82ckc" path="res://Scenes/transition.tscn" id="18_ujyyl"]
 [ext_resource type="PackedScene" uid="uid://cd7sj6arhgakh" path="res://Scenes/tutorial.tscn" id="19_mkpwh"]
+[ext_resource type="AudioStream" uid="uid://bk7le2ybxdp1b" path="res://Audio/Videogame Menu Select.wav" id="20_4nkqq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
 shader = ExtResource("2_1ehe0")
@@ -140,6 +141,10 @@ offset_left = -574.0
 offset_top = -322.0
 offset_right = -574.0
 offset_bottom = -322.0
+
+[node name="button_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_4nkqq")
+bus = &"sfx"
 
 [connection signal="timeout" from="Button Timer" to="." method="_on_button_timer_timeout"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]

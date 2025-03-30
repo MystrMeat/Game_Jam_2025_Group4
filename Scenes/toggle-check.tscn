@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4t0tew3t1o6h"]
+
+[ext_resource type="Script" uid="uid://cmn0co76txp04" path="res://Scenes/toggle_check.gd" id="1_8510l"]
+[ext_resource type="Texture2D" uid="uid://dd3mce7yqderw" path="res://Assets/UI/options/ToggleOff.png" id="2_0eore"]
+
+[node name="Toggle-check" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8510l")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+texture_normal = ExtResource("2_0eore")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

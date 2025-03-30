@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cd7sj6arhgakh"]
+[gd_scene load_steps=21 format=3 uid="uid://cd7sj6arhgakh"]
 
 [ext_resource type="Texture2D" uid="uid://boroqx2ylboa4" path="res://Assets/UI/shop/WindowShop FIXED.png" id="1_ka2pi"]
 [ext_resource type="Script" uid="uid://v118okgvuqds" path="res://Scripts/tutorial.gd" id="1_koko0"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cwobaavjllq23" path="res://Assets/game/token_planet.png" id="11_ap3ea"]
 [ext_resource type="Texture2D" uid="uid://dl1dfq3qyslyb" path="res://Assets/UI/main_menu/ButtonArrowLeftDepressed.png" id="12_lsb8r"]
 [ext_resource type="Texture2D" uid="uid://d1a8037tf5d2d" path="res://Assets/tutorial/shop.png" id="12_t6ver"]
+[ext_resource type="AudioStream" uid="uid://bk7le2ybxdp1b" path="res://Audio/Videogame Menu Select.wav" id="20_lexqi"]
 
 [node name="Tutorial" type="Control"]
 layout_mode = 3
@@ -363,6 +364,10 @@ offset_bottom = 554.0
 theme_override_font_sizes/font_size = 25
 text = "Next"
 autowrap_mode = 2
+
+[node name="button_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_lexqi")
+bus = &"sfx"
 
 [connection signal="pressed" from="arrow_left" to="." method="_on_arrow_left_pressed"]
 [connection signal="pressed" from="arrow_right" to="." method="_on_arrow_right_pressed"]
