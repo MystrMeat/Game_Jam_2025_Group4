@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var ball: Node2D = %Ball
+
 var rotation_speed
 var friction = 0.99
 var applyFriction = false

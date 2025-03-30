@@ -79,6 +79,17 @@ theme_override_fonts/font = ExtResource("9_rku1e")
 theme_override_font_sizes/font_size = 30
 text = "Spin"
 
+[node name="Clear" type="Button" parent="."]
+offset_left = -118.0
+offset_top = 25.0
+offset_right = -24.0
+offset_bottom = 65.0
+scale = Vector2(1.09983, 1.12184)
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+theme_override_font_sizes/font_size = 30
+text = "Clear"
+
 [node name="InOutBet" type="MarginContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -561,6 +572,7 @@ caret_blink = true
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="validTimer" to="." method="_on_valid_timer_timeout"]
 [connection signal="pressed" from="Spin" to="." method="_on_spin_pressed"]
+[connection signal="pressed" from="Clear" to="." method="_on_clear_pressed"]
 [connection signal="pressed" from="InOutBet/HBoxContainer/Bet Inside" to="." method="_on_bet_inside_pressed"]
 [connection signal="pressed" from="InOutBet/HBoxContainer/Bet Outside" to="." method="_on_bet_outside_pressed"]
 [connection signal="pressed" from="InBet/GridContainer/Bet Line" to="." method="_on_bet_line_pressed"]
@@ -575,24 +587,12 @@ caret_blink = true
 [connection signal="pressed" from="ZeroBet/GridContainer/Bet Zero Corner" to="." method="_on_bet_zero_corner_pressed"]
 [connection signal="pressed" from="ZeroBet/GridContainer/Bet Zero Split" to="." method="_on_bet_zero_split_pressed"]
 [connection signal="pressed" from="ZeroBet/GridContainer/Zero Back" to="." method="_on_zero_back_pressed"]
-[connection signal="mouse_entered" from="DozonBet/GridContainer/1st Dozon" to="." method="_on_st_dozon_mouse_entered"]
-[connection signal="mouse_exited" from="DozonBet/GridContainer/1st Dozon" to="." method="_on_st_dozon_mouse_exited"]
 [connection signal="pressed" from="DozonBet/GridContainer/1st Dozon" to="." method="_on_st_dozon_pressed"]
-[connection signal="mouse_entered" from="DozonBet/GridContainer/2nd Dozon" to="." method="_on_nd_dozon_mouse_entered"]
-[connection signal="mouse_exited" from="DozonBet/GridContainer/2nd Dozon" to="." method="_on_nd_dozon_mouse_exited"]
 [connection signal="pressed" from="DozonBet/GridContainer/2nd Dozon" to="." method="_on_nd_dozon_pressed"]
-[connection signal="mouse_entered" from="DozonBet/GridContainer/3rd Dozon" to="." method="_on_rd_dozon_mouse_entered"]
-[connection signal="mouse_exited" from="DozonBet/GridContainer/3rd Dozon" to="." method="_on_rd_dozon_mouse_exited"]
 [connection signal="pressed" from="DozonBet/GridContainer/3rd Dozon" to="." method="_on_rd_dozon_pressed"]
 [connection signal="pressed" from="DozonBet/GridContainer/Dozon Back" to="." method="_on_dozon_back_pressed"]
-[connection signal="mouse_entered" from="DozonBet2/GridContainer/A" to="." method="_on_a_mouse_entered"]
-[connection signal="mouse_exited" from="DozonBet2/GridContainer/A" to="." method="_on_a_mouse_exited"]
 [connection signal="pressed" from="DozonBet2/GridContainer/A" to="." method="_on_a_pressed"]
-[connection signal="mouse_entered" from="DozonBet2/GridContainer/B" to="." method="_on_b_mouse_entered"]
-[connection signal="mouse_exited" from="DozonBet2/GridContainer/B" to="." method="_on_b_mouse_exited"]
 [connection signal="pressed" from="DozonBet2/GridContainer/B" to="." method="_on_b_pressed"]
-[connection signal="mouse_entered" from="DozonBet2/GridContainer/C" to="." method="_on_c_mouse_entered"]
-[connection signal="mouse_exited" from="DozonBet2/GridContainer/C" to="." method="_on_c_mouse_exited"]
 [connection signal="pressed" from="DozonBet2/GridContainer/C" to="." method="_on_c_pressed"]
 [connection signal="pressed" from="DozonBet2/GridContainer/2 to 1 Back" to="." method="_on__to_1_back_pressed"]
 [connection signal="mouse_entered" from="OutBet/GridContainer/Bet Black" to="." method="_on_bet_black_mouse_entered"]
