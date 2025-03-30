@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cb1bp6vb5lnwp"]
+[gd_scene load_steps=16 format=3 uid="uid://cb1bp6vb5lnwp"]
 
 [ext_resource type="Script" uid="uid://010ublnp8sde" path="res://Scripts/title.gd" id="1_w31pl"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_ekrfg"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dosfe35u1iwqc" path="res://Assets/UI/title/button_credits_presed.png" id="7_th2ad"]
 [ext_resource type="Texture2D" uid="uid://yfk3ne47koyi" path="res://Assets/UI/title/button_back_normal.png" id="8_qh4d7"]
 [ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="9_lv7gn"]
+[ext_resource type="Texture2D" uid="uid://2qdn0b6udrh8" path="res://Assets/UI/title/WindowCredits FIXED.png" id="10_qh4d7"]
 [ext_resource type="PackedScene" uid="uid://bdmd6ufh82ckc" path="res://Scenes/transition.tscn" id="12_th2ad"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q2qps"]
@@ -81,20 +82,23 @@ offset_bottom = 648.0
 
 [node name="ColorRect" type="ColorRect" parent="credits_menu"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.103
-anchor_top = 0.113
-anchor_right = 0.874
-anchor_bottom = 0.898
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0196078, 0.0352941, 0.117647, 0.741176)
+
+[node name="WindowCreditsFixed" type="Sprite2D" parent="credits_menu/ColorRect"]
+position = Vector2(573, 323)
+scale = Vector2(0.598148, 0.598148)
+texture = ExtResource("10_qh4d7")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="credits_menu/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.041
-anchor_top = 0.068
+anchor_top = 0.205
 anchor_right = 0.955
 anchor_bottom = 0.92
 grow_horizontal = 2
@@ -118,9 +122,9 @@ Griffingalactic"
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.898
+anchor_top = 0.83
 anchor_right = 0.5
-anchor_bottom = 0.898
+anchor_bottom = 0.83
 offset_left = -78.0
 offset_top = -69.0
 offset_right = 78.0
