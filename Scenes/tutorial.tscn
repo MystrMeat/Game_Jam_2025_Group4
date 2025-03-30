@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://cd7sj6arhgakh"]
+[gd_scene load_steps=14 format=3 uid="uid://cd7sj6arhgakh"]
 
 [ext_resource type="Texture2D" uid="uid://boroqx2ylboa4" path="res://Assets/UI/shop/WindowShop FIXED.png" id="1_ka2pi"]
+[ext_resource type="Script" uid="uid://v118okgvuqds" path="res://Scripts/tutorial.gd" id="1_koko0"]
 [ext_resource type="PackedScene" uid="uid://cauce3wkgdp8y" path="res://Scenes/black_hole.tscn" id="2_p1f1o"]
 [ext_resource type="PackedScene" uid="uid://dvohnaalxgygx" path="res://Scenes/roulette_wheel.tscn" id="3_ys4pu"]
 [ext_resource type="Texture2D" uid="uid://thnnargyf25k" path="res://Assets/UI/main_menu/ButtonArrowLeftRaised.png" id="4_h2ono"]
@@ -16,6 +17,7 @@
 [node name="Tutorial" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_koko0")
 
 [node name="Button Container" type="Sprite2D" parent="."]
 position = Vector2(575.003, 324.099)
@@ -24,7 +26,6 @@ texture = ExtResource("1_ka2pi")
 metadata/_edit_lock_ = true
 
 [node name="step1" type="Node2D" parent="."]
-visible = false
 position = Vector2(575.003, 324.099)
 scale = Vector2(0.601077, 0.603521)
 
@@ -139,15 +140,6 @@ theme_override_font_sizes/font_size = 25
 text = "Split bet"
 autowrap_mode = 2
 
-[node name="bet0" type="Label" parent="step3"]
-offset_left = -410.935
-offset_top = 180.443
-offset_right = -279.935
-offset_bottom = 215.443
-theme_override_font_sizes/font_size = 25
-text = "Bet on 0"
-autowrap_mode = 2
-
 [node name="step4" type="Node2D" parent="."]
 visible = false
 position = Vector2(575.003, 324.099)
@@ -177,46 +169,15 @@ Second dozen (13 to 24)
 Third dozen (25 to 36)"
 autowrap_mode = 2
 
-[node name="line" type="Label" parent="step4"]
-offset_left = -559.002
-offset_top = -91.2955
-offset_right = -428.002
-offset_bottom = -56.2955
-theme_override_font_sizes/font_size = 25
-text = "Line bet"
-autowrap_mode = 2
-
-[node name="corner" type="Label" parent="step4"]
-offset_left = -339.396
-offset_top = -89.6385
-offset_right = -208.396
-offset_bottom = -54.6385
-theme_override_font_sizes/font_size = 25
-text = "Corner bet"
-autowrap_mode = 2
-
-[node name="street" type="Label" parent="step4"]
-offset_left = -778.608
-offset_top = -92.9524
-offset_right = -647.608
-offset_bottom = -57.9524
-theme_override_font_sizes/font_size = 25
-text = "Street bet"
-autowrap_mode = 2
-
-[node name="split" type="Label" parent="step4"]
-offset_left = -702.079
-offset_top = 177.129
-offset_right = -571.079
-offset_bottom = 212.129
-theme_override_font_sizes/font_size = 25
-text = "Split bet"
-autowrap_mode = 2
+[node name="Board2" type="Sprite2D" parent="step4"]
+position = Vector2(-505.764, 9.77808)
+scale = Vector2(0.630183, 0.62763)
+texture = ExtResource("7_ys4pu")
 
 [node name="bet0" type="Label" parent="step4"]
-offset_left = -410.935
+offset_left = -410.934
 offset_top = 180.443
-offset_right = -279.935
+offset_right = -279.934
 offset_bottom = 215.443
 theme_override_font_sizes/font_size = 25
 text = "Bet on 0"
@@ -241,7 +202,13 @@ Successfully betting on a row and a dozen will double your earnings.
 When you land on a zero, all outside bets lose."
 autowrap_mode = 2
 
+[node name="Board3" type="Sprite2D" parent="step5"]
+position = Vector2(-505.764, 9.77808)
+scale = Vector2(0.630183, 0.62763)
+texture = ExtResource("7_ys4pu")
+
 [node name="step6" type="Node2D" parent="."]
+visible = false
 position = Vector2(575.003, 324.099)
 scale = Vector2(0.601077, 0.603521)
 
@@ -252,9 +219,9 @@ offset_right = 774.0
 offset_bottom = 45.0
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
-text = "Afterwards, visit the shop to purchase some mass tokens!
+text = "Afterwards, visit the shop to purchase some mass tokens! The mass value of the token are as follows.
 
-The mass value of the token are as follows."
+To earn more mass, keep betting and making more winnings!"
 autowrap_mode = 2
 
 [node name="text2" type="Label" parent="step6"]
@@ -280,9 +247,9 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="text4" type="Label" parent="step6"]
-offset_left = -475.818
+offset_left = -467.5
 offset_top = 197.013
-offset_right = -377.818
+offset_right = -369.5
 offset_bottom = 288.013
 theme_override_font_sizes/font_size = 25
 text = "Planet
@@ -300,6 +267,31 @@ text = "Star
 1000kg"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="Comet" type="Sprite2D" parent="step6"]
+position = Vector2(-710.397, 124.107)
+scale = Vector2(0.465831, 0.463944)
+texture = ExtResource("8_8mnmb")
+
+[node name="Moon" type="Sprite2D" parent="step6"]
+position = Vector2(-562.329, 122.45)
+scale = Vector2(0.465831, 0.463944)
+texture = ExtResource("9_koko0")
+
+[node name="Star" type="Sprite2D" parent="step6"]
+position = Vector2(-269.522, 120.793)
+scale = Vector2(0.465831, 0.463944)
+texture = ExtResource("10_lsb8r")
+
+[node name="Planet" type="Sprite2D" parent="step6"]
+position = Vector2(-414.262, 122.45)
+scale = Vector2(0.465831, 0.463944)
+texture = ExtResource("11_ap3ea")
+
+[node name="Shop" type="Sprite2D" parent="step6"]
+position = Vector2(-487.464, -109.522)
+scale = Vector2(0.51587, 0.513781)
+texture = ExtResource("12_t6ver")
 
 [node name="back" type="Label" parent="."]
 offset_left = 392.0
@@ -339,27 +331,5 @@ theme_override_font_sizes/font_size = 25
 text = "Next"
 autowrap_mode = 2
 
-[node name="Comet" type="Sprite2D" parent="."]
-position = Vector2(148, 399)
-scale = Vector2(0.28, 0.28)
-texture = ExtResource("8_8mnmb")
-
-[node name="Moon" type="Sprite2D" parent="."]
-position = Vector2(237, 398)
-scale = Vector2(0.28, 0.28)
-texture = ExtResource("9_koko0")
-
-[node name="Star" type="Sprite2D" parent="."]
-position = Vector2(413, 397)
-scale = Vector2(0.28, 0.28)
-texture = ExtResource("10_lsb8r")
-
-[node name="Planet" type="Sprite2D" parent="."]
-position = Vector2(323, 398)
-scale = Vector2(0.28, 0.28)
-texture = ExtResource("11_ap3ea")
-
-[node name="Shop" type="Sprite2D" parent="."]
-position = Vector2(270, 258)
-scale = Vector2(0.310077, 0.310078)
-texture = ExtResource("12_t6ver")
+[connection signal="pressed" from="arrow_left" to="." method="_on_arrow_left_pressed"]
+[connection signal="pressed" from="arrow_right" to="." method="_on_arrow_right_pressed"]

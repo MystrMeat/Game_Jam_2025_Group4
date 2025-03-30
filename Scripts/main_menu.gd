@@ -38,7 +38,7 @@ func _on_button_timer_timeout() -> void:
 	elif n == 3: # enter shop
 		get_tree().change_scene_to_file("res://Scenes/shop.tscn")
 	elif n == 4: # credits
-		#open tutorial
+		$Tutorial.show()
 		pass
 		#get_tree().change_scene_to_file("res://Scenes/credits.tscn")
 
