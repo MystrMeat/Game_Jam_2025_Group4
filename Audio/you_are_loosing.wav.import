@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://m27dq4q2vmna"
-path="res://.godot/imported/you are loosing.wav-e411f19ee71f631fa84c1a21325aed4f.sample"
+path="res://.godot/imported/you_are_loosing.wav-69dcd582f891f4bf99343393d1774ade.sample"
 
 [deps]
 
-source_file="res://Audio/you are loosing.wav"
-dest_files=["res://.godot/imported/you are loosing.wav-e411f19ee71f631fa84c1a21325aed4f.sample"]
+source_file="res://Audio/you_are_loosing.wav"
+dest_files=["res://.godot/imported/you_are_loosing.wav-69dcd582f891f4bf99343393d1774ade.sample"]
 
 [params]
 
