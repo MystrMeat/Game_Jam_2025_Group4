@@ -151,7 +151,6 @@ texture_normal = ExtResource("8_qh4d7")
 texture_pressed = ExtResource("9_lv7gn")
 
 [node name="Transition" parent="." instance=ExtResource("12_th2ad")]
-visible = false
 
 [node name="audio_manager" parent="." instance=ExtResource("14_lv7gn")]
 

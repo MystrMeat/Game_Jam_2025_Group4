@@ -8,11 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://boroqx2ylboa4" path="res://Assets/UI/shop/WindowShop FIXED.png" id="5_1sjcd"]
 [ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="5_ymrm4"]
 [ext_resource type="Theme" uid="uid://byr2us48h4awc" path="res://Shaders/button_theme.tres" id="7_ymrm4"]
-[ext_resource type="FontFile" uid="uid://c235vknrpwev6" path="res://Assets/castiron-condensed.otf" id="8_s8dlv"]
 [ext_resource type="Texture2D" uid="uid://n2v6yp8fqiyh" path="res://Assets/game/token_comet.png" id="9_k6pkm"]
 [ext_resource type="Texture2D" uid="uid://cqxi2jpdh5t4n" path="res://Assets/game/token_moon.png" id="10_1sjcd"]
 [ext_resource type="Texture2D" uid="uid://wno1o0hu07l5" path="res://Assets/game/token_star.png" id="11_1cyt5"]
 [ext_resource type="Texture2D" uid="uid://cwobaavjllq23" path="res://Assets/game/token_planet.png" id="12_0vsm1"]
+[ext_resource type="PackedScene" uid="uid://bdmd6ufh82ckc" path="res://Scenes/transition.tscn" id="13_1sjcd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fdj0q"]
 shader = ExtResource("1_2shtd")
@@ -156,82 +156,81 @@ text = "$500"
 [node name="Currency conversion" type="Label" parent="."]
 layout_mode = 0
 offset_left = -324.0
-offset_top = 22.0
-offset_right = -219.0
+offset_top = 19.0
+offset_right = -182.0
 offset_bottom = 64.0
-theme_override_fonts/font = ExtResource("8_s8dlv")
-theme_override_font_sizes/font_size = 35
-text = "1kg = $0.25"
+theme_override_font_sizes/font_size = 16
+text = "1kilogram = $0.25"
 horizontal_alignment = 1
 
-[node name="Currency conversion" type="Label" parent="Currency conversion"]
-offset_left = 198.0
-offset_top = -126.0
-offset_right = 303.0
-offset_bottom = -101.0
+[node name="Currency conversion2" type="Label" parent="."]
+offset_left = -126.0
+offset_top = -104.0
+offset_right = -21.0
+offset_bottom = -79.0
 theme_override_font_sizes/font_size = 13
 text = "10 kg"
 horizontal_alignment = 1
 
-[node name="Currency conversion2" type="Label" parent="Currency conversion"]
-offset_left = 311.0
-offset_top = -126.0
-offset_right = 416.0
-offset_bottom = -101.0
+[node name="Currency conversion3" type="Label" parent="."]
+offset_left = -13.0
+offset_top = -104.0
+offset_right = 92.0
+offset_bottom = -79.0
 theme_override_font_sizes/font_size = 13
 text = "20 kg"
 horizontal_alignment = 1
 
-[node name="Currency conversion3" type="Label" parent="Currency conversion"]
-offset_left = 421.0
-offset_top = -126.0
-offset_right = 526.0
-offset_bottom = -101.0
+[node name="Currency conversion4" type="Label" parent="."]
+offset_left = 97.0
+offset_top = -104.0
+offset_right = 202.0
+offset_bottom = -79.0
 theme_override_font_sizes/font_size = 13
 text = "50 kg"
 horizontal_alignment = 1
 
-[node name="Currency conversion4" type="Label" parent="Currency conversion"]
-offset_left = 534.0
-offset_top = -126.0
-offset_right = 639.0
-offset_bottom = -101.0
+[node name="Currency conversion5" type="Label" parent="."]
+offset_left = 210.0
+offset_top = -104.0
+offset_right = 315.0
+offset_bottom = -79.0
 theme_override_font_sizes/font_size = 13
 text = "100 kg"
 horizontal_alignment = 1
 
-[node name="Currency conversion5" type="Label" parent="Currency conversion"]
-offset_left = 200.0
-offset_top = 32.0
-offset_right = 305.0
-offset_bottom = 57.0
+[node name="Currency conversion6" type="Label" parent="."]
+offset_left = -124.0
+offset_top = 54.0
+offset_right = -19.0
+offset_bottom = 79.0
 theme_override_font_sizes/font_size = 13
 text = "200 kg"
 horizontal_alignment = 1
 
-[node name="Currency conversion6" type="Label" parent="Currency conversion"]
-offset_left = 312.0
-offset_top = 32.0
-offset_right = 417.0
-offset_bottom = 57.0
+[node name="Currency conversion7" type="Label" parent="."]
+offset_left = -12.0
+offset_top = 54.0
+offset_right = 93.0
+offset_bottom = 79.0
 theme_override_font_sizes/font_size = 13
 text = "500 kg"
 horizontal_alignment = 1
 
-[node name="Currency conversion7" type="Label" parent="Currency conversion"]
-offset_left = 422.0
-offset_top = 32.0
-offset_right = 527.0
-offset_bottom = 57.0
+[node name="Currency conversion8" type="Label" parent="."]
+offset_left = 98.0
+offset_top = 54.0
+offset_right = 203.0
+offset_bottom = 79.0
 theme_override_font_sizes/font_size = 13
 text = "1000 kg"
 horizontal_alignment = 1
 
-[node name="Currency conversion8" type="Label" parent="Currency conversion"]
-offset_left = 533.0
-offset_top = 32.0
-offset_right = 638.0
-offset_bottom = 57.0
+[node name="Currency conversion9" type="Label" parent="."]
+offset_left = 209.0
+offset_top = 54.0
+offset_right = 314.0
+offset_bottom = 79.0
 theme_override_font_sizes/font_size = 13
 text = "2000 kg"
 horizontal_alignment = 1
@@ -304,12 +303,12 @@ scale = Vector2(0.14, 0.14)
 texture = ExtResource("12_0vsm1")
 
 [node name="Star2" type="Sprite2D" parent="Token Icons"]
-position = Vector2(242, 15)
+position = Vector2(247, 13)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("11_1cyt5")
 
 [node name="Star3" type="Sprite2D" parent="Token Icons"]
-position = Vector2(272, 32)
+position = Vector2(278, 29)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("11_1cyt5")
 
@@ -319,6 +318,13 @@ offset_left = 58.0
 offset_top = 165.0
 offset_right = 58.0
 offset_bottom = 165.0
+
+[node name="Transition" parent="." instance=ExtResource("13_1sjcd")]
+z_index = 5
+offset_left = -526.0
+offset_top = -295.0
+offset_right = 626.0
+offset_bottom = 353.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

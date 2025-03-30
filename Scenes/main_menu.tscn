@@ -126,7 +126,6 @@ texture_pressed = ExtResource("14_wyh8j")
 stretch_mode = 3
 
 [node name="Transition" parent="." instance=ExtResource("18_ujyyl")]
-visible = false
 offset_left = -576.0
 offset_top = -324.0
 offset_right = 576.0
