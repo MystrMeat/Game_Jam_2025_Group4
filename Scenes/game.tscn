@@ -65,6 +65,7 @@ unique_name_in_owner = true
 visible = false
 
 [node name="Board" parent="." instance=ExtResource("8_rku1e")]
+unique_name_in_owner = true
 position = Vector2(268, -135)
 
 [node name="Spin" type="Button" parent="."]
@@ -136,49 +137,189 @@ theme_override_constants/v_separation = 25
 columns = 3
 
 [node name="Bet Line" type="Button" parent="InBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Line"
 
 [node name="Bet Corner" type="Button" parent="InBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Corner"
 
 [node name="Bet Street" type="Button" parent="InBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Street"
 
 [node name="Bet Split" type="Button" parent="InBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Split"
 
 [node name="Bet Zero" type="Button" parent="InBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Zero"
 
 [node name="Bet Number" type="Button" parent="InBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Number"
 
 [node name="Back" type="Button" parent="InBet/GridContainer"]
-unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Back"
+
+[node name="ZeroBet" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 106.0
+offset_top = 99.5
+offset_right = 333.0
+offset_bottom = 227.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.64772, 1.64772)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GridContainer" type="GridContainer" parent="ZeroBet"]
+layout_mode = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 3
+
+[node name="Bet Self" type="Button" parent="ZeroBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Street"
+
+[node name="Bet Zero Line" type="Button" parent="ZeroBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line"
+
+[node name="Bet Zero Corner" type="Button" parent="ZeroBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Corner"
+
+[node name="Bet Zero Split" type="Button" parent="ZeroBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Split"
+
+[node name="Zero Back" type="Button" parent="ZeroBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Back"
+
+[node name="DozonBet" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 80.5
+offset_top = 105.5
+offset_right = 452.5
+offset_bottom = 233.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.64772, 1.64772)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GridContainer" type="GridContainer" parent="DozonBet"]
+layout_mode = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="1st Dozon" type="Button" parent="DozonBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "First Dozon"
+
+[node name="2nd Dozon" type="Button" parent="DozonBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Second Dozon"
+
+[node name="3rd Dozon" type="Button" parent="DozonBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Third Dozon"
+
+[node name="Dozon Back" type="Button" parent="DozonBet/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Back"
+
+[node name="DozonBet2" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 155.0
+offset_top = 101.0
+offset_right = 527.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.64772, 1.64772)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GridContainer" type="GridContainer" parent="DozonBet2"]
+layout_mode = 2
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 4
+
+[node name="A" type="Button" parent="DozonBet2/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "A"
+
+[node name="B" type="Button" parent="DozonBet2/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "B"
+
+[node name="C" type="Button" parent="DozonBet2/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "C"
+
+[node name="2 to 1 Back" type="Button" parent="DozonBet2/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
@@ -201,56 +342,136 @@ theme_override_constants/v_separation = 25
 columns = 3
 
 [node name="Bet Black" type="Button" parent="OutBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Red"
 
 [node name="Bet Purple" type="Button" parent="OutBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Black"
 
 [node name="Bet Odd" type="Button" parent="OutBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Odd"
 
 [node name="Bet Even" type="Button" parent="OutBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Even"
 
 [node name="Bet Low" type="Button" parent="OutBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Low"
 
 [node name="Bet High" type="Button" parent="OutBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "High"
 
 [node name="Bet Dozen" type="Button" parent="OutBet/GridContainer"]
-unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Dozen"
 
 [node name="Back2" type="Button" parent="OutBet/GridContainer"]
-unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Back"
+
+[node name="Bet Lines" type="MarginContainer" parent="."]
+visible = false
+offset_left = 50.0
+offset_top = 22.0
+offset_right = 329.0
+offset_bottom = 201.0
+scale = Vector2(1.60475, 1.49752)
+
+[node name="GridContainer" type="GridContainer" parent="Bet Lines"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 3
+
+[node name="Bet Line1" type="Button" parent="Bet Lines/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line A"
+
+[node name="Bet Line2" type="Button" parent="Bet Lines/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line B"
+
+[node name="Bet Line3" type="Button" parent="Bet Lines/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line C"
+
+[node name="Bet Line4" type="Button" parent="Bet Lines/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line D"
+
+[node name="Bet Line5" type="Button" parent="Bet Lines/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line E"
+
+[node name="Bet Line6" type="Button" parent="Bet Lines/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line F"
+
+[node name="Bet Line7" type="Button" parent="Bet Lines/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line G"
+
+[node name="Bet Line8" type="Button" parent="Bet Lines/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line H"
+
+[node name="Bet Line9" type="Button" parent="Bet Lines/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line I"
+
+[node name="Bet Line10" type="Button" parent="Bet Lines/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line J"
+
+[node name="Bet Line11" type="Button" parent="Bet Lines/GridContainer"]
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Line K"
+
+[node name="Lines Back" type="Button" parent="Bet Lines/GridContainer"]
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
@@ -292,6 +513,18 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("14_nb51f")
 theme_override_font_sizes/font_size = 35
 text = "Insufficient Mass - Please Purchase More Mass."
+
+[node name="No Bet Place Error" type="Label" parent="."]
+visible = false
+offset_left = -124.0
+offset_top = -251.0
+offset_right = 268.0
+offset_bottom = -202.0
+scale = Vector2(0.840001, 0.944194)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_nb51f")
+theme_override_font_sizes/font_size = 35
+text = "No Bet Placed."
 
 [node name="Bet field" type="Label" parent="."]
 offset_left = -232.0
@@ -337,12 +570,83 @@ caret_blink = true
 [connection signal="pressed" from="InBet/GridContainer/Bet Zero" to="." method="_on_bet_zero_pressed"]
 [connection signal="pressed" from="InBet/GridContainer/Bet Number" to="." method="_on_bet_number_pressed"]
 [connection signal="pressed" from="InBet/GridContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ZeroBet/GridContainer/Bet Self" to="." method="_on_bet_self_pressed"]
+[connection signal="pressed" from="ZeroBet/GridContainer/Bet Zero Line" to="." method="_on_bet_zero_line_pressed"]
+[connection signal="pressed" from="ZeroBet/GridContainer/Bet Zero Corner" to="." method="_on_bet_zero_corner_pressed"]
+[connection signal="pressed" from="ZeroBet/GridContainer/Bet Zero Split" to="." method="_on_bet_zero_split_pressed"]
+[connection signal="pressed" from="ZeroBet/GridContainer/Zero Back" to="." method="_on_zero_back_pressed"]
+[connection signal="mouse_entered" from="DozonBet/GridContainer/1st Dozon" to="." method="_on_st_dozon_mouse_entered"]
+[connection signal="mouse_exited" from="DozonBet/GridContainer/1st Dozon" to="." method="_on_st_dozon_mouse_exited"]
+[connection signal="pressed" from="DozonBet/GridContainer/1st Dozon" to="." method="_on_st_dozon_pressed"]
+[connection signal="mouse_entered" from="DozonBet/GridContainer/2nd Dozon" to="." method="_on_nd_dozon_mouse_entered"]
+[connection signal="mouse_exited" from="DozonBet/GridContainer/2nd Dozon" to="." method="_on_nd_dozon_mouse_exited"]
+[connection signal="pressed" from="DozonBet/GridContainer/2nd Dozon" to="." method="_on_nd_dozon_pressed"]
+[connection signal="mouse_entered" from="DozonBet/GridContainer/3rd Dozon" to="." method="_on_rd_dozon_mouse_entered"]
+[connection signal="mouse_exited" from="DozonBet/GridContainer/3rd Dozon" to="." method="_on_rd_dozon_mouse_exited"]
+[connection signal="pressed" from="DozonBet/GridContainer/3rd Dozon" to="." method="_on_rd_dozon_pressed"]
+[connection signal="pressed" from="DozonBet/GridContainer/Dozon Back" to="." method="_on_dozon_back_pressed"]
+[connection signal="mouse_entered" from="DozonBet2/GridContainer/A" to="." method="_on_a_mouse_entered"]
+[connection signal="mouse_exited" from="DozonBet2/GridContainer/A" to="." method="_on_a_mouse_exited"]
+[connection signal="pressed" from="DozonBet2/GridContainer/A" to="." method="_on_a_pressed"]
+[connection signal="mouse_entered" from="DozonBet2/GridContainer/B" to="." method="_on_b_mouse_entered"]
+[connection signal="mouse_exited" from="DozonBet2/GridContainer/B" to="." method="_on_b_mouse_exited"]
+[connection signal="pressed" from="DozonBet2/GridContainer/B" to="." method="_on_b_pressed"]
+[connection signal="mouse_entered" from="DozonBet2/GridContainer/C" to="." method="_on_c_mouse_entered"]
+[connection signal="mouse_exited" from="DozonBet2/GridContainer/C" to="." method="_on_c_mouse_exited"]
+[connection signal="pressed" from="DozonBet2/GridContainer/C" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="DozonBet2/GridContainer/2 to 1 Back" to="." method="_on__to_1_back_pressed"]
+[connection signal="mouse_entered" from="OutBet/GridContainer/Bet Black" to="." method="_on_bet_black_mouse_entered"]
+[connection signal="mouse_exited" from="OutBet/GridContainer/Bet Black" to="." method="_on_bet_black_mouse_exited"]
 [connection signal="pressed" from="OutBet/GridContainer/Bet Black" to="." method="_on_bet_black_pressed"]
+[connection signal="mouse_entered" from="OutBet/GridContainer/Bet Purple" to="." method="_on_bet_purple_mouse_entered"]
+[connection signal="mouse_exited" from="OutBet/GridContainer/Bet Purple" to="." method="_on_bet_purple_mouse_exited"]
 [connection signal="pressed" from="OutBet/GridContainer/Bet Purple" to="." method="_on_bet_purple_pressed"]
+[connection signal="mouse_entered" from="OutBet/GridContainer/Bet Odd" to="." method="_on_bet_odd_mouse_entered"]
+[connection signal="mouse_exited" from="OutBet/GridContainer/Bet Odd" to="." method="_on_bet_odd_mouse_exited"]
 [connection signal="pressed" from="OutBet/GridContainer/Bet Odd" to="." method="_on_bet_odd_pressed"]
+[connection signal="mouse_entered" from="OutBet/GridContainer/Bet Even" to="." method="_on_bet_even_mouse_entered"]
+[connection signal="mouse_exited" from="OutBet/GridContainer/Bet Even" to="." method="_on_bet_even_mouse_exited"]
 [connection signal="pressed" from="OutBet/GridContainer/Bet Even" to="." method="_on_bet_even_pressed"]
+[connection signal="mouse_entered" from="OutBet/GridContainer/Bet Low" to="." method="_on_bet_low_mouse_entered"]
+[connection signal="mouse_exited" from="OutBet/GridContainer/Bet Low" to="." method="_on_bet_low_mouse_exited"]
 [connection signal="pressed" from="OutBet/GridContainer/Bet Low" to="." method="_on_bet_low_pressed"]
+[connection signal="mouse_entered" from="OutBet/GridContainer/Bet High" to="." method="_on_bet_high_mouse_entered"]
+[connection signal="mouse_exited" from="OutBet/GridContainer/Bet High" to="." method="_on_bet_high_mouse_exited"]
 [connection signal="pressed" from="OutBet/GridContainer/Bet High" to="." method="_on_bet_high_pressed"]
 [connection signal="pressed" from="OutBet/GridContainer/Bet Dozen" to="." method="_on_bet_dozen_pressed"]
 [connection signal="pressed" from="OutBet/GridContainer/Back2" to="." method="_on_back_2_pressed"]
+[connection signal="mouse_entered" from="Bet Lines/GridContainer/Bet Line1" to="." method="_on_bet_line_1_mouse_entered"]
+[connection signal="mouse_exited" from="Bet Lines/GridContainer/Bet Line1" to="." method="_on_bet_line_1_mouse_exited"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Bet Line1" to="." method="_on_bet_line_1_pressed"]
+[connection signal="mouse_entered" from="Bet Lines/GridContainer/Bet Line2" to="." method="_on_bet_line_2_mouse_entered"]
+[connection signal="mouse_exited" from="Bet Lines/GridContainer/Bet Line2" to="." method="_on_bet_line_2_mouse_exited"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Bet Line2" to="." method="_on_bet_line_2_pressed"]
+[connection signal="mouse_entered" from="Bet Lines/GridContainer/Bet Line3" to="." method="_on_bet_line_3_mouse_entered"]
+[connection signal="mouse_exited" from="Bet Lines/GridContainer/Bet Line3" to="." method="_on_bet_line_3_mouse_exited"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Bet Line3" to="." method="_on_bet_line_3_pressed"]
+[connection signal="mouse_entered" from="Bet Lines/GridContainer/Bet Line4" to="." method="_on_bet_line_4_mouse_entered"]
+[connection signal="mouse_exited" from="Bet Lines/GridContainer/Bet Line4" to="." method="_on_bet_line_4_mouse_exited"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Bet Line4" to="." method="_on_bet_line_4_pressed"]
+[connection signal="mouse_entered" from="Bet Lines/GridContainer/Bet Line5" to="." method="_on_bet_line_5_mouse_entered"]
+[connection signal="mouse_exited" from="Bet Lines/GridContainer/Bet Line5" to="." method="_on_bet_line_5_mouse_exited"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Bet Line5" to="." method="_on_bet_line_5_pressed"]
+[connection signal="mouse_entered" from="Bet Lines/GridContainer/Bet Line6" to="." method="_on_bet_line_6_mouse_entered"]
+[connection signal="mouse_exited" from="Bet Lines/GridContainer/Bet Line6" to="." method="_on_bet_line_6_mouse_exited"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Bet Line6" to="." method="_on_bet_line_6_pressed"]
+[connection signal="mouse_entered" from="Bet Lines/GridContainer/Bet Line7" to="." method="_on_bet_line_7_mouse_entered"]
+[connection signal="mouse_exited" from="Bet Lines/GridContainer/Bet Line7" to="." method="_on_bet_line_7_mouse_exited"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Bet Line7" to="." method="_on_bet_line_7_pressed"]
+[connection signal="mouse_entered" from="Bet Lines/GridContainer/Bet Line8" to="." method="_on_bet_line_8_mouse_entered"]
+[connection signal="mouse_exited" from="Bet Lines/GridContainer/Bet Line8" to="." method="_on_bet_line_8_mouse_exited"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Bet Line8" to="." method="_on_bet_line_8_pressed"]
+[connection signal="mouse_entered" from="Bet Lines/GridContainer/Bet Line9" to="." method="_on_bet_line_9_mouse_entered"]
+[connection signal="mouse_exited" from="Bet Lines/GridContainer/Bet Line9" to="." method="_on_bet_line_9_mouse_exited"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Bet Line9" to="." method="_on_bet_line_9_pressed"]
+[connection signal="mouse_entered" from="Bet Lines/GridContainer/Bet Line10" to="." method="_on_bet_line_10_mouse_entered"]
+[connection signal="mouse_exited" from="Bet Lines/GridContainer/Bet Line10" to="." method="_on_bet_line_10_mouse_exited"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Bet Line10" to="." method="_on_bet_line_10_pressed"]
+[connection signal="mouse_entered" from="Bet Lines/GridContainer/Bet Line11" to="." method="_on_bet_line_11_mouse_entered"]
+[connection signal="mouse_exited" from="Bet Lines/GridContainer/Bet Line11" to="." method="_on_bet_line_11_mouse_exited"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Bet Line11" to="." method="_on_bet_line_11_pressed"]
+[connection signal="pressed" from="Bet Lines/GridContainer/Lines Back" to="." method="_on_lines_back_pressed"]
 [connection signal="pressed" from="BigButtons/HBoxContainer/Shop" to="." method="_on_shop_pressed"]

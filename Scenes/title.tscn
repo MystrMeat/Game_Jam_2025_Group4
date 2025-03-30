@@ -38,7 +38,7 @@ shader_parameter/wave_count = 20.0
 shader_parameter/speed = 3.0
 shader_parameter/height = 0.003
 
-[node name="Title" type="Node2D" node_paths=PackedStringArray("cloud_back", "cloud_front", "play_button", "credits_button", "close_credits", "credits_menu", "transition", "audio_manager")]
+[node name="Title" type="Node2D" node_paths=PackedStringArray("cloud_back", "cloud_front", "play_button", "credits_button", "close_credits", "credits_menu", "transition")]
 script = ExtResource("1_w31pl")
 cloud_back = NodePath("cloud_back")
 cloud_front = NodePath("cloud_front")
@@ -47,7 +47,6 @@ credits_button = NodePath("credits_button")
 close_credits = NodePath("credits_menu/ColorRect/back")
 credits_menu = NodePath("credits_menu")
 transition = NodePath("Transition")
-audio_manager = NodePath("")
 
 [node name="BackgroundNoStars" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_q2qps")
