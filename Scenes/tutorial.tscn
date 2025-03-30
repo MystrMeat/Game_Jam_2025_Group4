@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cd7sj6arhgakh"]
+[gd_scene load_steps=13 format=3 uid="uid://cd7sj6arhgakh"]
 
 [ext_resource type="Texture2D" uid="uid://boroqx2ylboa4" path="res://Assets/UI/shop/WindowShop FIXED.png" id="1_ka2pi"]
 [ext_resource type="PackedScene" uid="uid://cauce3wkgdp8y" path="res://Scenes/black_hole.tscn" id="2_p1f1o"]
@@ -6,6 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://thnnargyf25k" path="res://Assets/UI/main_menu/ButtonArrowLeftRaised.png" id="4_h2ono"]
 [ext_resource type="Texture2D" uid="uid://gi3t4ddn7dby" path="res://Assets/UI/main_menu/ButtonArrowRightRaised.png" id="5_on4kn"]
 [ext_resource type="Texture2D" uid="uid://byppih7a12tow" path="res://Assets/UI/main_menu/ButtonArrowRightDepressed.png" id="6_70gml"]
+[ext_resource type="Texture2D" uid="uid://rdra3uw5ljwb" path="res://Assets/tutorial/board.png" id="7_ys4pu"]
+[ext_resource type="Texture2D" uid="uid://n2v6yp8fqiyh" path="res://Assets/game/token_comet.png" id="8_8mnmb"]
+[ext_resource type="Texture2D" uid="uid://cqxi2jpdh5t4n" path="res://Assets/game/token_moon.png" id="9_koko0"]
+[ext_resource type="Texture2D" uid="uid://wno1o0hu07l5" path="res://Assets/game/token_star.png" id="10_lsb8r"]
+[ext_resource type="Texture2D" uid="uid://cwobaavjllq23" path="res://Assets/game/token_planet.png" id="11_ap3ea"]
+[ext_resource type="Texture2D" uid="uid://d1a8037tf5d2d" path="res://Assets/tutorial/shop.png" id="12_t6ver"]
 
 [node name="Tutorial" type="Control"]
 layout_mode = 3
@@ -51,16 +57,248 @@ scale = Vector2(0.727, 0.724)
 metadata/_edit_group_ = true
 
 [node name="step2" type="Node2D" parent="."]
+visible = false
 position = Vector2(575.003, 324.099)
 scale = Vector2(0.601077, 0.603521)
 
-[node name="Currency conversion" type="Label" parent="step2"]
+[node name="text" type="Label" parent="step2"]
 offset_left = -126.0
 offset_top = -272.0
 offset_right = 774.0
 offset_bottom = 245.0
 theme_override_font_sizes/font_size = 25
-text = "The numbers are labelled from 0 to 36."
+text = "Inside Bet
+
+The numbers are labelled from 0 to 36.
+
+Choosing the correct number that is designated to the roulette wheel, called an inside bet, will earn you 36 times your bet as earnings.
+
+You can bet more than one number using only one chip. The more numbers you bet, your probability of winning increases, but the payout decreases."
+autowrap_mode = 2
+
+[node name="Board" type="Sprite2D" parent="step2"]
+position = Vector2(-505.764, 9.77808)
+scale = Vector2(0.630183, 0.62763)
+texture = ExtResource("7_ys4pu")
+
+[node name="step3" type="Node2D" parent="."]
+visible = false
+position = Vector2(575.003, 324.099)
+scale = Vector2(0.601077, 0.603521)
+
+[node name="text" type="RichTextLabel" parent="step3"]
+offset_left = -126.0
+offset_top = -272.0
+offset_right = 774.0
+offset_bottom = 172.0
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "There are numerous ways to make an inside bet:
+
+[ul]Betting on a line (6 numbers): If any of the 6 bets around your line win, you earn 6 times your bet
+Corner bet (4 numbers): If any of the 4 around your corner win, you earn 9 times your bet
+Street (3 numbers): If any of the 3 around your corner win, you earn 12 times your bet
+Split (2 numbers): If any of the 2 numbers around your split win, you earn 18 times your bet
+Bet on 0: As a split (2 numbers) or just zero or a 3 number bet or a 4 number corner bet (ends)
+"
+autowrap_mode = 2
+
+[node name="corner" type="Label" parent="step3"]
+offset_left = -560.666
+offset_top = -89.6385
+offset_right = -429.666
+offset_bottom = -54.6385
+theme_override_font_sizes/font_size = 25
+text = "Corner bet"
+autowrap_mode = 2
+
+[node name="street" type="Label" parent="step3"]
+offset_left = -322.759
+offset_top = -92.9524
+offset_right = -191.759
+offset_bottom = -57.9524
+theme_override_font_sizes/font_size = 25
+text = "Street bet"
+autowrap_mode = 2
+
+[node name="line" type="Label" parent="step3"]
+offset_left = -775.281
+offset_top = -91.2955
+offset_right = -644.281
+offset_bottom = -56.2955
+theme_override_font_sizes/font_size = 25
+text = "Line bet"
+autowrap_mode = 2
+
+[node name="split" type="Label" parent="step3"]
+offset_left = -702.079
+offset_top = 177.129
+offset_right = -571.079
+offset_bottom = 212.129
+theme_override_font_sizes/font_size = 25
+text = "Split bet"
+autowrap_mode = 2
+
+[node name="bet0" type="Label" parent="step3"]
+offset_left = -410.935
+offset_top = 180.443
+offset_right = -279.935
+offset_bottom = 215.443
+theme_override_font_sizes/font_size = 25
+text = "Bet on 0"
+autowrap_mode = 2
+
+[node name="step4" type="Node2D" parent="."]
+visible = false
+position = Vector2(575.003, 324.099)
+scale = Vector2(0.601077, 0.603521)
+
+[node name="text" type="RichTextLabel" parent="step4"]
+offset_left = -126.0
+offset_top = -338.0
+offset_right = 774.0
+offset_bottom = 298.0
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Outside bets
+
+Outside bets, in contrast to inside bets, are non-numerical betting methods that are labelled around the wheel. 6 outside bets offer a 50:50 chance of winning, which will double your winnings. 
+You can bet the following:
+
+[ul]Bet on red
+Bet on black
+Bet on odd
+Bet on even
+Bet on low numbers (1 to 18)
+Bet on high numbers (19 to 36)
+6 - 12 number bets 
+First dozen (1 to 12)
+Second dozen (13 to 24)
+Third dozen (25 to 36)"
+autowrap_mode = 2
+
+[node name="line" type="Label" parent="step4"]
+offset_left = -559.002
+offset_top = -91.2955
+offset_right = -428.002
+offset_bottom = -56.2955
+theme_override_font_sizes/font_size = 25
+text = "Line bet"
+autowrap_mode = 2
+
+[node name="corner" type="Label" parent="step4"]
+offset_left = -339.396
+offset_top = -89.6385
+offset_right = -208.396
+offset_bottom = -54.6385
+theme_override_font_sizes/font_size = 25
+text = "Corner bet"
+autowrap_mode = 2
+
+[node name="street" type="Label" parent="step4"]
+offset_left = -778.608
+offset_top = -92.9524
+offset_right = -647.608
+offset_bottom = -57.9524
+theme_override_font_sizes/font_size = 25
+text = "Street bet"
+autowrap_mode = 2
+
+[node name="split" type="Label" parent="step4"]
+offset_left = -702.079
+offset_top = 177.129
+offset_right = -571.079
+offset_bottom = 212.129
+theme_override_font_sizes/font_size = 25
+text = "Split bet"
+autowrap_mode = 2
+
+[node name="bet0" type="Label" parent="step4"]
+offset_left = -410.935
+offset_top = 180.443
+offset_right = -279.935
+offset_bottom = 215.443
+theme_override_font_sizes/font_size = 25
+text = "Bet on 0"
+autowrap_mode = 2
+
+[node name="step5" type="Node2D" parent="."]
+visible = false
+position = Vector2(575.003, 324.099)
+scale = Vector2(0.601077, 0.603521)
+
+[node name="text" type="RichTextLabel" parent="step5"]
+offset_left = -126.0
+offset_top = -114.0
+offset_right = 774.0
+offset_bottom = 298.0
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "You can chose a dozen and a row (one of the 2 TO 1 options).
+
+Successfully betting on a row and a dozen will double your earnings.
+
+When you land on a zero, all outside bets lose."
+autowrap_mode = 2
+
+[node name="step6" type="Node2D" parent="."]
+position = Vector2(575.003, 324.099)
+scale = Vector2(0.601077, 0.603521)
+
+[node name="text" type="RichTextLabel" parent="step6"]
+offset_left = -126.0
+offset_top = -124.0
+offset_right = 774.0
+offset_bottom = 45.0
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Afterwards, visit the shop to purchase some mass tokens!
+
+The mass value of the token are as follows."
+autowrap_mode = 2
+
+[node name="text2" type="Label" parent="step6"]
+offset_left = -761.971
+offset_top = 197.013
+offset_right = -663.971
+offset_bottom = 288.013
+theme_override_font_sizes/font_size = 25
+text = "Comet
+10kg"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="text3" type="Label" parent="step6"]
+offset_left = -612.24
+offset_top = 197.013
+offset_right = -514.24
+offset_bottom = 288.013
+theme_override_font_sizes/font_size = 25
+text = "Moon
+50kg"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="text4" type="Label" parent="step6"]
+offset_left = -475.818
+offset_top = 197.013
+offset_right = -377.818
+offset_bottom = 288.013
+theme_override_font_sizes/font_size = 25
+text = "Planet
+100kg"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="text5" type="Label" parent="step6"]
+offset_left = -319.432
+offset_top = 197.013
+offset_right = -221.432
+offset_bottom = 288.013
+theme_override_font_sizes/font_size = 25
+text = "Star
+1000kg"
+horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="back" type="Label" parent="."]
@@ -100,3 +338,28 @@ offset_bottom = 554.0
 theme_override_font_sizes/font_size = 25
 text = "Next"
 autowrap_mode = 2
+
+[node name="Comet" type="Sprite2D" parent="."]
+position = Vector2(148, 399)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("8_8mnmb")
+
+[node name="Moon" type="Sprite2D" parent="."]
+position = Vector2(237, 398)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("9_koko0")
+
+[node name="Star" type="Sprite2D" parent="."]
+position = Vector2(413, 397)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("10_lsb8r")
+
+[node name="Planet" type="Sprite2D" parent="."]
+position = Vector2(323, 398)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("11_ap3ea")
+
+[node name="Shop" type="Sprite2D" parent="."]
+position = Vector2(270, 258)
+scale = Vector2(0.310077, 0.310078)
+texture = ExtResource("12_t6ver")
