@@ -1,118 +1,138 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvohnaalxgygx"]
+[gd_scene load_steps=4 format=3 uid="uid://dvohnaalxgygx"]
 
 [ext_resource type="Script" uid="uid://b8gsdbfmgsfj4" path="res://Scripts/roulette_wheel.gd" id="1_mjh8x"]
 [ext_resource type="Texture2D" uid="uid://c4f4fjag1mmr6" path="res://Assets/game/Wheel NewPalette.png" id="1_sylsi"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_mjh8x"]
+radius = 96.18
+
 [node name="Roulette Wheel" type="Node2D"]
 script = ExtResource("1_mjh8x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Inner Wall" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(-5.96046e-08, 0)
+scale = Vector2(3.11, 3.11)
+shape = SubResource("CircleShape2D_mjh8x")
+
+[node name="Inner Wall2" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(-5.96046e-08, 0)
+scale = Vector2(3.99, 3.99)
+shape = SubResource("CircleShape2D_mjh8x")
+one_way_collision = true
+one_way_collision_margin = 5.0
+debug_color = Color(0, 0.568399, 0.853337, 0.42)
 
 [node name="Wheel" type="Sprite2D" parent="."]
 texture = ExtResource("1_sylsi")
 
 [node name="Zero" type="Label" parent="Wheel"]
 offset_left = 25.0
-offset_top = 362.0
+offset_top = 359.0
 offset_right = 75.0
-offset_bottom = 419.0
+offset_bottom = 416.0
 rotation = 3.14159
 theme_override_font_sizes/font_size = 36
 text = "0"
 horizontal_alignment = 1
 
 [node name="32" type="Label" parent="Wheel"]
-offset_left = -36.0
-offset_top = 361.0
-offset_right = 14.0
-offset_bottom = 418.0
+offset_left = -35.0
+offset_top = 359.0
+offset_right = 15.0
+offset_bottom = 416.0
 rotation = 3.31089
 theme_override_font_sizes/font_size = 36
 text = "32"
 horizontal_alignment = 1
 
 [node name="15" type="Label" parent="Wheel"]
-offset_left = -97.0
-offset_top = 350.0
-offset_right = -47.0
-offset_bottom = 407.0
+offset_left = -95.0
+offset_top = 347.0
+offset_right = -45.0
+offset_bottom = 404.0
 rotation = 3.48193
 theme_override_font_sizes/font_size = 36
 text = "15"
 horizontal_alignment = 1
 
 [node name="19" type="Label" parent="Wheel"]
-offset_left = -153.0
-offset_top = 329.0
-offset_right = -103.0
-offset_bottom = 386.0
+offset_left = -152.0
+offset_top = 327.0
+offset_right = -102.0
+offset_bottom = 384.0
 rotation = 3.65123
 theme_override_font_sizes/font_size = 36
 text = "19"
 horizontal_alignment = 1
 
 [node name="4" type="Label" parent="Wheel"]
-offset_left = -207.0
-offset_top = 298.0
-offset_right = -157.0
-offset_bottom = 355.0
+offset_left = -205.0
+offset_top = 295.0
+offset_right = -155.0
+offset_bottom = 352.0
 rotation = 3.82053
 theme_override_font_sizes/font_size = 36
 text = "4"
 horizontal_alignment = 1
 
 [node name="21" type="Label" parent="Wheel"]
-offset_left = -255.0
-offset_top = 257.0
-offset_right = -205.0
-offset_bottom = 314.0
+offset_left = -253.0
+offset_top = 255.0
+offset_right = -203.0
+offset_bottom = 312.0
 rotation = 3.98982
 theme_override_font_sizes/font_size = 36
 text = "21"
 horizontal_alignment = 1
 
 [node name="2" type="Label" parent="Wheel"]
-offset_left = -295.0
-offset_top = 211.0
-offset_right = -245.0
-offset_bottom = 268.0
+offset_left = -293.0
+offset_top = 210.0
+offset_right = -243.0
+offset_bottom = 267.0
 rotation = 4.16086
 theme_override_font_sizes/font_size = 36
 text = "2"
 horizontal_alignment = 1
 
 [node name="25" type="Label" parent="Wheel"]
-offset_left = -327.0
-offset_top = 158.0
-offset_right = -277.0
-offset_bottom = 215.0
+offset_left = -325.0
+offset_top = 157.0
+offset_right = -275.0
+offset_bottom = 214.0
 rotation = 4.33016
 theme_override_font_sizes/font_size = 36
 text = "25"
 horizontal_alignment = 1
 
 [node name="17" type="Label" parent="Wheel"]
-offset_left = -348.0
-offset_top = 100.0
-offset_right = -298.0
-offset_bottom = 157.0
+offset_left = -346.0
+offset_top = 101.0
+offset_right = -296.0
+offset_bottom = 158.0
 rotation = 4.49946
 theme_override_font_sizes/font_size = 36
 text = "17"
 horizontal_alignment = 1
 
 [node name="34" type="Label" parent="Wheel"]
-offset_left = -361.0
-offset_top = 42.0
-offset_right = -311.0
-offset_bottom = 99.0
+offset_left = -359.0
+offset_top = 40.0
+offset_right = -309.0
+offset_bottom = 97.0
 rotation = 4.6705
 theme_override_font_sizes/font_size = 36
 text = "34"
 horizontal_alignment = 1
 
 [node name="6" type="Label" parent="Wheel"]
-offset_left = -362.0
+offset_left = -359.0
 offset_top = -20.9999
-offset_right = -312.0
+offset_right = -309.0
 offset_bottom = 36.0001
 rotation = 4.8398
 theme_override_font_sizes/font_size = 36
@@ -120,70 +140,70 @@ text = "6"
 horizontal_alignment = 1
 
 [node name="27" type="Label" parent="Wheel"]
-offset_left = -353.0
-offset_top = -82.9999
-offset_right = -303.0
-offset_bottom = -25.9999
+offset_left = -351.0
+offset_top = -80.9999
+offset_right = -301.0
+offset_bottom = -23.9999
 rotation = 5.00909
 theme_override_font_sizes/font_size = 36
 text = "27"
 horizontal_alignment = 1
 
 [node name="13" type="Label" parent="Wheel"]
-offset_left = -334.0
-offset_top = -140.0
-offset_right = -284.0
-offset_bottom = -83.0
+offset_left = -331.0
+offset_top = -139.0
+offset_right = -281.0
+offset_bottom = -82.0
 rotation = 5.18014
 theme_override_font_sizes/font_size = 36
 text = "13"
 horizontal_alignment = 1
 
 [node name="36" type="Label" parent="Wheel"]
-offset_left = -307.0
-offset_top = -196.0
-offset_right = -257.0
-offset_bottom = -139.0
+offset_left = -303.0
+offset_top = -194.0
+offset_right = -253.0
+offset_bottom = -137.0
 rotation = 5.34943
 theme_override_font_sizes/font_size = 36
 text = "36"
 horizontal_alignment = 1
 
 [node name="11" type="Label" parent="Wheel"]
-offset_left = -269.0
-offset_top = -245.0
-offset_right = -219.0
-offset_bottom = -188.0
+offset_left = -266.0
+offset_top = -243.0
+offset_right = -216.0
+offset_bottom = -186.0
 rotation = 5.51873
 theme_override_font_sizes/font_size = 36
 text = "11"
 horizontal_alignment = 1
 
 [node name="30" type="Label" parent="Wheel"]
-offset_left = -223.0
-offset_top = -286.0
-offset_right = -173.0
-offset_bottom = -229.0
+offset_left = -221.0
+offset_top = -283.0
+offset_right = -171.0
+offset_bottom = -226.0
 rotation = 5.68977
 theme_override_font_sizes/font_size = 36
 text = "30"
 horizontal_alignment = 1
 
 [node name="8" type="Label" parent="Wheel"]
-offset_left = -171.0
-offset_top = -320.0
-offset_right = -121.0
-offset_bottom = -263.0
+offset_left = -169.0
+offset_top = -317.0
+offset_right = -119.0
+offset_bottom = -260.0
 rotation = 5.85907
 theme_override_font_sizes/font_size = 36
 text = "8"
 horizontal_alignment = 1
 
 [node name="23" type="Label" parent="Wheel"]
-offset_left = -116.0
-offset_top = -345.0
-offset_right = -66.0
-offset_bottom = -288.0
+offset_left = -114.0
+offset_top = -341.0
+offset_right = -64.0
+offset_bottom = -284.0
 rotation = 6.02837
 theme_override_font_sizes/font_size = 36
 text = "23"
@@ -191,88 +211,88 @@ horizontal_alignment = 1
 
 [node name="10" type="Label" parent="Wheel"]
 offset_left = -54.0
-offset_top = -359.0
+offset_top = -356.0
 offset_right = -4.0
-offset_bottom = -302.0
+offset_bottom = -299.0
 rotation = 6.19766
 theme_override_font_sizes/font_size = 36
 text = "10"
 horizontal_alignment = 1
 
 [node name="5" type="Label" parent="Wheel"]
-offset_left = 7.0
-offset_top = -364.0
-offset_right = 57.0
-offset_bottom = -307.0
+offset_left = 8.0
+offset_top = -361.0
+offset_right = 58.0
+offset_bottom = -304.0
 rotation = 6.36696
 theme_override_font_sizes/font_size = 36
 text = "5"
 horizontal_alignment = 1
 
 [node name="24" type="Label" parent="Wheel"]
-offset_left = 69.0
-offset_top = -357.0
-offset_right = 119.0
-offset_bottom = -300.0
+offset_left = 68.0
+offset_top = -354.0
+offset_right = 118.0
+offset_bottom = -297.0
 rotation = 6.538
 theme_override_font_sizes/font_size = 36
 text = "24"
 horizontal_alignment = 1
 
 [node name="16" type="Label" parent="Wheel"]
-offset_left = 128.0
-offset_top = -341.0
-offset_right = 178.0
-offset_bottom = -284.0
+offset_left = 126.0
+offset_top = -338.0
+offset_right = 176.0
+offset_bottom = -281.0
 rotation = 6.7073
 theme_override_font_sizes/font_size = 36
 text = "16"
 horizontal_alignment = 1
 
 [node name="33" type="Label" parent="Wheel"]
-offset_left = 185.0
-offset_top = -315.0
-offset_right = 235.0
-offset_bottom = -258.0
+offset_left = 182.0
+offset_top = -311.0
+offset_right = 232.0
+offset_bottom = -254.0
 rotation = 6.8766
 theme_override_font_sizes/font_size = 36
 text = "33"
 horizontal_alignment = 1
 
 [node name="1" type="Label" parent="Wheel"]
-offset_left = 235.0
-offset_top = -280.0
-offset_right = 285.0
-offset_bottom = -223.0
+offset_left = 233.0
+offset_top = -276.0
+offset_right = 283.0
+offset_bottom = -219.0
 rotation = 7.04764
 theme_override_font_sizes/font_size = 36
 text = "1"
 horizontal_alignment = 1
 
 [node name="20" type="Label" parent="Wheel"]
-offset_left = 278.0
-offset_top = -236.0
-offset_right = 328.0
-offset_bottom = -179.0
+offset_left = 276.0
+offset_top = -233.0
+offset_right = 326.0
+offset_bottom = -176.0
 rotation = 7.21694
 theme_override_font_sizes/font_size = 36
 text = "20"
 horizontal_alignment = 1
 
 [node name="14" type="Label" parent="Wheel"]
-offset_left = 314.0
-offset_top = -186.0
-offset_right = 364.0
-offset_bottom = -129.0
+offset_left = 310.0
+offset_top = -185.0
+offset_right = 360.0
+offset_bottom = -128.0
 rotation = 7.38623
 theme_override_font_sizes/font_size = 36
 text = "14"
 horizontal_alignment = 1
 
 [node name="31" type="Label" parent="Wheel"]
-offset_left = 340.0
+offset_left = 339.0
 offset_top = -128.0
-offset_right = 390.0
+offset_right = 389.0
 offset_bottom = -71.0
 rotation = 7.55553
 theme_override_font_sizes/font_size = 36
@@ -280,9 +300,9 @@ text = "31"
 horizontal_alignment = 1
 
 [node name="9" type="Label" parent="Wheel"]
-offset_left = 357.0
+offset_left = 356.0
 offset_top = -70.0001
-offset_right = 407.0
+offset_right = 406.0
 offset_bottom = -13.0001
 rotation = 7.72657
 theme_override_font_sizes/font_size = 36
@@ -290,9 +310,9 @@ text = "9"
 horizontal_alignment = 1
 
 [node name="22" type="Label" parent="Wheel"]
-offset_left = 364.0
+offset_left = 362.0
 offset_top = -9.00003
-offset_right = 414.0
+offset_right = 412.0
 offset_bottom = 48.0
 rotation = 7.89587
 theme_override_font_sizes/font_size = 36
@@ -300,80 +320,80 @@ text = "22"
 horizontal_alignment = 1
 
 [node name="18" type="Label" parent="Wheel"]
-offset_left = 360.0
-offset_top = 52.0
-offset_right = 410.0
-offset_bottom = 109.0
+offset_left = 357.0
+offset_top = 51.0
+offset_right = 407.0
+offset_bottom = 108.0
 rotation = 8.06691
 theme_override_font_sizes/font_size = 36
 text = "18"
 horizontal_alignment = 1
 
 [node name="29" type="Label" parent="Wheel"]
-offset_left = 347.0
-offset_top = 112.0
-offset_right = 397.0
-offset_bottom = 169.0
+offset_left = 343.0
+offset_top = 111.0
+offset_right = 393.0
+offset_bottom = 168.0
 rotation = 8.23621
 theme_override_font_sizes/font_size = 36
 text = "29"
 horizontal_alignment = 1
 
 [node name="7" type="Label" parent="Wheel"]
-offset_left = 322.0
-offset_top = 169.0
-offset_right = 372.0
-offset_bottom = 226.0
+offset_left = 319.0
+offset_top = 168.0
+offset_right = 369.0
+offset_bottom = 225.0
 rotation = 8.40551
 theme_override_font_sizes/font_size = 36
 text = "7"
 horizontal_alignment = 1
 
 [node name="28" type="Label" parent="Wheel"]
-offset_left = 289.0
-offset_top = 221.0
-offset_right = 339.0
-offset_bottom = 278.0
+offset_left = 287.0
+offset_top = 220.0
+offset_right = 337.0
+offset_bottom = 277.0
 rotation = 8.57655
 theme_override_font_sizes/font_size = 36
 text = "28"
 horizontal_alignment = 1
 
 [node name="12" type="Label" parent="Wheel"]
-offset_left = 248.0
-offset_top = 266.0
-offset_right = 298.0
-offset_bottom = 323.0
+offset_left = 246.0
+offset_top = 265.0
+offset_right = 296.0
+offset_bottom = 322.0
 rotation = 8.74584
 theme_override_font_sizes/font_size = 36
 text = "12"
 horizontal_alignment = 1
 
 [node name="35" type="Label" parent="Wheel"]
-offset_left = 199.0
-offset_top = 304.0
-offset_right = 249.0
-offset_bottom = 361.0
+offset_left = 197.0
+offset_top = 302.0
+offset_right = 247.0
+offset_bottom = 359.0
 rotation = 8.91514
 theme_override_font_sizes/font_size = 36
 text = "35"
 horizontal_alignment = 1
 
 [node name="3" type="Label" parent="Wheel"]
-offset_left = 144.0
-offset_top = 333.0
-offset_right = 194.0
-offset_bottom = 390.0
+offset_left = 143.0
+offset_top = 331.0
+offset_right = 193.0
+offset_bottom = 388.0
 rotation = 9.08444
 theme_override_font_sizes/font_size = 36
 text = "3"
 horizontal_alignment = 1
 
 [node name="26" type="Label" parent="Wheel"]
-offset_left = 86.0
-offset_top = 353.0
-offset_right = 136.0
-offset_bottom = 410.0
+offset_left = 85.0
+offset_top = 349.0
+offset_right = 135.0
+offset_bottom = 406.0
 rotation = 9.25548
 theme_override_font_sizes/font_size = 36
 text = "26"

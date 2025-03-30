@@ -1,6 +1,6 @@
 extends Node2D
 
-var d := 0.0
+var d := 0
 var radius := 265
 var speed := 2
 
