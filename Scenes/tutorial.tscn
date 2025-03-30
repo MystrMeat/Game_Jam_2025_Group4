@@ -174,15 +174,6 @@ position = Vector2(-505.764, 9.77808)
 scale = Vector2(0.630183, 0.62763)
 texture = ExtResource("7_ys4pu")
 
-[node name="bet0" type="Label" parent="step4"]
-offset_left = -410.934
-offset_top = 180.443
-offset_right = -279.934
-offset_bottom = 215.443
-theme_override_font_sizes/font_size = 25
-text = "Bet on 0"
-autowrap_mode = 2
-
 [node name="step5" type="Node2D" parent="."]
 visible = false
 position = Vector2(575.003, 324.099)
@@ -294,9 +285,9 @@ scale = Vector2(0.51587, 0.513781)
 texture = ExtResource("12_t6ver")
 
 [node name="back" type="Label" parent="."]
-offset_left = 392.0
+offset_left = 213.0
 offset_top = 516.0
-offset_right = 467.0
+offset_right = 402.0
 offset_bottom = 554.0
 theme_override_font_sizes/font_size = 25
 text = "Back"
@@ -304,9 +295,9 @@ autowrap_mode = 2
 
 [node name="arrow_left" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 302.0
+offset_left = 123.0
 offset_top = 484.0
-offset_right = 502.0
+offset_right = 323.0
 offset_bottom = 684.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("4_h2ono")
@@ -314,18 +305,18 @@ texture_pressed = ExtResource("4_h2ono")
 
 [node name="arrow_right" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 672.0
+offset_left = 769.0
 offset_top = 481.0
-offset_right = 872.0
+offset_right = 969.0
 offset_bottom = 681.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("5_on4kn")
 texture_pressed = ExtResource("6_70gml")
 
 [node name="next" type="Label" parent="."]
-offset_left = 771.0
+offset_left = 868.0
 offset_top = 516.0
-offset_right = 846.0
+offset_right = 943.0
 offset_bottom = 554.0
 theme_override_font_sizes/font_size = 25
 text = "Next"
