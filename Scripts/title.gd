@@ -8,10 +8,9 @@ extends Node2D
 @export var credits_button: TextureButton
 @export var close_credits: TextureButton
 @export var credits_menu: Control
-@export var audio: AudioStreamPlayer
+@export var transition: Control
 var bg_cloud_spd = 2
 var fg_cloud_spd = 4
-
 
 func _ready():
 	spawn_cloud_inst(bg_cloud,0, 108,cloud_back)
@@ -44,6 +43,7 @@ func move_cloud_parallax(node, speed):
 
 func _on_play_pressed():
 	print("play")
+	transition.play("fade_out")
 	pass # Replace with function body.
 
 func _on_credits_pressed():
@@ -53,8 +53,4 @@ func _on_credits_pressed():
 
 func _on_back_pressed():
 	credits_menu.hide()
-	pass # Replace with function body.
-
-func _on_audio_stream_player_finished():
-	audio.play()
 	pass # Replace with function body.
