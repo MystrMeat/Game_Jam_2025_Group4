@@ -48,9 +48,12 @@ func move_cloud_parallax(node, speed):
 
 func _on_play_pressed():
 	print("play")
-	transition.file_name = "res://Scenes/game.tscn"
-	transition.play("fade_out")
-	pass # Replace with function body.
+	if Global.tutorial_complete:
+		transition.file_name = "res://Scenes/game.tscn"
+		transition.play("fade_out")
+	else:
+		$Tutorial.show()
+	 # Replace with function body.
 
 func _on_credits_pressed():
 	print("credits")

@@ -75,5 +75,9 @@ func _on_arrow_right_pressed():
 		step_count = 6
 		pass
 	elif step_count == 6:
+		if !Global.tutorial_complete:
+			Global.tutorial_complete = true
+			get_tree().change_scene_to_file("res://Scenes/game.tscn")
+		
 		hide()
 	pass # Replace with function body.
