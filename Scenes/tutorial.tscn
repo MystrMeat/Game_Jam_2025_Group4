@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cd7sj6arhgakh"]
+[gd_scene load_steps=20 format=3 uid="uid://cd7sj6arhgakh"]
 
 [ext_resource type="Texture2D" uid="uid://boroqx2ylboa4" path="res://Assets/UI/shop/WindowShop FIXED.png" id="1_ka2pi"]
 [ext_resource type="Script" uid="uid://v118okgvuqds" path="res://Scripts/tutorial.gd" id="1_koko0"]
@@ -7,9 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://thnnargyf25k" path="res://Assets/UI/main_menu/ButtonArrowLeftRaised.png" id="4_h2ono"]
 [ext_resource type="Texture2D" uid="uid://gi3t4ddn7dby" path="res://Assets/UI/main_menu/ButtonArrowRightRaised.png" id="5_on4kn"]
 [ext_resource type="Texture2D" uid="uid://byppih7a12tow" path="res://Assets/UI/main_menu/ButtonArrowRightDepressed.png" id="6_70gml"]
+[ext_resource type="Texture2D" uid="uid://cqjavuc3svulk" path="res://Assets/tutorial/corner_bet.png" id="6_dxsep"]
+[ext_resource type="Texture2D" uid="uid://cmpfqg2pt8new" path="res://Assets/tutorial/0-bet.png" id="7_lexqi"]
 [ext_resource type="Texture2D" uid="uid://rdra3uw5ljwb" path="res://Assets/tutorial/board.png" id="7_ys4pu"]
 [ext_resource type="Texture2D" uid="uid://n2v6yp8fqiyh" path="res://Assets/game/token_comet.png" id="8_8mnmb"]
+[ext_resource type="Texture2D" uid="uid://w0gnlp15gaxl" path="res://Assets/tutorial/line_bet.png" id="8_pkgwa"]
 [ext_resource type="Texture2D" uid="uid://cqxi2jpdh5t4n" path="res://Assets/game/token_moon.png" id="9_koko0"]
+[ext_resource type="Texture2D" uid="uid://k77nyjmfhs8g" path="res://Assets/tutorial/split_bet.png" id="9_radxo"]
+[ext_resource type="Texture2D" uid="uid://c2mv15crxfmtm" path="res://Assets/tutorial/street_bet.png" id="10_1cu4j"]
 [ext_resource type="Texture2D" uid="uid://wno1o0hu07l5" path="res://Assets/game/token_star.png" id="10_lsb8r"]
 [ext_resource type="Texture2D" uid="uid://cwobaavjllq23" path="res://Assets/game/token_planet.png" id="11_ap3ea"]
 [ext_resource type="Texture2D" uid="uid://dl1dfq3qyslyb" path="res://Assets/UI/main_menu/ButtonArrowLeftDepressed.png" id="12_lsb8r"]
@@ -27,6 +32,7 @@ texture = ExtResource("1_ka2pi")
 metadata/_edit_lock_ = true
 
 [node name="step1" type="Node2D" parent="."]
+visible = false
 position = Vector2(575.003, 324.099)
 scale = Vector2(0.601077, 0.603521)
 
@@ -84,7 +90,6 @@ scale = Vector2(0.630183, 0.62763)
 texture = ExtResource("7_ys4pu")
 
 [node name="step3" type="Node2D" parent="."]
-visible = false
 position = Vector2(575.003, 324.099)
 scale = Vector2(0.601077, 0.603521)
 
@@ -106,49 +111,74 @@ Bet on 0: As a split (2 numbers) or just zero or a 3 number bet or a 4 number co
 autowrap_mode = 2
 
 [node name="corner" type="Label" parent="step3"]
-offset_left = -560.666
-offset_top = -89.6385
-offset_right = -429.666
-offset_bottom = -54.6385
+offset_left = -560.665
+offset_top = -71.4126
+offset_right = -429.665
+offset_bottom = -36.4126
 theme_override_font_sizes/font_size = 25
 text = "Corner bet"
 autowrap_mode = 2
 
 [node name="street" type="Label" parent="step3"]
 offset_left = -322.759
-offset_top = -92.9524
+offset_top = -71.4126
 offset_right = -191.759
-offset_bottom = -57.9524
+offset_bottom = -36.4126
 theme_override_font_sizes/font_size = 25
 text = "Street bet"
 autowrap_mode = 2
 
 [node name="line" type="Label" parent="step3"]
-offset_left = -775.281
-offset_top = -91.2955
-offset_right = -644.281
-offset_bottom = -56.2955
+offset_left = -781.935
+offset_top = -66.4418
+offset_right = -650.935
+offset_bottom = -31.4418
 theme_override_font_sizes/font_size = 25
 text = "Line bet"
 autowrap_mode = 2
 
 [node name="split" type="Label" parent="step3"]
-offset_left = -702.079
-offset_top = 177.129
-offset_right = -571.079
-offset_bottom = 212.129
+offset_left = -725.37
+offset_top = 220.209
+offset_right = -594.37
+offset_bottom = 255.209
 theme_override_font_sizes/font_size = 25
 text = "Split bet"
 autowrap_mode = 2
 
 [node name="split2" type="Label" parent="step3"]
-offset_left = -419.253
-offset_top = 177.129
-offset_right = -288.253
-offset_bottom = 212.129
+offset_left = -424.243
+offset_top = 220.209
+offset_right = -293.243
+offset_bottom = 255.209
 theme_override_font_sizes/font_size = 25
 text = "Bet on 0"
 autowrap_mode = 2
+
+[node name="CornerBet" type="Sprite2D" parent="step3"]
+position = Vector2(-497.445, -192.369)
+scale = Vector2(0.598308, 0.598308)
+texture = ExtResource("6_dxsep")
+
+[node name="0-bet" type="Sprite2D" parent="step3"]
+position = Vector2(-364.351, 97.5957)
+scale = Vector2(0.727266, 0.724321)
+texture = ExtResource("7_lexqi")
+
+[node name="LineBet" type="Sprite2D" parent="step3"]
+position = Vector2(-737.015, -192.369)
+scale = Vector2(0.568254, 0.568254)
+texture = ExtResource("8_pkgwa")
+
+[node name="SplitBet" type="Sprite2D" parent="step3"]
+position = Vector2(-673.796, 109.194)
+scale = Vector2(0.708928, 0.708928)
+texture = ExtResource("9_radxo")
+
+[node name="StreetBet" type="Sprite2D" parent="step3"]
+position = Vector2(-264.53, -195.683)
+scale = Vector2(0.687352, 0.687352)
+texture = ExtResource("10_1cu4j")
 
 [node name="step4" type="Node2D" parent="."]
 visible = false

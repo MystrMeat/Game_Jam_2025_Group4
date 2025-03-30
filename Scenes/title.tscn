@@ -94,6 +94,7 @@ texture_normal = ExtResource("6_cwqts")
 texture_pressed = ExtResource("7_th2ad")
 
 [node name="credits_menu" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
