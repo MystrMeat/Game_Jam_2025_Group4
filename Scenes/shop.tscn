@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://b0pbhgx1cs4wi"]
+[gd_scene load_steps=15 format=3 uid="uid://b0pbhgx1cs4wi"]
 
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="1_2shtd"]
 [ext_resource type="Script" uid="uid://m8oqp3hg1n1w" path="res://Scripts/shop.gd" id="1_fdj0q"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_io27d"]
 [ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="3_io27d"]
+[ext_resource type="Texture2D" uid="uid://boroqx2ylboa4" path="res://Assets/UI/shop/WindowShop FIXED.png" id="4_1sjcd"]
 [ext_resource type="Texture2D" uid="uid://yfk3ne47koyi" path="res://Assets/UI/title/button_back_normal.png" id="4_3ps1r"]
 [ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="5_ymrm4"]
 [ext_resource type="Theme" uid="uid://byr2us48h4awc" path="res://Shaders/button_theme.tres" id="7_ymrm4"]
@@ -45,16 +46,20 @@ position = Vector2(3, -2)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_io27d")
 
+[node name="WindowShopFixed" type="Sprite2D" parent="."]
+position = Vector2(-1, -3)
+scale = Vector2(0.524074, 0.524074)
+texture = ExtResource("4_1sjcd")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 0)
-zoom = Vector2(1.5, 1.5)
 
 [node name="Global" parent="." instance=ExtResource("3_io27d")]
 layout_mode = 1
-offset_left = 20.0
-offset_top = 87.0
-offset_right = 20.0
-offset_bottom = 87.0
+offset_left = -27.0
+offset_top = 224.0
+offset_right = -27.0
+offset_bottom = 224.0
 
 [node name="back_button" type="TextureButton" parent="."]
 layout_mode = 0
