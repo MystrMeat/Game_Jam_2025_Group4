@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cb1bp6vb5lnwp"]
+[gd_scene load_steps=17 format=3 uid="uid://cb1bp6vb5lnwp"]
 
 [ext_resource type="Script" uid="uid://010ublnp8sde" path="res://Scripts/title.gd" id="1_w31pl"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_ekrfg"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="9_lv7gn"]
 [ext_resource type="Texture2D" uid="uid://2qdn0b6udrh8" path="res://Assets/UI/title/WindowCredits FIXED.png" id="10_qh4d7"]
 [ext_resource type="PackedScene" uid="uid://bdmd6ufh82ckc" path="res://Scenes/transition.tscn" id="12_th2ad"]
+[ext_resource type="Script" uid="uid://ve3fn7nimtud" path="res://Scripts/audio_stream.gd" id="14_lv7gn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q2qps"]
 shader = ExtResource("2_fp2oq")
@@ -75,6 +76,7 @@ texture_normal = ExtResource("6_cwqts")
 texture_pressed = ExtResource("7_th2ad")
 
 [node name="credits_menu" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
@@ -135,6 +137,13 @@ texture_pressed = ExtResource("9_lv7gn")
 
 [node name="Transition" parent="." instance=ExtResource("12_th2ad")]
 visible = false
+
+[node name="global_audio_manager" type="Node" parent="."]
+script = ExtResource("14_lv7gn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="global_audio_manager"]
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="credits_button" to="." method="_on_credits_pressed"]
