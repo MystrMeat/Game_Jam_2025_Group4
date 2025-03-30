@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cb1bp6vb5lnwp"]
+[gd_scene load_steps=22 format=3 uid="uid://cb1bp6vb5lnwp"]
 
 [ext_resource type="Script" uid="uid://010ublnp8sde" path="res://Scripts/title.gd" id="1_w31pl"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_ekrfg"]
@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="9_lv7gn"]
 [ext_resource type="Texture2D" uid="uid://2qdn0b6udrh8" path="res://Assets/UI/title/WindowCredits FIXED.png" id="10_qh4d7"]
 [ext_resource type="PackedScene" uid="uid://bdmd6ufh82ckc" path="res://Scenes/transition.tscn" id="12_th2ad"]
+[ext_resource type="Texture2D" uid="uid://dxdrfuodhnpyr" path="res://Assets/UI/title/DoodleA.png" id="14_wkj73"]
+[ext_resource type="Texture2D" uid="uid://dsu3kpxm0uimj" path="res://Assets/UI/title/DoodleB.png" id="15_34adv"]
+[ext_resource type="Texture2D" uid="uid://dwkrdknk7mini" path="res://Assets/UI/title/DoodleC.png" id="16_8fpq2"]
+[ext_resource type="Texture2D" uid="uid://bl77dc4mncydw" path="res://Assets/UI/title/DoodleD.png" id="17_yrftc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q2qps"]
 shader = ExtResource("2_fp2oq")
@@ -69,6 +73,7 @@ offset_left = -2930.0
 offset_top = -2033.0
 offset_right = 5253.0
 offset_bottom = 2203.0
+metadata/_edit_lock_ = true
 
 [node name="cloud_front" type="Node2D" parent="."]
 
@@ -93,6 +98,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
+metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="credits_menu"]
 layout_mode = 1
@@ -102,11 +108,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0196078, 0.0352941, 0.117647, 0.741176)
+metadata/_edit_lock_ = true
 
 [node name="WindowCreditsFixed" type="Sprite2D" parent="credits_menu/ColorRect"]
 position = Vector2(573, 323)
 scale = Vector2(0.598148, 0.598148)
 texture = ExtResource("10_qh4d7")
+metadata/_edit_lock_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="credits_menu/ColorRect"]
 layout_mode = 1
@@ -131,6 +139,7 @@ Crowbird
 
 Illustration
 Griffingalactic"
+metadata/_edit_lock_ = true
 
 [node name="back" type="TextureButton" parent="credits_menu/ColorRect"]
 layout_mode = 1
@@ -147,7 +156,28 @@ grow_vertical = 0
 texture_normal = ExtResource("8_qh4d7")
 texture_pressed = ExtResource("9_lv7gn")
 
+[node name="DoodleA" type="Sprite2D" parent="credits_menu/ColorRect"]
+position = Vector2(413, 213)
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("14_wkj73")
+
+[node name="DoodleB" type="Sprite2D" parent="credits_menu/ColorRect"]
+position = Vector2(714, 367)
+scale = Vector2(0.535, 0.535)
+texture = ExtResource("15_34adv")
+
+[node name="DoodleC" type="Sprite2D" parent="credits_menu/ColorRect"]
+position = Vector2(729, 240)
+scale = Vector2(0.465, 0.465)
+texture = ExtResource("16_8fpq2")
+
+[node name="DoodleD" type="Sprite2D" parent="credits_menu/ColorRect"]
+position = Vector2(417, 409)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("17_yrftc")
+
 [node name="Transition" parent="." instance=ExtResource("12_th2ad")]
+visible = false
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="credits_button" to="." method="_on_credits_pressed"]
