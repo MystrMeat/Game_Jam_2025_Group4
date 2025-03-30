@@ -63,10 +63,10 @@ offset_bottom = 224.0
 
 [node name="back_button" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = -346.0
-offset_top = 119.0
-offset_right = -190.0
-offset_bottom = 188.0
+offset_left = -351.0
+offset_top = 111.0
+offset_right = -195.0
+offset_bottom = 180.0
 texture_normal = ExtResource("4_3ps1r")
 texture_pressed = ExtResource("5_ymrm4")
 stretch_mode = 3
@@ -81,67 +81,89 @@ anchor_bottom = 0.5
 offset_left = -642.0
 offset_top = -391.0
 offset_right = -303.0
-offset_bottom = -187.0
+offset_bottom = -207.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.315, 1.315)
 
 [node name="Buying Options" type="GridContainer" parent="MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/h_separation = 25
+theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 100
 columns = 4
 
 [node name="Purchase 10" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
+theme_override_font_sizes/font_size = 16
 text = "10 Kg"
 icon_alignment = 1
 
 [node name="Purchase 20" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
+theme_override_font_sizes/font_size = 16
 text = "20 Kg"
 icon_alignment = 1
 
 [node name="Purchase 50" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
+theme_override_font_sizes/font_size = 16
 text = "50 Kg"
 
 [node name="Purchase 100" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
+theme_override_font_sizes/font_size = 16
 text = "100 Kg"
 
 [node name="Purchase 200" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
+theme_override_font_sizes/font_size = 16
 text = "200 Kg"
 
 [node name="Purchase 500" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
+theme_override_font_sizes/font_size = 16
 text = "500 Kg"
 
 [node name="Purchase 1000" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
+theme_override_font_sizes/font_size = 16
 text = "1000 Kg"
 
 [node name="Purchase 2000" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
+theme_override_font_sizes/font_size = 16
 text = "2000 Kg"
 
 [node name="Currency conversion" type="Label" parent="."]
 layout_mode = 0
-offset_left = 94.0
-offset_top = -201.0
-offset_right = 199.0
-offset_bottom = -159.0
+offset_left = -405.0
+offset_top = -123.0
+offset_right = -300.0
+offset_bottom = -81.0
 theme_override_fonts/font = ExtResource("8_s8dlv")
 theme_override_font_sizes/font_size = 35
 text = "$0.25 per Kg"
@@ -150,77 +172,77 @@ horizontal_alignment = 1
 [node name="Token Icons" type="Node" parent="."]
 
 [node name="Comet" type="Sprite2D" parent="Token Icons"]
-position = Vector2(-14, -76)
+position = Vector2(-14, -116)
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("9_k6pkm")
 
 [node name="Comet2" type="Sprite2D" parent="Token Icons"]
-position = Vector2(80, -85)
+position = Vector2(80, -125)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("9_k6pkm")
 
 [node name="Comet3" type="Sprite2D" parent="Token Icons"]
-position = Vector2(110, -64)
+position = Vector2(110, -104)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("9_k6pkm")
 
 [node name="Moon" type="Sprite2D" parent="Token Icons"]
-position = Vector2(203, -76)
+position = Vector2(203, -116)
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("10_1sjcd")
 
 [node name="Star" type="Sprite2D" parent="Token Icons"]
-position = Vector2(203, 96)
+position = Vector2(203, 61)
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("11_1cyt5")
 
 [node name="Planet" type="Sprite2D" parent="Token Icons"]
-position = Vector2(322, -76)
+position = Vector2(322, -116)
 scale = Vector2(0.28, 0.28)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet2" type="Sprite2D" parent="Token Icons"]
-position = Vector2(-28, 84)
+position = Vector2(-28, 49)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet3" type="Sprite2D" parent="Token Icons"]
-position = Vector2(2.00001, 105)
+position = Vector2(2.00001, 70)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet4" type="Sprite2D" parent="Token Icons"]
-position = Vector2(108, 110)
+position = Vector2(108, 75)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet5" type="Sprite2D" parent="Token Icons"]
-position = Vector2(81, 105)
+position = Vector2(81, 70)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet6" type="Sprite2D" parent="Token Icons"]
-position = Vector2(108, 87)
+position = Vector2(108, 52)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet7" type="Sprite2D" parent="Token Icons"]
-position = Vector2(81, 82)
+position = Vector2(81, 47)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("12_0vsm1")
 
 [node name="Planet8" type="Sprite2D" parent="Token Icons"]
-position = Vector2(95, 96)
+position = Vector2(95, 61)
 scale = Vector2(0.18, 0.18)
 texture = ExtResource("12_0vsm1")
 
 [node name="Star2" type="Sprite2D" parent="Token Icons"]
-position = Vector2(308, 85)
+position = Vector2(308, 50)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("11_1cyt5")
 
 [node name="Star3" type="Sprite2D" parent="Token Icons"]
-position = Vector2(337, 106)
+position = Vector2(337, 71)
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("11_1cyt5")
 
