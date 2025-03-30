@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c34qdg3a6yjc3"]
+[gd_scene load_steps=22 format=3 uid="uid://c34qdg3a6yjc3"]
 
 [ext_resource type="Script" uid="uid://bb8onw2y5qw06" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_1ehe0"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://be3ulhqsgxojw" path="res://Assets/UI/main_menu/button_exit_normal.png" id="13_m3bi6"]
 [ext_resource type="Texture2D" uid="uid://dj6te2b0ixvxy" path="res://Assets/UI/main_menu/button_exit_pressed.png" id="14_wyh8j"]
 [ext_resource type="Shader" uid="uid://dv82snil5dlry" path="res://Shaders/hard_light.gdshader" id="15_m3bi6"]
+[ext_resource type="PackedScene" uid="uid://bdmd6ufh82ckc" path="res://Scenes/transition.tscn" id="18_ujyyl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
 shader = ExtResource("2_1ehe0")
@@ -123,6 +124,13 @@ layout_mode = 2
 texture_normal = ExtResource("13_m3bi6")
 texture_pressed = ExtResource("14_wyh8j")
 stretch_mode = 3
+
+[node name="Transition" parent="." instance=ExtResource("18_ujyyl")]
+visible = false
+offset_left = 237.0
+offset_top = -97.0
+offset_right = 1389.0
+offset_bottom = 551.0
 
 [connection signal="timeout" from="Button Timer" to="." method="_on_button_timer_timeout"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
