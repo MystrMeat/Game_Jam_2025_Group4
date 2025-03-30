@@ -38,10 +38,10 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_spin_pressed() -> void: # spins the wheel
-	if global.player_mass < int(bet_amount.text) or global.player_mass == 0:
+	if global.player_mass < int(bet_amount.text):
 		invalid_mass.visible = true # If player has insufficient funds
 		valid_timer.start()
-	elif !bet_placed:
+	elif !bet_placed or global.player_mass == 0:
 		no_bet_place_error.visible = true
 		valid_timer.start()
 	else:

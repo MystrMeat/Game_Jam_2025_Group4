@@ -684,9 +684,4 @@ rotation = 2.97229
 scale = Vector2(3.24, 3.60001)
 polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
 
-[connection signal="area_entered" from="Wheel/32_Area" to="." method="_on__area_area_entered"]
-[connection signal="area_shape_entered" from="Wheel/32_Area" to="." method="_on__area_area_shape_entered"]
-[connection signal="body_entered" from="Wheel/32_Area" to="." method="_on__area_body_entered"]
-[connection signal="body_shape_entered" from="Wheel/32_Area" to="." method="_on__area_body_shape_entered"]
-
 [editable path="Global"]
