@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://m8oqp3hg1n1w" path="res://Scripts/shop.gd" id="1_fdj0q"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_io27d"]
 [ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="3_io27d"]
+[ext_resource type="Texture2D" uid="uid://boroqx2ylboa4" path="res://Assets/UI/shop/WindowShop FIXED.png" id="4_1sjcd"]
 [ext_resource type="Texture2D" uid="uid://yfk3ne47koyi" path="res://Assets/UI/title/button_back_normal.png" id="4_3ps1r"]
 [ext_resource type="Texture2D" uid="uid://boroqx2ylboa4" path="res://Assets/UI/shop/WindowShop FIXED.png" id="5_1sjcd"]
 [ext_resource type="Texture2D" uid="uid://7vrpv0n54wyr" path="res://Assets/UI/title/button_back_pressed.png" id="5_ymrm4"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cqxi2jpdh5t4n" path="res://Assets/game/token_moon.png" id="10_1sjcd"]
 [ext_resource type="Texture2D" uid="uid://wno1o0hu07l5" path="res://Assets/game/token_star.png" id="11_1cyt5"]
 [ext_resource type="Texture2D" uid="uid://cwobaavjllq23" path="res://Assets/game/token_planet.png" id="12_0vsm1"]
+[ext_resource type="PackedScene" uid="uid://bdmd6ufh82ckc" path="res://Scenes/transition.tscn" id="14_1cyt5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fdj0q"]
 shader = ExtResource("1_2shtd")
@@ -54,7 +56,6 @@ texture = ExtResource("5_1sjcd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 0)
-zoom = Vector2(1.5, 1.5)
 
 [node name="back_button" type="TextureButton" parent="."]
 layout_mode = 0
@@ -83,68 +84,74 @@ scale = Vector2(1.315, 1.115)
 
 [node name="Buying Options" type="GridContainer" parent="MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/h_separation = 25
+theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 100
 columns = 4
 
 [node name="Purchase 10" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
-theme_override_fonts/font = ExtResource("8_s8dlv")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 16
 text = "10 Kg"
 icon_alignment = 1
 
 [node name="Purchase 20" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
-theme_override_fonts/font = ExtResource("8_s8dlv")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 16
 text = "20 Kg"
 icon_alignment = 1
 
 [node name="Purchase 50" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
-theme_override_fonts/font = ExtResource("8_s8dlv")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 16
 text = "50 Kg"
 
 [node name="Purchase 100" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
-theme_override_fonts/font = ExtResource("8_s8dlv")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 16
 text = "100 Kg"
 
 [node name="Purchase 200" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
-theme_override_fonts/font = ExtResource("8_s8dlv")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 16
 text = "200 Kg"
 
 [node name="Purchase 500" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
-theme_override_fonts/font = ExtResource("8_s8dlv")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 16
 text = "500 Kg"
 
 [node name="Purchase 1000" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
-theme_override_fonts/font = ExtResource("8_s8dlv")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 16
 text = "1000 Kg"
 
 [node name="Purchase 2000" type="Button" parent="MarginContainer/Buying Options"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("7_ymrm4")
-theme_override_fonts/font = ExtResource("8_s8dlv")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 16
 text = "2000 Kg"
 
 [node name="Currency conversion" type="Label" parent="."]
