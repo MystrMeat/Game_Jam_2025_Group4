@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3njkcwdvyclr"]
+[gd_scene load_steps=10 format=3 uid="uid://d3njkcwdvyclr"]
 
 [ext_resource type="PackedScene" uid="uid://ejjh63y8scsy" path="res://Scenes/ball.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bsreyydqg7aet" path="res://Scripts/game.gd" id="1_qxrlw"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://cauce3wkgdp8y" path="res://Scenes/black_hole.tscn" id="4_3dryh"]
 [ext_resource type="PackedScene" uid="uid://dvohnaalxgygx" path="res://Scenes/roulette_wheel.tscn" id="6_h4fw4"]
 [ext_resource type="Theme" uid="uid://byr2us48h4awc" path="res://Shaders/button_theme.tres" id="7_1l0tm"]
-[ext_resource type="Texture2D" uid="uid://b1sywgsblc2mi" path="res://Assets/game/Board NewPalette.png" id="9_ldgsr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v158k"]
 shader = ExtResource("2_i6g32")
@@ -42,13 +41,14 @@ offset_bottom = 451.0
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Black Hole" parent="." instance=ExtResource("4_3dryh")]
-position = Vector2(-297, -90)
+position = Vector2(-337, -89)
 
 [node name="Roulette Wheel" parent="." instance=ExtResource("6_h4fw4")]
-position = Vector2(-298, -96)
+position = Vector2(-338, -88)
 scale = Vector2(0.599995, 0.599995)
 
 [node name="Ball" parent="." instance=ExtResource("1_ebmjs")]
+position = Vector2(0, -5)
 
 [node name="InOutBet" type="MarginContainer" parent="."]
 anchors_preset = 8
@@ -184,15 +184,11 @@ layout_mode = 2
 theme = ExtResource("7_1l0tm")
 text = "Bet Dozen"
 
-[node name="Board" type="Sprite2D" parent="."]
-position = Vector2(264, -160)
-scale = Vector2(0.857806, 0.857806)
-texture = ExtResource("9_ldgsr")
-
 [node name="Spin" type="Button" parent="."]
-offset_left = -89.0
-offset_top = -299.0
-offset_right = -9.0
-offset_bottom = -259.0
+offset_left = -123.0
+offset_top = -295.0
+offset_right = -43.0
+offset_bottom = -255.0
+scale = Vector2(1.09983, 1.12184)
 theme = ExtResource("7_1l0tm")
 text = "Spin"
