@@ -9,14 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://dimxbhhtr7fjq" path="res://Assets/title_screen/title_screen_balck_hole.png" id="5_wyh8j"]
 [ext_resource type="Texture2D" uid="uid://bofw31n8x1hlp" path="res://Assets/UI/title/button_play_pressed.png" id="6_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://brgxb45po5knn" path="res://Assets/UI/main_menu/button_shop_normal.png" id="7_16hvj"]
-[ext_resource type="Texture2D" uid="uid://buocmlt2h13jj" path="res://Assets/UI/title/button_credits_normal.png" id="7_yhxw7"]
-[ext_resource type="Texture2D" uid="uid://dosfe35u1iwqc" path="res://Assets/UI/title/button_credits_presed.png" id="8_trj04"]
 [ext_resource type="Texture2D" uid="uid://75a2pox475ji" path="res://Assets/UI/main_menu/button_shop_pressed.png" id="8_vr1f0"]
 [ext_resource type="Texture2D" uid="uid://45rgh4mkcbow" path="res://Assets/UI/main_menu/button_options_normal.png" id="9_vtepg"]
 [ext_resource type="Texture2D" uid="uid://be0i28vy3nco2" path="res://Assets/UI/main_menu/button_options_pressed.png" id="10_8dnnj"]
 [ext_resource type="Texture2D" uid="uid://be3ulhqsgxojw" path="res://Assets/UI/main_menu/button_exit_normal.png" id="13_m3bi6"]
+[ext_resource type="Texture2D" uid="uid://cj63x8xmxd253" path="res://Assets/UI/main_menu/buttons_tutorial_normal.png" id="14_ujyyl"]
 [ext_resource type="Texture2D" uid="uid://dj6te2b0ixvxy" path="res://Assets/UI/main_menu/button_exit_pressed.png" id="14_wyh8j"]
 [ext_resource type="Shader" uid="uid://dv82snil5dlry" path="res://Shaders/hard_light.gdshader" id="15_m3bi6"]
+[ext_resource type="Texture2D" uid="uid://dm2q8hn84e8qn" path="res://Assets/UI/main_menu/buttons_tutorial_pressed.png" id="15_mkpwh"]
 [ext_resource type="PackedScene" uid="uid://bdmd6ufh82ckc" path="res://Scenes/transition.tscn" id="18_ujyyl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
@@ -114,10 +114,10 @@ texture_normal = ExtResource("9_vtepg")
 texture_pressed = ExtResource("10_8dnnj")
 stretch_mode = 3
 
-[node name="credits_button" type="TextureButton" parent="Main Menu Options/VBoxContainer"]
+[node name="tutorial_button" type="TextureButton" parent="Main Menu Options/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("7_yhxw7")
-texture_pressed = ExtResource("8_trj04")
+texture_normal = ExtResource("14_ujyyl")
+texture_pressed = ExtResource("15_mkpwh")
 stretch_mode = 3
 
 [node name="exit_button" type="TextureButton" parent="Main Menu Options/VBoxContainer"]
@@ -137,5 +137,5 @@ offset_bottom = 324.0
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/shop_button" to="." method="_on_shop_button_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/options_button" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="Main Menu Options/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Main Menu Options/VBoxContainer/tutorial_button" to="." method="_on_tutorial_button_pressed"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/exit_button" to="." method="_on_exit_button_pressed"]
