@@ -1,0 +1,665 @@
+[gd_scene load_steps=3 format=3 uid="uid://qrffl8vmj2ys"]
+
+[ext_resource type="Script" uid="uid://rdpgmp7kakk4" path="res://Scripts/board.gd" id="1_2wvcj"]
+[ext_resource type="Texture2D" uid="uid://b1sywgsblc2mi" path="res://Assets/game/Board NewPalette.png" id="2_uh3b8"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_2wvcj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -31)
+scale = Vector2(0.839998, 0.839998)
+texture = ExtResource("2_uh3b8")
+
+[node name="1st12" type="Label" parent="."]
+offset_left = -158.0
+offset_top = 34.0
+offset_right = -77.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 25
+text = "1st 12"
+
+[node name="2nd12" type="Label" parent="."]
+offset_left = -16.0
+offset_top = 34.0
+offset_right = 80.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 25
+text = "2nd 12"
+
+[node name="3rd12" type="Label" parent="."]
+offset_left = 136.0
+offset_top = 34.0
+offset_right = 232.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 25
+text = "3rd 12"
+
+[node name="odd" type="Label" parent="."]
+offset_left = 110.0
+offset_top = 70.0
+offset_right = 206.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 25
+text = "ODD"
+
+[node name="even" type="Label" parent="."]
+offset_left = -119.0
+offset_top = 70.0
+offset_right = -23.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 25
+text = "EVEN"
+
+[node name="1 to 18" type="Label" parent="."]
+offset_left = -193.0
+offset_top = 74.0
+offset_right = -97.0
+offset_bottom = 109.0
+scale = Vector2(0.72, 0.72)
+theme_override_font_sizes/font_size = 25
+text = "1 to 18"
+
+[node name="19 to 36" type="Label" parent="."]
+offset_left = 179.0
+offset_top = 74.0
+offset_right = 275.0
+offset_bottom = 109.0
+scale = Vector2(0.720001, 0.720001)
+theme_override_font_sizes/font_size = 25
+text = "19 to 36"
+
+[node name="2 to 1" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 254.5
+offset_top = -106.309
+offset_right = 289.5
+offset_bottom = -88.3088
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(1.69941, 1.69941)
+theme_override_font_sizes/font_size = 13
+text = "2 to 1"
+
+[node name="2 to 2" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 255.0
+offset_top = -39.0
+offset_right = 290.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(1.69941, 1.69941)
+theme_override_font_sizes/font_size = 13
+text = "2 to 1"
+
+[node name="2 to 3" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 255.0
+offset_top = 27.0
+offset_right = 290.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(1.69941, 1.69941)
+theme_override_font_sizes/font_size = 13
+text = "2 to 1"
+
+[node name="0" type="Label" parent="."]
+offset_left = -286.0
+offset_top = -50.0
+offset_right = -246.0
+offset_bottom = -22.0
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 20
+text = "0"
+
+[node name="1" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -208.0
+offset_top = 8.0
+offset_right = -200.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "1"
+
+[node name="2" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -208.0
+offset_top = -59.0
+offset_right = -200.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "2"
+
+[node name="3" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -208.0
+offset_top = -123.0
+offset_right = -200.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "3"
+
+[node name="4" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -171.0
+offset_top = 8.0
+offset_right = -163.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "4"
+
+[node name="5" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -171.0
+offset_top = -59.0
+offset_right = -163.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "5"
+
+[node name="6" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -171.0
+offset_top = -123.0
+offset_right = -163.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "6"
+
+[node name="7" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -133.0
+offset_top = 8.0
+offset_right = -125.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "7"
+
+[node name="8" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -133.0
+offset_top = -59.0
+offset_right = -125.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "8"
+
+[node name="9" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -133.0
+offset_top = -123.0
+offset_right = -125.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "9"
+
+[node name="10" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.5
+offset_top = 19.0
+offset_right = -81.5
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "10"
+
+[node name="11" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.5
+offset_top = -47.0
+offset_right = -81.5
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "11"
+
+[node name="12" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -112.0
+offset_right = -81.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "12"
+
+[node name="13" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -58.5
+offset_top = 19.0
+offset_right = -43.5
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "13"
+
+[node name="14" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -58.5
+offset_top = -47.0
+offset_right = -43.5
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "14"
+
+[node name="15" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -112.0
+offset_right = -43.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "15"
+
+[node name="16" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.5
+offset_top = 19.0
+offset_right = -5.49998
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "16"
+
+[node name="17" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.5
+offset_top = -47.0
+offset_right = -5.49998
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "17"
+
+[node name="18" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -112.0
+offset_right = -5.00002
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "18"
+
+[node name="19" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.5
+offset_top = 19.0
+offset_right = 31.5
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "19"
+
+[node name="20" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.5
+offset_top = -47.0
+offset_right = 31.5
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "20"
+
+[node name="21" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = -112.0
+offset_right = 32.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "21"
+
+[node name="22" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 54.5
+offset_top = 19.0
+offset_right = 69.5
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "22"
+
+[node name="23" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 54.5
+offset_top = -47.0
+offset_right = 69.5
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "23"
+
+[node name="24" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 55.0
+offset_top = -112.0
+offset_right = 70.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "24"
+
+[node name="25" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.5
+offset_top = 19.0
+offset_right = 106.5
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "25"
+
+[node name="26" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 91.5
+offset_top = -47.0
+offset_right = 106.5
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "26"
+
+[node name="27" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 92.0
+offset_top = -112.0
+offset_right = 107.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "27"
+
+[node name="28" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 130.5
+offset_top = 19.0
+offset_right = 145.5
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "28"
+
+[node name="29" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 130.5
+offset_top = -47.0
+offset_right = 145.5
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "29"
+
+[node name="30" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 131.0
+offset_top = -112.0
+offset_right = 146.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "30"
+
+[node name="31" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 168.0
+offset_top = 20.6912
+offset_right = 183.0
+offset_bottom = 38.6912
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "31"
+
+[node name="32" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 168.0
+offset_top = -45.3088
+offset_right = 183.0
+offset_bottom = -27.3088
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "32"
+
+[node name="33" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 168.5
+offset_top = -110.309
+offset_right = 183.5
+offset_bottom = -92.3088
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "33"
+
+[node name="34" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 207.0
+offset_top = 20.6912
+offset_right = 222.0
+offset_bottom = 38.6912
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "34"
+
+[node name="35" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 207.0
+offset_top = -45.3088
+offset_right = 222.0
+offset_bottom = -27.3088
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "35"
+
+[node name="36" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 207.5
+offset_top = -110.309
+offset_right = 222.5
+offset_bottom = -92.3088
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+scale = Vector2(2.77941, 2.77941)
+theme_override_font_sizes/font_size = 13
+text = "36"
