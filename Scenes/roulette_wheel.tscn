@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvohnaalxgygx"]
+[gd_scene load_steps=4 format=3 uid="uid://dvohnaalxgygx"]
 
 [ext_resource type="Script" uid="uid://b8gsdbfmgsfj4" path="res://Scripts/roulette_wheel.gd" id="1_mjh8x"]
 [ext_resource type="Texture2D" uid="uid://c4f4fjag1mmr6" path="res://Assets/game/Wheel NewPalette.png" id="1_sylsi"]
+[ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="2_xvo8k"]
 
 [node name="Roulette Wheel" type="Node2D"]
 script = ExtResource("1_mjh8x")
+
+[node name="Global" parent="." instance=ExtResource("2_xvo8k")]
+
+[node name="Player Mass" parent="Global" index="0"]
+visible = false
+
+[node name="Player Money" parent="Global" index="1"]
+visible = false
 
 [node name="Wheel" type="Sprite2D" parent="."]
 texture = ExtResource("1_sylsi")
@@ -674,3 +683,10 @@ rotation = 2.97229
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/26_Area"]
 scale = Vector2(3.24, 3.60001)
 polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[connection signal="area_entered" from="Wheel/32_Area" to="." method="_on__area_area_entered"]
+[connection signal="area_shape_entered" from="Wheel/32_Area" to="." method="_on__area_area_shape_entered"]
+[connection signal="body_entered" from="Wheel/32_Area" to="." method="_on__area_body_entered"]
+[connection signal="body_shape_entered" from="Wheel/32_Area" to="." method="_on__area_body_shape_entered"]
+
+[editable path="Global"]

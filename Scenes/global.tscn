@@ -35,3 +35,12 @@ theme_override_colors/font_color = Color(0, 0.749434, 1.92523e-06, 1)
 theme_override_fonts/font = ExtResource("2_o8ivi")
 theme_override_font_sizes/font_size = 80
 text = "0"
+
+[node name="Current_number" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_o8ivi")
+theme_override_font_sizes/font_size = 150
+text = "0"

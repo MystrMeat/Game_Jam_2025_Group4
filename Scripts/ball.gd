@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 
 var d := 0.0
 var radius := 210

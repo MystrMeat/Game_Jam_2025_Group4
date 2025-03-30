@@ -43,12 +43,6 @@ position = Vector2(1, 1)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_1l0tm")
 
-[node name="Global" parent="." instance=ExtResource("2_wrm1d")]
-offset_left = -169.0
-offset_top = 451.0
-offset_right = -169.0
-offset_bottom = 451.0
-
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Black Hole" parent="." instance=ExtResource("4_3dryh")]
@@ -67,6 +61,19 @@ visible = false
 [node name="Board" parent="." instance=ExtResource("8_rku1e")]
 unique_name_in_owner = true
 position = Vector2(268, -135)
+
+[node name="Global" parent="." instance=ExtResource("2_wrm1d")]
+offset_left = -169.0
+offset_top = 451.0
+offset_right = -169.0
+offset_bottom = 451.0
+
+[node name="Current_number" parent="Global" index="2"]
+visible = true
+offset_left = -188.0
+offset_top = -634.0
+offset_right = -136.0
+offset_bottom = -394.0
 
 [node name="Spin" type="Button" parent="."]
 offset_left = -123.0
@@ -650,3 +657,5 @@ caret_blink = true
 [connection signal="pressed" from="Bet Lines/GridContainer/Bet Line11" to="." method="_on_bet_line_11_pressed"]
 [connection signal="pressed" from="Bet Lines/GridContainer/Lines Back" to="." method="_on_lines_back_pressed"]
 [connection signal="pressed" from="BigButtons/HBoxContainer/Shop" to="." method="_on_shop_pressed"]
+
+[editable path="Global"]

@@ -4,9 +4,11 @@ extends Control
 
 @onready var player_mass_text: Label = $"Player Mass"
 @onready var player_money_text: Label = $"Player Money"
+@onready var current_number: Label = $Current_number
 
 static var player_mass = 0
 static var player_money = 10000
+var player_bet = []
 
 const comet_token := 10
 const moon_token := 50
@@ -68,4 +70,7 @@ func purchase2000():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	pass
+	
+func checkWin(number):
 	pass
