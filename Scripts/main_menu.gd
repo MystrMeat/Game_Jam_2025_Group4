@@ -28,6 +28,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	move_cloud_parallax(cloud_back,bg_cloud_spd)
 	move_cloud_parallax(cloud_front,fg_cloud_spd)
+	
+	
 
 
 func _on_button_timer_timeout() -> void:
