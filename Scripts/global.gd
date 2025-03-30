@@ -1,5 +1,7 @@
 extends Control
 
+@onready var tutorial_complete = false
+
 @onready var player_mass_text: Label = $"Player Mass"
 @onready var player_money_text: Label = $"Player Money"
 
