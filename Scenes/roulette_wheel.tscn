@@ -462,7 +462,6 @@ polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.
 [node name="6_Area" type="Area2D" parent="Wheel"]
 position = Vector2(-332, -42)
 rotation = -1.44339
-scale = Vector2(1, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/6_Area"]
 scale = Vector2(3.24, 3.60001)
@@ -535,7 +534,6 @@ polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.
 [node name="5_Area" type="Area2D" parent="Wheel"]
 position = Vector2(29, -334)
 rotation = 0.0837747
-scale = Vector2(1, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/5_Area"]
 scale = Vector2(3.24, 3.60001)
@@ -568,7 +566,6 @@ polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.
 [node name="1_Area" type="Area2D" parent="Wheel"]
 position = Vector2(233, -241)
 rotation = 0.764455
-scale = Vector2(1, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/1_Area"]
 scale = Vector2(3.24, 3.60001)
@@ -625,7 +622,6 @@ polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.
 [node name="29_Area" type="Area2D" parent="Wheel"]
 position = Vector2(311, 125)
 rotation = 1.95302
-scale = Vector2(1, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/29_Area"]
 scale = Vector2(3.24, 3.60001)

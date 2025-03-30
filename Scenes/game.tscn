@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3njkcwdvyclr"]
+[gd_scene load_steps=16 format=3 uid="uid://d3njkcwdvyclr"]
 
 [ext_resource type="PackedScene" uid="uid://ejjh63y8scsy" path="res://Scenes/ball.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bsreyydqg7aet" path="res://Scripts/game.gd" id="1_qxrlw"]
@@ -12,6 +12,8 @@
 [ext_resource type="FontFile" uid="uid://bv8dft2gtqmku" path="res://Assets/UI/title/AeromoveDemoRegular.ttf" id="9_rku1e"]
 [ext_resource type="Texture2D" uid="uid://drxv7c4tof4wp" path="res://Assets/game/ButtonRaised.png" id="11_1phco"]
 [ext_resource type="Texture2D" uid="uid://cuso4elagclcu" path="res://Assets/game/ButtonDepressed.png" id="12_nb51f"]
+[ext_resource type="Theme" uid="uid://c4jhfnt41gh80" path="res://Shaders/BetEnterTheme.tres" id="13_1phco"]
+[ext_resource type="FontFile" uid="uid://c235vknrpwev6" path="res://Assets/castiron-condensed.otf" id="14_nb51f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v158k"]
 shader = ExtResource("2_i6g32")
@@ -31,6 +33,9 @@ shader_parameter/additional_scroll_speed = 0.07
 script = ExtResource("1_qxrlw")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="validTimer" type="Timer" parent="."]
+wait_time = 4.263
 
 [node name="BackgroundNoStars" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_v158k")
@@ -115,9 +120,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 106.0
-offset_top = 143.0
+offset_top = 99.5
 offset_right = 333.0
-offset_bottom = 222.0
+offset_bottom = 227.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.64772, 1.64772)
@@ -130,41 +135,54 @@ theme_override_constants/h_separation = 25
 theme_override_constants/v_separation = 25
 columns = 3
 
-[node name="Line" type="Button" parent="InBet/GridContainer"]
+[node name="Bet Line" type="Button" parent="InBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Line"
 
 [node name="Bet Corner" type="Button" parent="InBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Corner"
 
 [node name="Bet Street" type="Button" parent="InBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Street"
 
 [node name="Bet Split" type="Button" parent="InBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Split"
 
 [node name="Bet Zero" type="Button" parent="InBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Zero"
 
 [node name="Bet Number" type="Button" parent="InBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Number"
+
+[node name="Back" type="Button" parent="InBet/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Back"
 
 [node name="OutBet" type="MarginContainer" parent="."]
 visible = false
@@ -183,46 +201,60 @@ theme_override_constants/v_separation = 25
 columns = 3
 
 [node name="Bet Black" type="Button" parent="OutBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Red"
 
 [node name="Bet Purple" type="Button" parent="OutBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Black"
 
 [node name="Bet Odd" type="Button" parent="OutBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Odd"
 
 [node name="Bet Even" type="Button" parent="OutBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Even"
 
 [node name="Bet Low" type="Button" parent="OutBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Low"
 
 [node name="Bet High" type="Button" parent="OutBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "High"
 
 [node name="Bet Dozen" type="Button" parent="OutBet/GridContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_1l0tm")
 theme_override_fonts/font = ExtResource("9_rku1e")
 text = "Dozen"
+
+[node name="Back2" type="Button" parent="OutBet/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("7_1l0tm")
+theme_override_fonts/font = ExtResource("9_rku1e")
+text = "Back"
 
 [node name="BigButtons" type="MarginContainer" parent="."]
 offset_left = 125.0
@@ -249,8 +281,68 @@ theme_override_fonts/font = ExtResource("9_rku1e")
 theme_override_font_sizes/font_size = 100
 text = "Shop"
 
+[node name="Invalid Mass" type="Label" parent="."]
+visible = false
+offset_left = -260.0
+offset_top = 188.0
+offset_right = 132.0
+offset_bottom = 237.0
+scale = Vector2(0.840001, 0.944194)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_nb51f")
+theme_override_font_sizes/font_size = 35
+text = "Insufficient Mass - Please Purchase More Mass."
+
+[node name="Bet field" type="Label" parent="."]
+offset_left = -232.0
+offset_top = 130.0
+offset_right = -173.0
+offset_bottom = 163.0
+scale = Vector2(1.08, 1.08)
+theme_override_fonts/font = ExtResource("9_rku1e")
+theme_override_font_sizes/font_size = 35
+text = "Bet"
+
+[node name="EnterBET" type="Label" parent="Bet field"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = -13.0
+offset_right = 121.0
+offset_bottom = 36.0
+theme_override_font_sizes/font_size = 35
+text = ":"
+
+[node name="Bet Amount" type="LineEdit" parent="."]
+offset_left = -155.0
+offset_top = 99.0
+offset_right = -3.0
+offset_bottom = 179.0
+scale = Vector2(1.08, 1.08)
+theme = ExtResource("13_1phco")
+theme_override_fonts/font = ExtResource("14_nb51f")
+theme_override_font_sizes/font_size = 60
+text = "0"
+expand_to_text_length = true
+caret_blink = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="validTimer" to="." method="_on_valid_timer_timeout"]
 [connection signal="pressed" from="Spin" to="." method="_on_spin_pressed"]
 [connection signal="pressed" from="InOutBet/HBoxContainer/Bet Inside" to="." method="_on_bet_inside_pressed"]
 [connection signal="pressed" from="InOutBet/HBoxContainer/Bet Outside" to="." method="_on_bet_outside_pressed"]
+[connection signal="pressed" from="InBet/GridContainer/Bet Line" to="." method="_on_bet_line_pressed"]
+[connection signal="pressed" from="InBet/GridContainer/Bet Corner" to="." method="_on_bet_corner_pressed"]
+[connection signal="pressed" from="InBet/GridContainer/Bet Street" to="." method="_on_bet_street_pressed"]
+[connection signal="pressed" from="InBet/GridContainer/Bet Split" to="." method="_on_bet_split_pressed"]
+[connection signal="pressed" from="InBet/GridContainer/Bet Zero" to="." method="_on_bet_zero_pressed"]
+[connection signal="pressed" from="InBet/GridContainer/Bet Number" to="." method="_on_bet_number_pressed"]
+[connection signal="pressed" from="InBet/GridContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="OutBet/GridContainer/Bet Black" to="." method="_on_bet_black_pressed"]
+[connection signal="pressed" from="OutBet/GridContainer/Bet Purple" to="." method="_on_bet_purple_pressed"]
+[connection signal="pressed" from="OutBet/GridContainer/Bet Odd" to="." method="_on_bet_odd_pressed"]
+[connection signal="pressed" from="OutBet/GridContainer/Bet Even" to="." method="_on_bet_even_pressed"]
+[connection signal="pressed" from="OutBet/GridContainer/Bet Low" to="." method="_on_bet_low_pressed"]
+[connection signal="pressed" from="OutBet/GridContainer/Bet High" to="." method="_on_bet_high_pressed"]
+[connection signal="pressed" from="OutBet/GridContainer/Bet Dozen" to="." method="_on_bet_dozen_pressed"]
+[connection signal="pressed" from="OutBet/GridContainer/Back2" to="." method="_on_back_2_pressed"]
 [connection signal="pressed" from="BigButtons/HBoxContainer/Shop" to="." method="_on_shop_pressed"]
