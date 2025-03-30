@@ -127,10 +127,10 @@ stretch_mode = 3
 
 [node name="Transition" parent="." instance=ExtResource("18_ujyyl")]
 visible = false
-offset_left = 237.0
-offset_top = -97.0
-offset_right = 1389.0
-offset_bottom = 551.0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
 
 [connection signal="timeout" from="Button Timer" to="." method="_on_button_timer_timeout"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
