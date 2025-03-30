@@ -1,11 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://c34qdg3a6yjc3"]
+[gd_scene load_steps=22 format=3 uid="uid://c34qdg3a6yjc3"]
 
 [ext_resource type="Script" uid="uid://bb8onw2y5qw06" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Shader" uid="uid://bhl5hejiekm6q" path="res://Shaders/star_parallax.gdshader" id="2_1ehe0"]
 [ext_resource type="PackedScene" uid="uid://wu84ubnk1cmi" path="res://Scenes/global.tscn" id="2_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="3_ce3w2"]
-[ext_resource type="Texture2D" uid="uid://c72v86gqm7ndy" path="res://Assets/title_screen/TITLE.png" id="5_m3bi6"]
+[ext_resource type="Shader" uid="uid://bq4g7dwfddmr5" path="res://Shaders/ripple.gdshader" id="4_m3bi6"]
 [ext_resource type="Texture2D" uid="uid://cuahr2ccc5ulh" path="res://Assets/UI/title/button_play_normal.png" id="5_opfnp"]
+[ext_resource type="Texture2D" uid="uid://dimxbhhtr7fjq" path="res://Assets/title_screen/title_screen_balck_hole.png" id="5_wyh8j"]
 [ext_resource type="Texture2D" uid="uid://bofw31n8x1hlp" path="res://Assets/UI/title/button_play_pressed.png" id="6_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://brgxb45po5knn" path="res://Assets/UI/main_menu/button_shop_normal.png" id="7_16hvj"]
 [ext_resource type="Texture2D" uid="uid://buocmlt2h13jj" path="res://Assets/UI/title/button_credits_normal.png" id="7_yhxw7"]
@@ -16,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://be3ulhqsgxojw" path="res://Assets/UI/main_menu/button_exit_normal.png" id="13_m3bi6"]
 [ext_resource type="Texture2D" uid="uid://dj6te2b0ixvxy" path="res://Assets/UI/main_menu/button_exit_pressed.png" id="14_wyh8j"]
 [ext_resource type="Shader" uid="uid://dv82snil5dlry" path="res://Shaders/hard_light.gdshader" id="15_m3bi6"]
+[ext_resource type="PackedScene" uid="uid://bdmd6ufh82ckc" path="res://Scenes/transition.tscn" id="18_ujyyl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n45e2"]
 shader = ExtResource("2_1ehe0")
@@ -31,11 +33,19 @@ shader_parameter/near_stars_color = Color(1, 1, 1, 1)
 shader_parameter/base_scroll_speed = 0.02
 shader_parameter/additional_scroll_speed = 0.07
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ujyyl"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wyh8j"]
 shader = ExtResource("15_m3bi6")
 
-[node name="Main Menu" type="Node2D"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ujyyl"]
+shader = ExtResource("4_m3bi6")
+shader_parameter/wave_count = 20.0
+shader_parameter/speed = 3.0
+shader_parameter/height = 0.003
+
+[node name="Main Menu" type="Node2D" node_paths=PackedStringArray("cloud_back", "cloud_front")]
 script = ExtResource("1_28flt")
+cloud_back = NodePath("cloud_back")
+cloud_front = NodePath("cloud_front")
 
 [node name="BackgroundNoStars" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_n45e2")
@@ -43,29 +53,44 @@ position = Vector2(1, 1)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_ce3w2")
 
+[node name="cloud_back" type="Node2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(0.6, 0.6)
+
 [node name="TitleScreenBalckHole" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_wyh8j")
+position = Vector2(-159, -77.0001)
+scale = Vector2(0.368166, 0.368166)
+texture = ExtResource("5_wyh8j")
+
+[node name="ColorRect" type="ColorRect" parent="TitleScreenBalckHole"]
 material = SubResource("ShaderMaterial_ujyyl")
-position = Vector2(-135, -67)
-scale = Vector2(0.0703506, 0.0703506)
-texture = ExtResource("5_m3bi6")
+offset_left = -1124.0
+offset_top = -687.0
+offset_right = 1597.0
+offset_bottom = 744.0
+
+[node name="cloud_front" type="Node2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(0.6, 0.6)
 
 [node name="Button Timer" type="Timer" parent="."]
 wait_time = 0.255
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
 
 [node name="Global" parent="." instance=ExtResource("2_ce3w2")]
-offset_left = 15.0
-offset_top = 353.0
-offset_right = 15.0
-offset_bottom = 353.0
+offset_left = -140.0
+offset_top = 430.0
+offset_right = -140.0
+offset_bottom = 430.0
 
 [node name="Main Menu Options" type="MarginContainer" parent="."]
-offset_left = 139.0
-offset_top = -180.0
-offset_right = 409.0
-offset_bottom = 181.0
+offset_left = 237.0
+offset_top = -97.0
+offset_right = 507.0
+offset_bottom = 264.0
+size_flags_horizontal = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Main Menu Options"]
 layout_mode = 2
@@ -99,6 +124,13 @@ layout_mode = 2
 texture_normal = ExtResource("13_m3bi6")
 texture_pressed = ExtResource("14_wyh8j")
 stretch_mode = 3
+
+[node name="Transition" parent="." instance=ExtResource("18_ujyyl")]
+visible = false
+offset_left = 237.0
+offset_top = -97.0
+offset_right = 1389.0
+offset_bottom = 551.0
 
 [connection signal="timeout" from="Button Timer" to="." method="_on_button_timer_timeout"]
 [connection signal="pressed" from="Main Menu Options/VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
