@@ -1,14 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://s8ley87lf358"]
+[gd_scene load_steps=2 format=3 uid="uid://bed1dp4o6268b"]
 
-[ext_resource type="Script" uid="uid://ve3fn7nimtud" path="res://Scripts/audio_manager.gd" id="1_u0cv0"]
+[ext_resource type="Script" uid="uid://bsg5acugq513c" path="res://Scripts/global_audio.gd" id="1_sm2tf"]
 
-[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_a0seo"]
-
-[node name="global_audio_manager" type="Node"]
-script = ExtResource("1_u0cv0")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamWAV_a0seo")
-bus = &"music"
-
-[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
+[node name="global_audio_manager" type="AudioStreamPlayer"]
+script = ExtResource("1_sm2tf")

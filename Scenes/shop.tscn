@@ -164,6 +164,7 @@ text = "1kilogram = $0.25"
 horizontal_alignment = 1
 
 [node name="Currency conversion2" type="Label" parent="."]
+layout_mode = 0
 offset_left = -126.0
 offset_top = -104.0
 offset_right = -21.0
@@ -173,6 +174,7 @@ text = "10 kg"
 horizontal_alignment = 1
 
 [node name="Currency conversion3" type="Label" parent="."]
+layout_mode = 0
 offset_left = -13.0
 offset_top = -104.0
 offset_right = 92.0
@@ -182,6 +184,7 @@ text = "20 kg"
 horizontal_alignment = 1
 
 [node name="Currency conversion4" type="Label" parent="."]
+layout_mode = 0
 offset_left = 97.0
 offset_top = -104.0
 offset_right = 202.0
@@ -191,6 +194,7 @@ text = "50 kg"
 horizontal_alignment = 1
 
 [node name="Currency conversion5" type="Label" parent="."]
+layout_mode = 0
 offset_left = 210.0
 offset_top = -104.0
 offset_right = 315.0
@@ -200,6 +204,7 @@ text = "100 kg"
 horizontal_alignment = 1
 
 [node name="Currency conversion6" type="Label" parent="."]
+layout_mode = 0
 offset_left = -124.0
 offset_top = 54.0
 offset_right = -19.0
@@ -209,6 +214,7 @@ text = "200 kg"
 horizontal_alignment = 1
 
 [node name="Currency conversion7" type="Label" parent="."]
+layout_mode = 0
 offset_left = -12.0
 offset_top = 54.0
 offset_right = 93.0
@@ -218,6 +224,7 @@ text = "500 kg"
 horizontal_alignment = 1
 
 [node name="Currency conversion8" type="Label" parent="."]
+layout_mode = 0
 offset_left = 98.0
 offset_top = 54.0
 offset_right = 203.0
@@ -227,6 +234,7 @@ text = "1000 kg"
 horizontal_alignment = 1
 
 [node name="Currency conversion9" type="Label" parent="."]
+layout_mode = 0
 offset_left = 209.0
 offset_top = 54.0
 offset_right = 314.0

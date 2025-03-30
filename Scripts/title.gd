@@ -17,6 +17,7 @@ func _init(): #parent called before children
 	GlobalAudio.current_scene = "title"
 
 func _ready():
+	GlobalAudio.play_music_level()
 	spawn_cloud_inst(bg_cloud,0, 108,cloud_back)
 	spawn_cloud_inst(fg_cloud,0, 108,cloud_front)
 	
@@ -47,7 +48,7 @@ func move_cloud_parallax(node, speed):
 
 func _on_play_pressed():
 	print("play")
-	transition.file_name = "res://Scenes/main_menu.tscn"
+	transition.file_name = "res://Scenes/game.tscn"
 	transition.play("fade_out")
 	pass # Replace with function body.
 
