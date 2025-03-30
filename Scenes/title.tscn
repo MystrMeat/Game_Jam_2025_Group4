@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cb1bp6vb5lnwp"]
+[gd_scene load_steps=19 format=3 uid="uid://cb1bp6vb5lnwp"]
 
 [ext_resource type="Script" uid="uid://010ublnp8sde" path="res://Scripts/title.gd" id="1_w31pl"]
 [ext_resource type="Texture2D" uid="uid://bh55t77q1ubdj" path="res://Assets/title_screen/Background_NoStars.png" id="2_ekrfg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c72v86gqm7ndy" path="res://Assets/title_screen/TITLE.png" id="4_cwqts"]
 [ext_resource type="Shader" uid="uid://dv82snil5dlry" path="res://Shaders/hard_light.gdshader" id="4_th2ad"]
 [ext_resource type="Texture2D" uid="uid://bofw31n8x1hlp" path="res://Assets/UI/title/button_play_pressed.png" id="5_kyk5u"]
+[ext_resource type="Shader" uid="uid://bq4g7dwfddmr5" path="res://Shaders/ripple.gdshader" id="6_5vuho"]
 [ext_resource type="Texture2D" uid="uid://buocmlt2h13jj" path="res://Assets/UI/title/button_credits_normal.png" id="6_cwqts"]
 [ext_resource type="Texture2D" uid="uid://dosfe35u1iwqc" path="res://Assets/UI/title/button_credits_presed.png" id="7_th2ad"]
 [ext_resource type="Texture2D" uid="uid://yfk3ne47koyi" path="res://Assets/UI/title/button_back_normal.png" id="8_qh4d7"]
@@ -31,6 +32,12 @@ shader_parameter/additional_scroll_speed = 0.07
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qh4d7"]
 shader = ExtResource("4_th2ad")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ohkfa"]
+shader = ExtResource("6_5vuho")
+shader_parameter/wave_count = 20.0
+shader_parameter/speed = 3.0
+shader_parameter/height = 0.003
 
 [node name="Title" type="Node2D" node_paths=PackedStringArray("cloud_back", "cloud_front", "play_button", "credits_button", "close_credits", "credits_menu", "transition", "audio_manager")]
 script = ExtResource("1_w31pl")
@@ -57,6 +64,13 @@ material = SubResource("ShaderMaterial_qh4d7")
 position = Vector2(415, 280)
 scale = Vector2(0.14163, 0.14163)
 texture = ExtResource("4_cwqts")
+
+[node name="ColorRect" type="ColorRect" parent="Title"]
+material = SubResource("ShaderMaterial_ohkfa")
+offset_left = -2930.0
+offset_top = -2033.0
+offset_right = 5253.0
+offset_bottom = 2203.0
 
 [node name="cloud_front" type="Node2D" parent="."]
 
@@ -137,6 +151,7 @@ texture_normal = ExtResource("8_qh4d7")
 texture_pressed = ExtResource("9_lv7gn")
 
 [node name="Transition" parent="." instance=ExtResource("12_th2ad")]
+visible = false
 
 [node name="audio_manager" parent="." instance=ExtResource("14_lv7gn")]
 
