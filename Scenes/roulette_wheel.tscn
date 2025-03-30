@@ -1,30 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvohnaalxgygx"]
+[gd_scene load_steps=3 format=3 uid="uid://dvohnaalxgygx"]
 
 [ext_resource type="Script" uid="uid://b8gsdbfmgsfj4" path="res://Scripts/roulette_wheel.gd" id="1_mjh8x"]
 [ext_resource type="Texture2D" uid="uid://c4f4fjag1mmr6" path="res://Assets/game/Wheel NewPalette.png" id="1_sylsi"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_mjh8x"]
-radius = 96.18
-
 [node name="Roulette Wheel" type="Node2D"]
 script = ExtResource("1_mjh8x")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="Inner Wall" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
-position = Vector2(-5.96046e-08, 0)
-scale = Vector2(3.11, 3.11)
-shape = SubResource("CircleShape2D_mjh8x")
-
-[node name="Inner Wall2" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
-position = Vector2(-5.96046e-08, 0)
-scale = Vector2(3.99, 3.99)
-shape = SubResource("CircleShape2D_mjh8x")
-one_way_collision = true
-one_way_collision_margin = 5.0
-debug_color = Color(0, 0.568399, 0.853337, 0.42)
 
 [node name="Wheel" type="Sprite2D" parent="."]
 texture = ExtResource("1_sylsi")
@@ -360,10 +340,10 @@ text = "28"
 horizontal_alignment = 1
 
 [node name="12" type="Label" parent="Wheel"]
-offset_left = 246.0
-offset_top = 265.0
-offset_right = 296.0
-offset_bottom = 322.0
+offset_left = 247.0
+offset_top = 264.0
+offset_right = 297.0
+offset_bottom = 321.0
 rotation = 8.74584
 theme_override_font_sizes/font_size = 36
 text = "12"
@@ -398,3 +378,299 @@ rotation = 9.25548
 theme_override_font_sizes/font_size = 36
 text = "26"
 horizontal_alignment = 1
+
+[node name="Zero_Area" type="Area2D" parent="Wheel"]
+position = Vector2(0, 334)
+rotation = 3.14159
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/Zero_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="32_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-56, 329)
+rotation = 3.31089
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/32_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="15_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-110, 315)
+rotation = 3.48019
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/15_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="19_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-162, 292)
+rotation = 3.65123
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/19_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="4_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-209, 260)
+rotation = 3.82053
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/4_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="21_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-250, 221)
+rotation = 3.98982
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/21_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="2_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-284, 175)
+rotation = 4.16086
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/2_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="25_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-310, 125)
+rotation = 4.32842
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/25_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="17_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-327, 71)
+rotation = 4.49946
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/17_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="34_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-334, 14)
+rotation = 4.66876
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/34_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="6_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-332, -42)
+rotation = 4.8398
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/6_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="27_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-320, -98)
+rotation = 5.00909
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/27_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="13_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-299, -151)
+rotation = 5.17839
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/13_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="36_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-269, -199)
+rotation = 5.34943
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/36_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="11_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-232, -242)
+rotation = 5.51873
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/11_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="30_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-188, -278)
+rotation = 5.68803
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/30_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="8_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-138, -305)
+rotation = 5.85733
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/8_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="23_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-84, -324)
+rotation = 6.02837
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/23_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="10_Area" type="Area2D" parent="Wheel"]
+position = Vector2(-28, -334)
+rotation = 6.19941
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/10_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="5_Area" type="Area2D" parent="Wheel"]
+position = Vector2(29, -334)
+rotation = 6.36696
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/5_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="24_Area" type="Area2D" parent="Wheel"]
+position = Vector2(85, -324)
+rotation = 6.538
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/24_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="16_Area" type="Area2D" parent="Wheel"]
+position = Vector2(139, -305)
+rotation = 6.7073
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/16_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="33_Area" type="Area2D" parent="Wheel"]
+position = Vector2(188, -277)
+rotation = 6.8766
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/33_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="1_Area" type="Area2D" parent="Wheel"]
+position = Vector2(233, -241)
+rotation = 7.04764
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/1_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="20_Area" type="Area2D" parent="Wheel"]
+position = Vector2(270, -199)
+rotation = 7.21694
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/20_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="14_Area" type="Area2D" parent="Wheel"]
+position = Vector2(299, -151)
+rotation = 7.38623
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/14_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="31_Area" type="Area2D" parent="Wheel"]
+position = Vector2(321, -98)
+rotation = 7.55553
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/31_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="9_Area" type="Area2D" parent="Wheel"]
+position = Vector2(333, -42)
+rotation = 7.72657
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/9_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="22_Area" type="Area2D" parent="Wheel"]
+position = Vector2(335, 14)
+rotation = 7.89587
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/22_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="18_Area" type="Area2D" parent="Wheel"]
+position = Vector2(327, 70)
+rotation = 8.06517
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/18_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="29_Area" type="Area2D" parent="Wheel"]
+position = Vector2(311, 125)
+rotation = 8.23621
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/29_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="7_Area" type="Area2D" parent="Wheel"]
+position = Vector2(286, 175)
+rotation = 8.40551
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/7_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="28_Area" type="Area2D" parent="Wheel"]
+position = Vector2(252, 221)
+rotation = 8.5748
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/28_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="12_Area" type="Area2D" parent="Wheel"]
+position = Vector2(210, 260)
+rotation = 8.74584
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/12_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="35_Area" type="Area2D" parent="Wheel"]
+position = Vector2(164, 292)
+rotation = 8.91514
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/35_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="3_Area" type="Area2D" parent="Wheel"]
+position = Vector2(112, 315)
+rotation = 9.08444
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/3_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
+
+[node name="26_Area" type="Area2D" parent="Wheel"]
+position = Vector2(57, 329)
+rotation = 9.25548
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wheel/26_Area"]
+scale = Vector2(3.24, 3.60001)
+polygon = PackedVector2Array(7.09874, 8.88889, 8.642, -8.33329, 2.42564e-05, -8.61109, -8.95059, -8.33334, -7.09879, 8.88885, -2.42564e-05, 8.61109)
