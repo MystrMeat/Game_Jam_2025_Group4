@@ -74,5 +74,4 @@ func _on_arrow_right_pressed():
 		pass
 	elif step_count == 6:
 		hide()
-		pass
 	pass # Replace with function body.

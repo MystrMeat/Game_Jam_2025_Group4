@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cd7sj6arhgakh"]
+[gd_scene load_steps=15 format=3 uid="uid://cd7sj6arhgakh"]
 
 [ext_resource type="Texture2D" uid="uid://boroqx2ylboa4" path="res://Assets/UI/shop/WindowShop FIXED.png" id="1_ka2pi"]
 [ext_resource type="Script" uid="uid://v118okgvuqds" path="res://Scripts/tutorial.gd" id="1_koko0"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cqxi2jpdh5t4n" path="res://Assets/game/token_moon.png" id="9_koko0"]
 [ext_resource type="Texture2D" uid="uid://wno1o0hu07l5" path="res://Assets/game/token_star.png" id="10_lsb8r"]
 [ext_resource type="Texture2D" uid="uid://cwobaavjllq23" path="res://Assets/game/token_planet.png" id="11_ap3ea"]
+[ext_resource type="Texture2D" uid="uid://dl1dfq3qyslyb" path="res://Assets/UI/main_menu/ButtonArrowLeftDepressed.png" id="12_lsb8r"]
 [ext_resource type="Texture2D" uid="uid://d1a8037tf5d2d" path="res://Assets/tutorial/shop.png" id="12_t6ver"]
 
 [node name="Tutorial" type="Control"]
@@ -138,6 +139,15 @@ offset_right = -571.079
 offset_bottom = 212.129
 theme_override_font_sizes/font_size = 25
 text = "Split bet"
+autowrap_mode = 2
+
+[node name="split2" type="Label" parent="step3"]
+offset_left = -419.253
+offset_top = 177.129
+offset_right = -288.253
+offset_bottom = 212.129
+theme_override_font_sizes/font_size = 25
+text = "Bet on 0"
 autowrap_mode = 2
 
 [node name="step4" type="Node2D" parent="."]
@@ -301,7 +311,7 @@ offset_right = 323.0
 offset_bottom = 684.0
 scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("4_h2ono")
-texture_pressed = ExtResource("4_h2ono")
+texture_pressed = ExtResource("12_lsb8r")
 
 [node name="arrow_right" type="TextureButton" parent="."]
 layout_mode = 0
