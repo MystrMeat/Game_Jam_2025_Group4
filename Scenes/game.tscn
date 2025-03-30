@@ -41,14 +41,17 @@ offset_bottom = 451.0
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Black Hole" parent="." instance=ExtResource("4_3dryh")]
+unique_name_in_owner = true
 position = Vector2(-337, -89)
 
 [node name="Roulette Wheel" parent="." instance=ExtResource("6_h4fw4")]
+unique_name_in_owner = true
 position = Vector2(-338, -88)
 scale = Vector2(0.599995, 0.599995)
 
 [node name="Ball" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(0, -5)
+unique_name_in_owner = true
+position = Vector2(-337, -88)
 
 [node name="InOutBet" type="MarginContainer" parent="."]
 anchors_preset = 8
@@ -192,3 +195,5 @@ offset_bottom = -255.0
 scale = Vector2(1.09983, 1.12184)
 theme = ExtResource("7_1l0tm")
 text = "Spin"
+
+[connection signal="pressed" from="Spin" to="." method="_on_spin_pressed"]
