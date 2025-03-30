@@ -32,7 +32,6 @@ texture = ExtResource("1_ka2pi")
 metadata/_edit_lock_ = true
 
 [node name="step1" type="Node2D" parent="."]
-visible = false
 position = Vector2(575.003, 324.099)
 scale = Vector2(0.601077, 0.603521)
 
@@ -90,6 +89,7 @@ scale = Vector2(0.630183, 0.62763)
 texture = ExtResource("7_ys4pu")
 
 [node name="step3" type="Node2D" parent="."]
+visible = false
 position = Vector2(575.003, 324.099)
 scale = Vector2(0.601077, 0.603521)
 
