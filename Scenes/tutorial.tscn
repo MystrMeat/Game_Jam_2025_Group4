@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://cd7sj6arhgakh"]
+
+[ext_resource type="Texture2D" uid="uid://boroqx2ylboa4" path="res://Assets/UI/shop/WindowShop FIXED.png" id="1_ka2pi"]
+[ext_resource type="PackedScene" uid="uid://cauce3wkgdp8y" path="res://Scenes/black_hole.tscn" id="2_p1f1o"]
+[ext_resource type="PackedScene" uid="uid://dvohnaalxgygx" path="res://Scenes/roulette_wheel.tscn" id="3_ys4pu"]
+[ext_resource type="Texture2D" uid="uid://thnnargyf25k" path="res://Assets/UI/main_menu/ButtonArrowLeftRaised.png" id="4_h2ono"]
+[ext_resource type="Texture2D" uid="uid://gi3t4ddn7dby" path="res://Assets/UI/main_menu/ButtonArrowRightRaised.png" id="5_on4kn"]
+[ext_resource type="Texture2D" uid="uid://byppih7a12tow" path="res://Assets/UI/main_menu/ButtonArrowRightDepressed.png" id="6_70gml"]
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Button Container" type="Sprite2D" parent="."]
+position = Vector2(575.003, 324.099)
+scale = Vector2(0.601077, 0.603521)
+texture = ExtResource("1_ka2pi")
+metadata/_edit_lock_ = true
+
+[node name="step1" type="Node2D" parent="."]
+visible = false
+position = Vector2(575.003, 324.099)
+scale = Vector2(0.601077, 0.603521)
+
+[node name="Currency conversion" type="Label" parent="step1"]
+offset_left = -126.0
+offset_top = -272.0
+offset_right = 774.0
+offset_bottom = 245.0
+theme_override_font_sizes/font_size = 25
+text = "The objective of this roulette is to correctly predict where the ball will land on the roulette wheel.
+You can increase your chances of winning by placing your bets across the board.
+
+When you win, you receive earnings that you will then enter the shop to buy mass tokens.
+When you lose, the black hole in the middle of the roulette gets bigger.
+
+You win the game if you have surpassed the mass of the black hole. If the black hole gets too big, you lose the game.
+"
+autowrap_mode = 2
+
+[node name="Black Hole" parent="step1" instance=ExtResource("2_p1f1o")]
+unique_name_in_owner = true
+position = Vector2(-500.773, -1.8205)
+scale = Vector2(1.66368, 1.65694)
+metadata/_edit_group_ = true
+
+[node name="Roulette Wheel" parent="step1" instance=ExtResource("3_ys4pu")]
+unique_name_in_owner = true
+position = Vector2(-502.437, -0.163635)
+scale = Vector2(0.727, 0.724)
+metadata/_edit_group_ = true
+
+[node name="step2" type="Node2D" parent="."]
+position = Vector2(575.003, 324.099)
+scale = Vector2(0.601077, 0.603521)
+
+[node name="Currency conversion" type="Label" parent="step2"]
+offset_left = -126.0
+offset_top = -272.0
+offset_right = 774.0
+offset_bottom = 245.0
+theme_override_font_sizes/font_size = 25
+text = "The numbers are labelled from 0 to 36."
+autowrap_mode = 2
+
+[node name="back" type="Label" parent="."]
+offset_left = 392.0
+offset_top = 516.0
+offset_right = 467.0
+offset_bottom = 554.0
+theme_override_font_sizes/font_size = 25
+text = "Back"
+autowrap_mode = 2
+
+[node name="arrow_left" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 484.0
+offset_right = 502.0
+offset_bottom = 684.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_h2ono")
+texture_pressed = ExtResource("4_h2ono")
+
+[node name="arrow_right" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 481.0
+offset_right = 872.0
+offset_bottom = 681.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_on4kn")
+texture_pressed = ExtResource("6_70gml")
+
+[node name="next" type="Label" parent="."]
+offset_left = 771.0
+offset_top = 516.0
+offset_right = 846.0
+offset_bottom = 554.0
+theme_override_font_sizes/font_size = 25
+text = "Next"
+autowrap_mode = 2
