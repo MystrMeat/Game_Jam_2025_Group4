@@ -1,8 +1,10 @@
 extends Node2D
 
-var d := 0
-var radius := 265
-var speed := 2
+var d := 0.0
+var radius := 210
+var speed = 2
+var friction = 0.99
+var playBall = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,10 +12,14 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	d += delta
+	if playBall:
+		d += delta
+		
+		position = Vector2(
+			sin(d * speed) * radius,
+			cos(d * speed) * radius
+		)
+		speed *= friction
+			
 	
-	position = Vector2(
-		sin(d * speed) * radius,
-		cos(d * speed) * radius
-	)
 	
