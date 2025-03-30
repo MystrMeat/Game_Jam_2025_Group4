@@ -3,8 +3,8 @@ extends Control
 @onready var arrow_left = $arrow_left
 @onready var arrow_right = $arrow_right
 @onready var step_count = 1
-var back_text = "Back"
-var front_text = "Front"
+var back_text = "Back to menu"
+var front_text = "Next"
 
 func _physics_process(delta):
 	$back.text == back_text
@@ -40,6 +40,7 @@ func _on_arrow_left_pressed():
 		$step6.hide()
 		$step5.show()
 		step_count = 5
+		back_text = "Back"
 		pass
 	pass # Replace with function body.
 
@@ -49,6 +50,7 @@ func _on_arrow_right_pressed():
 		print(step_count)
 		$step1.hide()
 		$step2.show()
+		front_text = "Next"
 		step_count = 2
 		pass
 	elif step_count == 2:

@@ -295,6 +295,7 @@ scale = Vector2(0.51587, 0.513781)
 texture = ExtResource("12_t6ver")
 
 [node name="back" type="Label" parent="."]
+layout_mode = 0
 offset_left = 213.0
 offset_top = 516.0
 offset_right = 402.0
@@ -324,6 +325,7 @@ texture_normal = ExtResource("5_on4kn")
 texture_pressed = ExtResource("6_70gml")
 
 [node name="next" type="Label" parent="."]
+layout_mode = 0
 offset_left = 868.0
 offset_top = 516.0
 offset_right = 943.0
